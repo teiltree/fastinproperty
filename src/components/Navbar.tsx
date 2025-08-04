@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, User, Settings } from "lucide-react";
+import { useLocation } from "react-router-dom";
+
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState("");
 
   // Mock location for demo - in real app this would come from react-router-dom
-  const location = { pathname: "/" };
+  const location = useLocation();
+
 
   const navItems = [
     { name: "HOME", href: "/" },
