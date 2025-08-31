@@ -15,56 +15,17 @@ export default function BuyPage() {
   return (
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <div
-            className="relative h-96 bg-cover bg-center flex items-center justify-center"
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UOM8C17bOxrVxTZqsEpv6CVKtNZxAt.png')`
-            }}
-        >
-          <h1 className="text-5xl font-light text-white text-center">
-            Buy at auction
-          </h1>
-        </div>
+          <div className="relative h-80 md:h-96 bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 flex items-center justify-center overflow-hidden">
+              <div className="absolute -inset-32 bg-white/10 blur-3xl" aria-hidden="true"></div>
+              <div className="text-center text-white px-4">
+                  <p className="uppercase tracking-widest text-white/70 text-xs md:text-sm mb-3">Services</p>
+                  <h1 className="text-3xl md:text-5xl font-semibold">Buy at Auction</h1>
+              </div>
+          </div>
 
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">
-            {/* 3-Step Process */}
-            <div className="mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-800 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                    1
-                  </div>
-                  <h3 className="text-xl font-semibold text-blue-800 mb-3">Login with Facebook or create an account</h3>
-                  <p className="text-gray-600">Get started by creating your account or logging in with Facebook for quick access.</p>
-                </div>
 
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-800 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                    2
-                  </div>
-                  <h3 className="text-xl font-semibold text-blue-800 mb-3">Request registration for the property you are interested in</h3>
-                  <p className="text-gray-600">Browse available properties and register your interest for the auctions you want to participate in.</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-800 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                    3
-                  </div>
-                  <h3 className="text-xl font-semibold text-blue-800 mb-3">Bid online and buy your dream home!</h3>
-                  <p className="text-gray-600">Place your bids in real-time and secure your dream property from anywhere in the world.</p>
-                </div>
-              </div>
-
-              <div className="text-center mb-8">
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Participating in an online auction is easy on our modern platform. Bid from anywhere in the world using your phone, laptop, desktop or tablet! To bid on a property, simply log into this website and request registration on the property you are interested in. One of our representatives will contact you and once your deposit has been secublue, you will be able to bid on any lot in that auction.
-                </p>
-                <button className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded font-semibold">
-                  PRE-REGISTER FOR AUCTIONS
-                </button>
-              </div>
-            </div>
 
             {/* Benefits of buying at Auction */}
             <div className="mb-16">
@@ -388,9 +349,9 @@ export default function BuyPage() {
             <div className="text-center bg-blue-800 text-white rounded-lg p-8">
               <h3 className="text-2xl font-semibold mb-4">Ready to Start Bidding?</h3>
               <p className="text-lg mb-6">Join thousands of successful buyers who have found their dream properties through our auctions.</p>
-              <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded font-semibold">
-                Register Now
-              </button>
+              <a href="https://qrco.de/ABC_Auctions" target="_blank" className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded font-semibold">
+              Join Now
+              </a>
             </div>
           </div>
         </div>

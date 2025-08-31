@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, Menu, X, Phone, Mail, MapPin, User, Settings } from "lucide-react";
+import { ChevronDown, Menu, X, Phone, Mail, MapPin, User, ExternalLink, Smartphone } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 
@@ -83,14 +83,26 @@ export default function Navbar() {
       icon: "🗺️"
     },
     {
-      name: "Partners",
-      href: "/about/partners",
-      description: "Dominant Web Platforms, Law firms, and institutions",
-      icon: "🤝"
+      name: "Online Bidding",
+      href: "/about/online-bidding",
+      description: "How to bid online, features and payments",
+      icon: "💻"
     },
+    // {
+    //   name: "Partners",
+    //   href: "/about/partners",
+    //   description: "Dominant Web Platforms, Law firms, and institutions",
+    //   icon: "🤝"
+    // },
+      {
+          name: "FAQs",
+          href: "/about/faqs",
+          description: "Frequently Asked Questions",
+          icon: "❔"
+      },
     {
-      name: "Privacy Policy",
-      href: "/about/privacy",
+      name: "Disclaimer",
+      href: "/about/disclaimer",
       description: "POPIA and CPA Compliant policies",
       icon: "🔒"
     },
@@ -113,15 +125,15 @@ export default function Navbar() {
               <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-yellow-400" />
-                  <span>+27 11 123 4567</span>
+                  <span>+263784086388 / +263719086388</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-yellow-400" />
-                  <span>info@fastinproperty.co.za</span>
+                  <span>info@fastinproperty.co.zw</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4 text-yellow-400" />
-                  <span>Johannesburg, South Africa</span>
+                  <span>2 Smithfield Way, Longlands Industrial Site, Marondera</span>
                 </div>
               </div>
               <div className="text-blue-200">
@@ -138,7 +150,7 @@ export default function Navbar() {
               {/* Logo */}
               <a href="/" className="flex items-center space-x-3 group">
                 <div className="flex flex-col">
-                  <img className="w-auto h-16 rounded-lg" src="https://i.postimg.cc/d08KpBx9/logo.png" alt="Logo"/>
+                  <img className="w-auto h-16 rounded-lg" src="https://i.postimg.cc/g0pZvzDg/main.jpg" alt="Logo"/>
                 </div>
               </a>
 
@@ -247,7 +259,7 @@ export default function Navbar() {
                     <div className="absolute -top-2 left-8 w-4 h-4 bg-white border-l border-t border-gray-100 transform rotate-45"></div>
                     <div className="p-6">
                       <h3 className="text-lg font-bold text-blue-900 mb-4 border-b border-gray-100 pb-2">
-                        About FastIn Property
+                        About Fastin Property Auctions
                       </h3>
                       <div className="grid gap-2">
                         {aboutItems.map((item) => (
@@ -309,41 +321,38 @@ export default function Navbar() {
                 </a>
               </nav>
 
-              {/* Login/User Menu */}
+              {/* Online Bidding Menu */}
               <div className="hidden lg:flex items-center space-x-4">
                 <div className="relative group">
                   <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-800 to-blue-900 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg">
                     <User className="w-4 h-4" />
-                    <span>LOG IN</span>
+                    <span>ONLINE BIDDING</span>
                     <ChevronDown className="w-4 h-4" />
                   </button>
 
-                  {/* User Dropdown */}
-                  <div className="absolute top-full right-0 mt-2 w-56 bg-white border border-gray-100 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  {/* Online Bidding Dropdown */}
+                  <div className="absolute top-full right-0 mt-2 w-64 bg-white border border-gray-100 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-gray-100 transform rotate-45"></div>
                     <div className="p-4">
                       <div className="space-y-2">
-                        <a href="/login" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
-                          <User className="w-4 h-4 text-blue-600" />
-                          <span className="font-medium text-gray-700">Sign In</span>
+                        <a href="https://app.fastinproperty.co.zw" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                          <ExternalLink className="w-4 h-4 text-blue-600" />
+                          <span className="font-medium text-gray-700">app.fastinproperty.co.zw</span>
                         </a>
-                        <a href="/register" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
-                          <Settings className="w-4 h-4 text-blue-600" />
-                          <span className="font-medium text-gray-700">Register</span>
+                        <a href="https://app.fastinproperty.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                          <ExternalLink className="w-4 h-4 text-blue-600" />
+                          <span className="font-medium text-gray-700">app.fastinproperty.com</span>
                         </a>
                         <hr className="border-gray-100" />
-                        <a href="/dashboard" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
-                          <Settings className="w-4 h-4 text-blue-600" />
-                          <span className="font-medium text-gray-700">Dashboard</span>
+                        <a href="https://qrco.de/ABC_Auctions" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                          <Smartphone className="w-4 h-4 text-blue-600" />
+                          <span className="font-medium text-gray-700">Get App</span>
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-blue-900 px-6 py-3 rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg">
-                  START BIDDING
-                </button>
               </div>
 
               {/* Mobile Menu Button */}
@@ -374,12 +383,19 @@ export default function Navbar() {
                 ))}
 
                 <div className="pt-4 space-y-3">
-                  <button className="w-full bg-gradient-to-r from-blue-800 to-blue-900 text-white py-3 px-4 rounded-lg font-semibold">
-                    LOG IN
-                  </button>
-                  <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-500 text-blue-900 py-3 px-4 rounded-lg font-bold">
-                    START BIDDING
-                  </button>
+                  <div className="text-xs uppercase text-gray-500 font-semibold px-1">Online Bidding</div>
+                  <a href="https://app.fastinproperty.co.zw" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between bg-white text-blue-900 py-3 px-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
+                    <span>app.fastinproperty.co.zw</span>
+                    <ExternalLink className="w-4 h-4 text-blue-600" />
+                  </a>
+                  <a href="https://app.fastinproperty.com" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between bg-white text-blue-900 py-3 px-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
+                    <span>app.fastinproperty.com</span>
+                    <ExternalLink className="w-4 h-4 text-blue-600" />
+                  </a>
+                  <a href="https://qrco.de/ABC_Auctions" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between bg-white text-blue-900 py-3 px-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
+                    <span>Start Bidding – Get App</span>
+                    <Smartphone className="w-4 h-4 text-blue-600" />
+                  </a>
                 </div>
               </div>
             </div>

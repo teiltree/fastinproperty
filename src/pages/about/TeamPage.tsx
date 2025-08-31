@@ -4,28 +4,23 @@ export default function TeamPage() {
 
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-light text-center mb-8 text-gray-800">THE TEAM</h1>
+          <h1 className="text-5xl font-extrabold text-center mb-10 bg-gradient-to-r from-blue-900 to-yellow-500 bg-clip-text text-transparent">The Team</h1>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <img
-                src="/placeholder.svg?height=300&width=400"
-                alt="Team silhouettes representing our professionals"
-                className="w-full rounded-lg shadow-md"
-              />
-            </div>
-            <div>
+          <div className="grid grid-cols-1 gap-8 items-center mb-16">
+            <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-8 border border-blue-100">
               <h2 className="text-2xl font-semibold text-blue-800 mb-6">Professional Excellence</h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Meet our team of professionals making up our Executive and Senior management personnel.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Our leadership team combines extensive real estate experience with innovative thinking, ensuring that
-                FastIn Property remains at the forefront of industry developments.
+                Fastin Property Auctions remains at the forefront of industry developments.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Each team member brings unique expertise and a shared commitment to delivering exceptional results for our clients and partners.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Each team member brings unique expertise and a shared commitment to delivering exceptional results for
-                our clients and partners.
+                The Fastin Property Auctions team is committed to realizing the best value for Sellers and Buyers through a simple, transparent and auditable process.
               </p>
             </div>
           </div>

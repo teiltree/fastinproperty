@@ -10,16 +10,13 @@ export default function SellPage() {
   return (
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <div
-            className="relative h-96 bg-cover bg-center flex items-center justify-center"
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UOM8C17bOxrVxTZqsEpv6CVKtNZxAt.png')`
-            }}
-        >
-          <h1 className="text-5xl font-light text-white text-center">
-            Sell at auction
-          </h1>
-        </div>
+          <div className="relative h-80 md:h-96 bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 flex items-center justify-center overflow-hidden">
+              <div className="absolute -inset-32 bg-white/10 blur-3xl" aria-hidden="true"></div>
+              <div className="text-center text-white px-4">
+                  <p className="uppercase tracking-widest text-white/70 text-xs md:text-sm mb-3">Services</p>
+                  <h1 className="text-3xl md:text-5xl font-semibold">Sell at Auction</h1>
+              </div>
+          </div>
 
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">
@@ -270,12 +267,12 @@ export default function SellPage() {
               <h3 className="text-2xl font-semibold mb-4">Ready to Sell Your Property?</h3>
               <p className="text-lg mb-6">Get started with a free valuation and discover how auction selling can work for you.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded font-semibold">
+                <a href="mailto:info@fastinproperty.co.zw" className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded font-semibold">
                   Book Free Valuation
-                </button>
-                <button className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-800 text-white px-8 py-3 rounded font-semibold transition-colors">
+                </a>
+                <a href="/contact" className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-800 text-white px-8 py-3 rounded font-semibold transition-colors">
                   Contact Us Today
-                </button>
+                </a>
               </div>
             </div>
           </div>

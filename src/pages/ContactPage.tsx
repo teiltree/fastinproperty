@@ -142,10 +142,8 @@ export default function ContactPage() {
                     </h3>
                   </div>
                   <div className="text-gray-700 leading-relaxed space-y-1">
-                    <p className="font-semibold">123 Auction Street</p>
-                    <p>Business District</p>
-                    <p>Johannesburg, 2000</p>
-                    <p>South Africa</p>
+                    <p className="font-semibold">2 Smithfield Way, Longlands Industrial Site, Marondera</p>
+                    <p>Zimbabwe</p>
                   </div>
                 </div>
 
@@ -166,7 +164,7 @@ export default function ContactPage() {
                       <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
                       <div>
                         <p className="font-semibold text-blue-900">Phone</p>
-                        <p className="text-gray-700">+27 11 123 4567</p>
+                        <p className="text-gray-700">+263784086388 / +263719086388</p>
                       </div>
                     </div>
                     <div className="flex items-center">
@@ -213,8 +211,8 @@ export default function ContactPage() {
                   Join hundreds of satisfied property owners who have successfully sold their properties through our comprehensive marketing approach.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="tel:+27111234567" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
-                    Call Now: +27 11 123 4567
+                  <a href="tel:+263784086388" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    Call Now: +263784086388 / +263719086388
                   </a>
                   <a href="mailto:info@fastinproperty.co.za" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300">
                     Send Email

@@ -22,17 +22,8 @@ export default function FinancePage() {
           <div className="max-w-6xl mx-auto">
 
             {/* Main Finance Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-              <div>
-                <div className="relative">
-                  <div className="absolute -top-4 -right-4 w-full h-full bg-yellow-500 rounded-2xl opacity-20"></div>
-                  <img
-                      src="/placeholder.svg?height=400&width=500"
-                      alt="Finance Meeting - Professional consultation"
-                      className="relative w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
-                  />
-                </div>
-              </div>
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-16 items-center mb-20">
+
 
               <div>
                 <div className="inline-flex items-center bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
@@ -66,12 +57,12 @@ export default function FinancePage() {
                 </div>
 
                 <div className="mt-8 space-x-4">
-                  <button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
-                    Get Pre-Approved
-                  </button>
-                  <button className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold px-8 py-4 rounded-lg transition-colors duration-300">
-                    Finance Calculator
-                  </button>
+                  {/*<button className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">*/}
+                  {/*  Get Pre-Approved*/}
+                  {/*</button>*/}
+                  {/*<button className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold px-8 py-4 rounded-lg transition-colors duration-300">*/}
+                  {/*  Finance Calculator*/}
+                  {/*</button>*/}
                 </div>
               </div>
             </div>
@@ -229,12 +220,12 @@ export default function FinancePage() {
                 Get pre-approved today and bid with confidence at your next auction
               </p>
               <div className="space-x-4">
-                <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors duration-300">
-                  Apply for Finance
-                </button>
-                <button className="border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors duration-300">
+                {/*<button className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors duration-300">*/}
+                {/*  Apply for Finance*/}
+                {/*</button>*/}
+                <a href="/contact" className="border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors duration-300">
                   Speak to an Expert
-                </button>
+                </a>
               </div>
 
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">

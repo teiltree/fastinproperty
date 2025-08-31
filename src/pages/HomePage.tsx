@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Search, Play, ChevronLeft, ChevronRight, MapPin, Bed, Bath, Square, Award, Users, Shield, TrendingUp } from "lucide-react";
+import {  Play, ChevronLeft, ChevronRight, MapPin, Bed, Bath, Square, Award, Users, Shield, TrendingUp } from "lucide-react";
+import {Link} from "react-router-dom";
 
 export default function HomePage() {
   // @ts-ignore
@@ -105,7 +106,7 @@ export default function HomePage() {
     {
       quote: "Fresh new way to sell your property. The online platform made everything so much easier.",
       author: "The House Buyer Company",
-      location: "South Africa",
+      location: "Zimbabwe",
       rating: 5
     },
     {
@@ -145,34 +146,34 @@ export default function HomePage() {
               </h1>
               <p className="text-2xl mb-4 text-blue-100 font-light">Virtual Online Auctioneers</p>
               <p className="text-lg text-blue-200 max-w-2xl mx-auto">
-                South Africa's premier online property auction platform. Buy, sell, and invest with confidence.
+                Zimbabwe's premier online property auction platform. Buy, sell, and invest with confidence.
               </p>
             </div>
 
             {/* Enhanced Search Bar */}
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 mb-12 max-w-4xl w-full shadow-2xl">
-              <div className="flex flex-col md:flex-row items-center gap-4">
-                <div className="flex-1 min-w-0">
-                  <select className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-700 font-medium focus:outline-none focus:border-blue-500 transition-colors bg-white">
-                    <option>Property Type</option>
-                    <option>Residential</option>
-                    <option>Commercial</option>
-                    <option>Vacant Land</option>
-                    <option>Industrial</option>
-                  </select>
-                </div>
-                <div className="flex-2 min-w-0 w-full md:w-auto">
-                  <input
-                      placeholder="Enter location, suburb, or property details..."
-                      className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-700 placeholder-gray-500 font-medium focus:outline-none focus:border-blue-500 transition-colors"
-                  />
-                </div>
-                <button className="bg-gradient-to-r from-blue-800 to-blue-700 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-3 rounded-xl flex items-center gap-3 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
-                  <Search className="w-5 h-5" />
-                  SEARCH PROPERTIES
-                </button>
-              </div>
-            </div>
+            {/*<div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 mb-12 max-w-4xl w-full shadow-2xl">*/}
+            {/*  <div className="flex flex-col md:flex-row items-center gap-4">*/}
+            {/*    <div className="flex-1 min-w-0">*/}
+            {/*      <select className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-700 font-medium focus:outline-none focus:border-blue-500 transition-colors bg-white">*/}
+            {/*        <option>Property Type</option>*/}
+            {/*        <option>Residential</option>*/}
+            {/*        <option>Commercial</option>*/}
+            {/*        <option>Vacant Land</option>*/}
+            {/*        <option>Industrial</option>*/}
+            {/*      </select>*/}
+            {/*    </div>*/}
+            {/*    <div className="flex-2 min-w-0 w-full md:w-auto">*/}
+            {/*      <input*/}
+            {/*          placeholder="Enter location, suburb, or property details..."*/}
+            {/*          className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-700 placeholder-gray-500 font-medium focus:outline-none focus:border-blue-500 transition-colors"*/}
+            {/*      />*/}
+            {/*    </div>*/}
+            {/*    <button className="bg-gradient-to-r from-blue-800 to-blue-700 hover:from-blue-700 hover:to-blue-600 text-white px-8 py-3 rounded-xl flex items-center gap-3 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105">*/}
+            {/*      <Search className="w-5 h-5" />*/}
+            {/*      SEARCH PROPERTIES*/}
+            {/*    </button>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
 
             {/* CTA Buttons */}
             <div className="flex flex-col md:flex-row gap-4">
@@ -321,40 +322,27 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Learn More Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-400 rounded-full"></div>
-            <div className="absolute bottom-10 right-10 w-24 h-24 bg-yellow-400 rounded-full"></div>
-            <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-yellow-400 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
-          </div>
+          {/* How Online Auctions Work (Combined) */}
+          <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-800 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10">
+                  <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-400 rounded-full"></div>
+                  <div className="absolute bottom-10 right-10 w-24 h-24 bg-yellow-400 rounded-full"></div>
+                  <div className="absolute top-1/2 left-1/2 w-16 h-16 bg-yellow-400 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+              </div>
 
-          <div className="container mx-auto px-4 text-center relative">
-            <button className="bg-yellow-400/20 hover:bg-yellow-400/30 text-yellow-400 rounded-full p-8 mb-8 transition-all transform hover:scale-110 shadow-2xl backdrop-blur-sm">
-              <Play className="w-12 h-12" />
-            </button>
-            <h2 className="text-3xl font-light text-white mb-4">Learn How It Works</h2>
-            <p className="text-blue-200 text-lg max-w-2xl mx-auto">
-              Discover the simple steps to successful online property auctions
-            </p>
-          </div>
-        </section>
-
-        {/* How Online Auctions Work */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4 text-center">
-            <div className="flex items-center justify-center gap-6 mb-12">
-              <h2 className="text-3xl font-semibold text-blue-900">How Online Auctions Work</h2>
-              <button className="bg-blue-900 hover:bg-blue-800 text-yellow-400 rounded-full p-4 transition-all transform hover:scale-110 shadow-lg">
-                <Play className="w-8 h-8" />
-              </button>
-            </div>
-
-            <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-blue-900 px-10 py-4 rounded-xl font-bold shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide">
-              Meet the Team
-            </button>
-          </div>
-        </section>
+              <div className="container mx-auto px-4 text-center relative">
+                  <div className="inline-flex items-center justify-center bg-yellow-400/20 text-yellow-400 rounded-full p-6 mb-6 shadow-2xl backdrop-blur-sm">
+                      <Play className="w-10 h-10" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-light text-white mb-4">How Online Auctions Work</h2>
+                  <p className="text-blue-200 text-lg max-w-3xl mx-auto mb-8">
+                      Learn how FastIn Property's virtual auctions make buying and selling simple, transparent, and secure. From registering and browsing properties to bidding online in real-time and closing the deal — we guide you through every step.
+                  </p>
+                  <Link to="/about/online-bidding" className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-blue-900 px-10 py-4 rounded-xl font-bold shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide">
+                      Explore Online Bidding
+                  </Link>
+              </div>
+          </section>
 
         {/* Testimonials Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">

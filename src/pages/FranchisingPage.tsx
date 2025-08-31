@@ -34,7 +34,7 @@ export default function FranchisingPage() {
           <div className="relative min-h-[70vh] flex items-center justify-center px-4">
             <div className="text-center text-white max-w-4xl mx-auto">
               <div className="inline-block px-4 py-2 bg-yellow-500/20 rounded-full text-yellow-300 text-sm font-medium mb-6 border border-yellow-500/30">
-                🏆 South Africa's Leading Online Auction Platform
+                🏆 Zimbabwe's Leading Online Auction Platform
               </div>
               <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Become an Online
@@ -77,7 +77,7 @@ export default function FranchisingPage() {
                 INDUSTRY FIRST
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-12 leading-tight">
-                The First Auction Company in South Africa to offer
+                The First Auction Company in Zimbabwe to offer
                 <span className="block text-yellow-600">Exclusively Licensed Areas</span>
               </h2>
 
@@ -103,7 +103,7 @@ export default function FranchisingPage() {
                     <h3 className="text-3xl font-bold text-blue-900 mb-6">Why Choose FastIn Property Franchising?</h3>
                     <div className="space-y-6 text-gray-700">
                       <p className="text-lg leading-relaxed">
-                        Join the FastIn Property family and become part of South Africa's leading online property auction platform.
+                        Join the FastIn Property family and become part of Zimbabwe's leading online property auction platform.
                         Our proven business model and comprehensive support system make franchising with us a smart investment.
                       </p>
                       <p className="text-lg leading-relaxed">

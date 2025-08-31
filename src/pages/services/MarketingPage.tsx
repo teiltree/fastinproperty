@@ -3,7 +3,7 @@ export default function MarketingPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
         {/* Hero Section */}
         <div
-            className="relative h-[70vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
+            className="relative h-[40vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
             style={{
               backgroundImage: `linear-gradient(135deg, rgba(30, 58, 138, 0.85), rgba(180, 83, 9, 0.75)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XLJaFd9Vi5y5QDFYSsnSqrfr9czT2X.png')`
             }}
@@ -140,41 +140,41 @@ export default function MarketingPage() {
 
                 <div className="flex justify-center">
                   <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-yellow-400">
-                    <img
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PF63oXBEFMoWiwOvsCpcVcN5F8oA6E.png"
-                        alt="Marketing information pack samples"
-                        className="max-w-full h-auto"
-                    />
+                    {/*<img*/}
+                    {/*    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PF63oXBEFMoWiwOvsCpcVcN5F8oA6E.png"*/}
+                    {/*    alt="Marketing information pack samples"*/}
+                    {/*    className="max-w-full h-auto"*/}
+                    {/*/>*/}
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Virtual Tours Section */}
-            <div className="mb-20">
-              <div className="text-center mb-12">
-                <h2 className="text-5xl font-bold text-blue-900 mb-4">Always Open for Viewing</h2>
-                <div className="w-32 h-1 bg-yellow-500 mx-auto rounded-full mb-6"></div>
-                <p className="text-2xl text-gray-600 font-light">Your property is always on show with our virtual tours!</p>
-              </div>
+            {/*<div className="mb-20">*/}
+            {/*  <div className="text-center mb-12">*/}
+            {/*    <h2 className="text-5xl font-bold text-blue-900 mb-4">Always Open for Viewing</h2>*/}
+            {/*    <div className="w-32 h-1 bg-yellow-500 mx-auto rounded-full mb-6"></div>*/}
+            {/*    <p className="text-2xl text-gray-600 font-light">Your property is always on show with our virtual tours!</p>*/}
+            {/*  </div>*/}
 
-              <div className="bg-white rounded-3xl shadow-2xl p-8 mb-12 border border-gray-100">
-                <div className="rounded-2xl overflow-hidden">
-                  <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-rK7NT6bXczTNOVqTLkiQniXy8rZKP7.png"
-                      alt="Virtual tour technology and drone footage"
-                      className="w-full h-auto"
-                  />
-                </div>
-              </div>
+            {/*  <div className="bg-white rounded-3xl shadow-2xl p-8 mb-12 border border-gray-100">*/}
+            {/*    <div className="rounded-2xl overflow-hidden">*/}
+            {/*      <img*/}
+            {/*          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-rK7NT6bXczTNOVqTLkiQniXy8rZKP7.png"*/}
+            {/*          alt="Virtual tour technology and drone footage"*/}
+            {/*          className="w-full h-auto"*/}
+            {/*      />*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
 
-              <div className="text-center bg-gradient-to-r from-yellow-50 to-blue-50 rounded-2xl p-10">
-                <h3 className="text-3xl font-bold text-blue-900 mb-6">Stunning Drone Footage</h3>
-                <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                  Our professional drone photography captures breathtaking aerial views of your property, showcasing its unique features and surroundings from perspectives that traditional photography simply cannot achieve.
-                </p>
-              </div>
-            </div>
+            {/*  <div className="text-center bg-gradient-to-r from-yellow-50 to-blue-50 rounded-2xl p-10">*/}
+            {/*    <h3 className="text-3xl font-bold text-blue-900 mb-6">Stunning Drone Footage</h3>*/}
+            {/*    <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">*/}
+            {/*      Our professional drone photography captures breathtaking aerial views of your property, showcasing its unique features and surroundings from perspectives that traditional photography simply cannot achieve.*/}
+            {/*    </p>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
 
             {/* Global Reach Section */}
             <div className="mb-20">
@@ -184,15 +184,15 @@ export default function MarketingPage() {
                 <p className="text-2xl text-gray-600 font-light">Buyers can bid from anywhere in the world!</p>
               </div>
 
-              <div className="bg-white rounded-3xl shadow-2xl p-8 mb-12 border border-gray-100">
-                <div className="rounded-2xl overflow-hidden">
-                  <img
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wzh5muiPx3gSCXoC5SLDMiJ9Mm3yMa.png"
-                      alt="Multi-device accessibility and marketing channels"
-                      className="w-full h-auto"
-                  />
-                </div>
-              </div>
+              {/*<div className="bg-white rounded-3xl shadow-2xl p-8 mb-12 border border-gray-100">*/}
+              {/*  <div className="rounded-2xl overflow-hidden">*/}
+              {/*    <img*/}
+              {/*        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wzh5muiPx3gSCXoC5SLDMiJ9Mm3yMa.png"*/}
+              {/*        alt="Multi-device accessibility and marketing channels"*/}
+              {/*        className="w-full h-auto"*/}
+              {/*    />*/}
+              {/*  </div>*/}
+              {/*</div>*/}
 
               <div className="text-center bg-gradient-to-r from-blue-50 to-yellow-50 rounded-2xl p-10">
                 <h3 className="text-3xl font-bold text-blue-900 mb-6">Extensive Marketing Channels</h3>

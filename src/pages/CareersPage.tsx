@@ -31,7 +31,7 @@ export default function CareersPage() {
         <div
             className="relative h-[500px] bg-cover bg-center flex items-center justify-center overflow-hidden"
             style={{
-              backgroundImage: `linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(202, 138, 4, 0.8) 100%), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W6HvrIECnVFfcTUZ4M0VThX5rhmq5o.png')`
+              backgroundImage: `linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(202, 138, 4, 0.8) 100%), url('#')`
             }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-yellow-600/20"></div>

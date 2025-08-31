@@ -13,7 +13,11 @@ import AlertsPage from "./pages/services/AlertsPage"
 import TeamPage from "./pages/about/TeamPage"
 import FootprintPage from "./pages/about/FootprintPage"
 import PartnersPage from "./pages/about/PartnersPage"
-import PrivacyPage from "./pages/about/PrivacyPage"
+import DisclaimerPage from "./pages/about/PrivacyPage"
+import OnlineBiddingPage from "./pages/about/OnlineBiddingPage"
+import TermsPage from "./pages/about/TermsPage"
+import FaqsPage from "./pages/about/FaqsPage"
+import RulesOfAuctionPage from "./pages/about/RulesOfAuctionPage"
 import "./App.css"
 import Layout from "@/components/Layout.tsx";
 
@@ -31,10 +35,14 @@ function App() {
         <Route path="/about/team" element={<TeamPage />} />
         <Route path="/about/footprint" element={<FootprintPage />} />
         <Route path="/about/partners" element={<PartnersPage />} />
-        <Route path="/about/privacy" element={<PrivacyPage />} />
+        <Route path="/about/disclaimer" element={<DisclaimerPage />} />
+        <Route path="/about/online-bidding" element={<OnlineBiddingPage />} />
+        <Route path="/about/faqs" element={<FaqsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/franchising" element={<FranchisingPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/rules-of-auction" element={<RulesOfAuctionPage />} />
       </Routes>
     </Layout>
   )
