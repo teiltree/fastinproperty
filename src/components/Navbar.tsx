@@ -335,13 +335,13 @@ export default function Navbar() {
                     <div className="absolute -top-2 right-6 w-4 h-4 bg-white border-l border-t border-gray-100 transform rotate-45"></div>
                     <div className="p-4">
                       <div className="space-y-2">
-                        <a href="https://app.fastinproperty.co.zw" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                        <a href="https://iprop.solutions/fastin/properties/for-auction" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
                           <ExternalLink className="w-4 h-4 text-blue-600" />
-                          <span className="font-medium text-gray-700">app.fastinproperty.co.zw</span>
+                          <span className="font-medium text-gray-700">Auction Stock</span>
                         </a>
-                        <a href="https://app.fastinproperty.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                        <a href="https://iprop.solutions/fastin/auth/login" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
                           <ExternalLink className="w-4 h-4 text-blue-600" />
-                          <span className="font-medium text-gray-700">app.fastinproperty.com</span>
+                          <span className="font-medium text-gray-700">Create Auction Account</span>
                         </a>
                         <hr className="border-gray-100" />
                         <a href="https://qrco.de/ABC_Auctions" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 p-3 rounded-lg hover:bg-blue-50 transition-colors">
@@ -384,12 +384,12 @@ export default function Navbar() {
 
                 <div className="pt-4 space-y-3">
                   <div className="text-xs uppercase text-gray-500 font-semibold px-1">Online Bidding</div>
-                  <a href="https://app.fastinproperty.co.zw" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between bg-white text-blue-900 py-3 px-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
-                    <span>app.fastinproperty.co.zw</span>
+                  <a href="https://iprop.solutions/fastin/properties/for-auction" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between bg-white text-blue-900 py-3 px-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
+                    <span>Auction Stock</span>
                     <ExternalLink className="w-4 h-4 text-blue-600" />
                   </a>
-                  <a href="https://app.fastinproperty.com" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between bg-white text-blue-900 py-3 px-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
-                    <span>app.fastinproperty.com</span>
+                  <a href="https://iprop.solutions/fastin/auth/login" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between bg-white text-blue-900 py-3 px-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors">
+                    <span>Create Auction Account</span>
                     <ExternalLink className="w-4 h-4 text-blue-600" />
                   </a>
                   <a href="https://qrco.de/ABC_Auctions" target="_blank" rel="noopener noreferrer" className="w-full flex items-center justify-between bg-white text-blue-900 py-3 px-4 rounded-lg font-semibold hover:bg-blue-100 transition-colors">

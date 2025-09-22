@@ -88,9 +88,9 @@ export default function OnlineBiddingPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-blue-900 mb-1">Or visit our online bidding site</h3>
                     <p className="text-gray-700">
-                      <a className="text-blue-700 underline" href="https://app.fastinproperty.co.zw" target="_blank" rel="noreferrer">app.fastinproperty.co.zw</a>
+                      <a className="text-blue-700 underline" href="https://iprop.solutions/fastin/properties/for-auction" target="_blank" rel="noreferrer">Auction Stock</a>
                       <span className="mx-2">/</span>
-                      <a className="text-blue-700 underline" href="https://app.fastinproperty.com" target="_blank" rel="noreferrer">app.fastinproperty.com</a>
+                      <a className="text-blue-700 underline" href="https://iprop.solutions/fastin/auth/login" target="_blank" rel="noreferrer">Create Auction Account</a>
                     </p>
                   </div>
                 </li>
@@ -205,7 +205,7 @@ export default function OnlineBiddingPage() {
                   <li>Contact us and we will ensure seamless handover / takeover to you.</li>
                 </ul>
                 <a
-                  href="https://app.fastinproperty.co.zw"
+                  href="https://iprop.solutions/fastin/properties/for-auction"
                   target="_blank"
                   rel="noreferrer"
                   className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition"
