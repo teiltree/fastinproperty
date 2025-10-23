@@ -57,7 +57,7 @@ export default function Footer() {
                             </div>
 
                             <p className="text-blue-200 mb-8 leading-relaxed text-sm">
-                                Zimbabwe's premier online property auction platform, connecting buyers and sellers with transparency, trust, and innovation since 1992.
+                                Zimbabwe's premier online property auction platform, connecting buyers and sellers with transparency, trust, and innovation.
                             </p>
 
                             <div className="space-y-4">
