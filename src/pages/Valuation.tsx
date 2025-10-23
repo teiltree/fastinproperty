@@ -3,7 +3,7 @@ import { Calculator, DollarSign, FileCheck, TrendingUp, Award, CheckCircle, Spar
 import { Link } from 'react-router-dom';
 
 export default function ValuationPage() {
-    const [offerAmount, setOfferAmount] = useState<string>('330000');
+    const [offerAmount, setOfferAmount] = useState<string>('50000');
     const VAT_RATE = 0.15; // 15% VAT
 
     // Format number with commas
