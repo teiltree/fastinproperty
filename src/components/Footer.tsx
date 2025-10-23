@@ -19,7 +19,7 @@ export default function Footer() {
     const quickLinks = [
         { name: "Current Auctions", href: "https://iprop.solutions/fastin/properties/for-auction" },
         { name: "Sell With Us", href: "/services/sell" },
-        { name: "Free Auction Valuation", href: "/contact" },
+        { name: "Free Auction Valuation", href: "/valuation" },
         { name: "Guide to Property Auctions in Zimbabwe", href: "/about/guide" },
         { name: "Finance Options", href: "/finance" },
         { name: "How It Works", href: "/about/online-bidding" },

@@ -160,12 +160,12 @@ export default function HomePage() {
                             <span className="text-yellow-400 text-sm font-semibold">Zimbabwe's Premier Auction Platform</span>
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
                             Welcome to <br />
                             <span className="text-yellow-400">FastIn Property Auctions</span>
                         </h1>
-                        <p className="text-2xl mb-4 text-blue-100 font-semibold">Virtual Online Auctioneers</p>
-                        <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+                        <p className="text-xl mb-4 text-blue-100 font-semibold">Virtual Online Auctioneers</p>
+                        <p className="text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
                             Buy, sell, and invest in property with confidence through Zimbabwe's most trusted online auction platform.
                         </p>
                     </div>
@@ -183,24 +183,32 @@ export default function HomePage() {
                         </a>
 
                         <Link
-                            to="/services/sell"
+                            to="https://forms.gle/zATdjtCQJweQnGxW6"
+                            target="_blank"
                             className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-yellow-400 px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
                         >
                             Sell Your Property
                         </Link>
 
                         <Link
-                            to="/services/buy"
+                            to="https://forms.gle/3ciUXanVv4R9e73W9"
+                            target="_blank"
                             className="bg-transparent border-2 border-yellow-400 hover:bg-yellow-400 hover:text-blue-900 text-yellow-400 px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
                         >
-                            How to Buy
+                            Make An Offer
                         </Link>
-
                         <Link
                             to="/valuation"
                             className="bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
                         >
-                            Free Valuation
+                            DEPOSIT AND FEE CALCULATOR
+                        </Link>
+                        <Link
+                            to="https://forms.gle/THstgtY3wEywmkuD9"
+                            target="_blank"
+                            className="bg-transparent border-2 border-blue-400 hover:bg-blue-800 hover:text-yellow-400 text-blue-400 px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
+                        >
+                           Looking For Something Else?
                         </Link>
                     </div>
                 </div>
@@ -310,7 +318,8 @@ export default function HomePage() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <Link
-                                        to="/services/sell"
+                                        to="https://forms.gle/zATdjtCQJweQnGxW6"
+                                        target="_blank"
                                         className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-blue-900 px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all"
                                     >
                                         List Your Property
@@ -399,7 +408,8 @@ export default function HomePage() {
                                         <ArrowRight className="w-5 h-5" />
                                     </Link>
                                     <Link
-                                        to="/services/sell"
+                                        to="https://forms.gle/zATdjtCQJweQnGxW6"
+                                        target="_blank"
                                         className="inline-flex items-center justify-center gap-2 bg-white border-2 border-yellow-400 hover:bg-yellow-50 text-blue-900 px-8 py-4 rounded-xl font-bold transition-all"
                                     >
                                         List Your Property

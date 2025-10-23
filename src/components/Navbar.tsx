@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, Menu, X, Phone, Mail, MapPin, User, ExternalLink, Smartphone } from "lucide-react";
+import { ChevronDown, Menu, X, Phone, Mail, MapPin, User, ExternalLink } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
@@ -447,19 +447,19 @@ export default function Navbar() {
                                                 </div>
                                             </a>
                                             <div className="border-t border-gray-200 my-2"></div>
-                                            <a
-                                                href="https://qrco.de/ABC_Auctions"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition-all group/item border-2 border-yellow-300"
-                                            >
-                                                <div className="flex items-center gap-3">
-                                                    <div className="bg-yellow-200 rounded-lg p-2 group-hover/item:bg-yellow-300 transition-colors">
-                                                        <Smartphone className="w-4 h-4 text-yellow-700" />
-                                                    </div>
-                                                    <span className="font-bold text-yellow-900 text-sm">Get Mobile App</span>
-                                                </div>
-                                            </a>
+                                            {/*<a*/}
+                                            {/*    href="https://qrco.de/ABC_Auctions"*/}
+                                            {/*    target="_blank"*/}
+                                            {/*    rel="noopener noreferrer"*/}
+                                            {/*    className="flex items-center justify-between p-4 rounded-xl bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition-all group/item border-2 border-yellow-300"*/}
+                                            {/*>*/}
+                                            {/*    <div className="flex items-center gap-3">*/}
+                                            {/*        <div className="bg-yellow-200 rounded-lg p-2 group-hover/item:bg-yellow-300 transition-colors">*/}
+                                            {/*            <Smartphone className="w-4 h-4 text-yellow-700" />*/}
+                                            {/*        </div>*/}
+                                            {/*        <span className="font-bold text-yellow-900 text-sm">Get Mobile App</span>*/}
+                                            {/*    </div>*/}
+                                            {/*</a>*/}
                                         </div>
                                     </div>
                                 </div>
@@ -495,7 +495,99 @@ export default function Navbar() {
                                 >
                                     {item.name}
                                 </a>
+
+
                             ))}
+                            {/* Mobile Dropdowns */}
+                            <div className="space-y-3">
+                                {/* Services */}
+                                <div>
+                                    <button
+                                        onClick={() => setActiveDropdown(activeDropdown === "services" ? "" : "services")}
+                                        className="w-full flex justify-between items-center py-3 px-5 rounded-xl font-bold bg-white text-blue-900 hover:bg-blue-100 transition-all shadow-sm"
+                                    >
+                                        <span>Services</span>
+                                        <ChevronDown
+                                            className={`w-5 h-5 transition-transform duration-300 ${
+                                                activeDropdown === "services" ? "rotate-180" : ""
+                                            }`}
+                                        />
+                                    </button>
+                                    {activeDropdown === "services" && (
+                                        <div className="mt-2 space-y-2 pl-4">
+                                            {serviceItems.map((sub) => (
+                                                <a
+                                                    key={sub.name}
+                                                    href={sub.href}
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                    className="block py-2 px-4 rounded-lg bg-blue-50 hover:bg-blue-100 text-sm text-blue-900 font-medium"
+                                                >
+                                                    {sub.icon} {sub.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* About */}
+                                <div>
+                                    <button
+                                        onClick={() => setActiveDropdown(activeDropdown === "about" ? "" : "about")}
+                                        className="w-full flex justify-between items-center py-3 px-5 rounded-xl font-bold bg-white text-blue-900 hover:bg-blue-100 transition-all shadow-sm"
+                                    >
+                                        <span>About</span>
+                                        <ChevronDown
+                                            className={`w-5 h-5 transition-transform duration-300 ${
+                                                activeDropdown === "about" ? "rotate-180" : ""
+                                            }`}
+                                        />
+                                    </button>
+                                    {activeDropdown === "about" && (
+                                        <div className="mt-2 space-y-2 pl-4">
+                                            {aboutItems.map((sub) => (
+                                                <a
+                                                    key={sub.name}
+                                                    href={sub.href}
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                    className="block py-2 px-4 rounded-lg bg-blue-50 hover:bg-blue-100 text-sm text-blue-900 font-medium"
+                                                >
+                                                    {sub.icon} {sub.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Franchising */}
+                                <div>
+                                    <button
+                                        onClick={() => setActiveDropdown(activeDropdown === "franchising" ? "" : "franchising")}
+                                        className="w-full flex justify-between items-center py-3 px-5 rounded-xl font-bold bg-white text-blue-900 hover:bg-blue-100 transition-all shadow-sm"
+                                    >
+                                        <span>Franchising</span>
+                                        <ChevronDown
+                                            className={`w-5 h-5 transition-transform duration-300 ${
+                                                activeDropdown === "franchising" ? "rotate-180" : ""
+                                            }`}
+                                        />
+                                    </button>
+                                    {activeDropdown === "franchising" && (
+                                        <div className="mt-2 space-y-2 pl-4">
+                                            {franchisingItems.map((sub) => (
+                                                <a
+                                                    key={sub.name}
+                                                    href={sub.href}
+                                                    onClick={() => setIsMobileMenuOpen(false)}
+                                                    className="block py-2 px-4 rounded-lg bg-blue-50 hover:bg-blue-100 text-sm text-blue-900 font-medium"
+                                                >
+                                                    {sub.icon} {sub.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+
 
                             <div className="pt-4 space-y-3">
                                 <div className="text-xs uppercase text-gray-500 font-bold px-2 tracking-wider flex items-center gap-2">

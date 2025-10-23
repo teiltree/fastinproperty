@@ -1,28 +1,38 @@
-import {Bath, Bed, ChevronLeft, ChevronRight, MapPin, Square, Bell, Mail, Target, TrendingUp} from "lucide-react";
-import {useState} from "react";
+import {
+    Bath,
+    Bed,
+    ChevronLeft,
+    ChevronRight,
+    MapPin,
+    Square,
+    Bell,
+    Mail,
+    Target,
+    TrendingUp,
+} from "lucide-react";
+import { useState } from "react";
+
+type Property = {
+    image: string;
+    price: string;
+    address: string;
+    description: string;
+    bedrooms: number;
+    bathrooms: number;
+    size: string;
+    type: string;
+};
 
 export default function AlertsPage() {
-  // @ts-ignore
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [email, setEmail] = useState("");
-  const [location, setLocation] = useState("");
+    // @ts-ignore
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [email, setEmail] = useState("");
+    const [location, setLocation] = useState("");
 
-  // @ts-ignore
-    const recentlySold = [
-    // {
-    //   image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop&auto=format",
-    //   price: "R1,000,000",
-    //   address: "14 Fountain Ave, Hutten Heights, Newcastle, KwaZulu-Natal",
-    //   description: "Luxurious Family Living in a Prestigious Neighbourhood",
-    //   bedrooms: 3,
-    //   bathrooms: 2,
-    //   size: "1250 m²",
-    //   type: "Residential | House",
-    // },
+    const recentlySold: Property[] = [];
 
-  ];
 
-  const nextSlide = () => {
+    const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % Math.ceil(recentlySold.length / 4));
   };
 
@@ -35,7 +45,7 @@ export default function AlertsPage() {
     console.log('Subscribing:', { email, location });
   };
 
-  // @ts-expect-error
+
     return (
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
