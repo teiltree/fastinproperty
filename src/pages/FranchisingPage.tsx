@@ -100,10 +100,10 @@ export default function FranchisingPage() {
 
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-3xl font-bold text-blue-900 mb-6">Why Choose FastIn Property Franchising?</h3>
+                    <h3 className="text-3xl font-bold text-blue-900 mb-6">Why Choose FastIn Property Auctions Franchising?</h3>
                     <div className="space-y-6 text-gray-700">
                       <p className="text-lg leading-relaxed">
-                        Join the FastIn Property family and become part of Zimbabwe's leading online property auction platform.
+                        Join the FastIn Property Auctions family and become part of Zimbabwe's leading online property auction platform.
                         Our proven business model and comprehensive support system make franchising with us a smart investment.
                       </p>
                       <p className="text-lg leading-relaxed">
@@ -233,7 +233,7 @@ export default function FranchisingPage() {
                   <h2 className="text-4xl font-bold text-blue-900 mb-8">Partnership Opportunity</h2>
                   <div className="space-y-6">
                     <p className="text-gray-700 text-lg leading-relaxed">
-                      Join forces with FastIn Property and become part of a revolutionary approach to real estate sales.
+                      Join forces with FastIn Property Auctions and become part of a revolutionary approach to real estate sales.
                       Our franchise model offers you the opportunity to own and operate your own online auction business
                       with full support from our experienced team.
                     </p>
@@ -268,7 +268,7 @@ export default function FranchisingPage() {
                   <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-100 to-yellow-100 rounded-full text-blue-800 text-sm font-bold mb-6">
                     GET STARTED TODAY
                   </div>
-                  <h2 className="text-4xl font-bold text-blue-900 mb-4">Start Your Journey with FastIn Property</h2>
+                  <h2 className="text-4xl font-bold text-blue-900 mb-4">Start Your Journey with FastIn Property Auctions</h2>
                   <p className="text-gray-600 text-lg">Take the first step towards owning your own online auction business</p>
                 </div>
 

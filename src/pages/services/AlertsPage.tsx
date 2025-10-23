@@ -7,47 +7,19 @@ export default function AlertsPage() {
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
 
-  const recentlySold = [
-    {
-      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop&auto=format",
-      price: "R1,000,000",
-      address: "14 Fountain Ave, Hutten Heights, Newcastle, KwaZulu-Natal",
-      description: "Luxurious Family Living in a Prestigious Neighbourhood",
-      bedrooms: 3,
-      bathrooms: 2,
-      size: "1250 m²",
-      type: "Residential | House",
-    },
-    {
-      image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=300&fit=crop&auto=format",
-      price: "R2,550,000",
-      address: "51 Princeps Crescent, Garsfontein, Pretoria, Gauteng",
-      description: "Exceptional 4 Bedroom Home in Garsfontein",
-      bedrooms: 4,
-      bathrooms: 3,
-      size: "851 m²",
-      type: "Residential | House",
-    },
-    {
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop&auto=format",
-      price: "R1,600,000",
-      address: "26 Kabeljon Street, Kleinbaai, Gansbaai, Western Cape",
-      description: "5 Bedroom House on Auction in Gansbaai",
-      bedrooms: 5,
-      bathrooms: 3,
-      size: "900 m²",
-      type: "Residential | House",
-    },
-    {
-      image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=300&fit=crop&auto=format",
-      price: "R7,800,000",
-      address: "134 Rivierpad Street, Buffelsdrift AH, Wonderboom, Gauteng",
-      description: "Discover an unparalleled lifestyle - Don't miss out!",
-      bedrooms: 6,
-      bathrooms: 4,
-      size: "3000 m²",
-      type: "Residential | House",
-    },
+  // @ts-ignore
+    const recentlySold = [
+    // {
+    //   image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop&auto=format",
+    //   price: "R1,000,000",
+    //   address: "14 Fountain Ave, Hutten Heights, Newcastle, KwaZulu-Natal",
+    //   description: "Luxurious Family Living in a Prestigious Neighbourhood",
+    //   bedrooms: 3,
+    //   bathrooms: 2,
+    //   size: "1250 m²",
+    //   type: "Residential | House",
+    // },
+
   ];
 
   const nextSlide = () => {
@@ -63,7 +35,8 @@ export default function AlertsPage() {
     console.log('Subscribing:', { email, location });
   };
 
-  return (
+  // @ts-expect-error
+    return (
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">

@@ -14,13 +14,13 @@ export default function TeamPage() {
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Our leadership team combines extensive real estate experience with innovative thinking, ensuring that
-                Fastin Property Auctions remains at the forefront of industry developments.
+                FastIn Property Auctions remains at the forefront of industry developments.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Each team member brings unique expertise and a shared commitment to delivering exceptional results for our clients and partners.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                The Fastin Property Auctions team is committed to realizing the best value for Sellers and Buyers through a simple, transparent and auditable process.
+                The FastIn Property Auctions team is committed to realizing the best value for Sellers and Buyers through a simple, transparent and auditable process.
               </p>
             </div>
           </div>

@@ -39,7 +39,7 @@ export default function FinancePage() {
                 <div className="space-y-6 text-lg text-gray-700">
                   <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
                     <p className="leading-relaxed font-semibold text-blue-900">
-                      All finance options are available when you buy with FastIn Property.
+                      All finance options are available when you buy with FastIn Property Auctions.
                       <span className="text-yellow-600">Traditional finance welcome!</span>
                     </p>
                   </div>

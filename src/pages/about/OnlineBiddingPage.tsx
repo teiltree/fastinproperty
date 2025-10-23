@@ -23,7 +23,7 @@ export default function OnlineBiddingPage() {
                 <span className="text-white">Online Bidding</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-light text-white mb-3">Online Bidding</h1>
-              <p className="text-blue-100 text-lg">How to bid online with Fastin Property Auctions</p>
+              <p className="text-blue-100 text-lg">How to bid online with FastIn Property Auctions</p>
             </div>
           </div>
         </div>
@@ -72,14 +72,14 @@ export default function OnlineBiddingPage() {
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold">1</div>
                   <div>
                     <h3 className="text-xl font-semibold text-blue-900 mb-1">Download our Auction App</h3>
-                    <p className="text-gray-700">Fastin Property Auctions Mobile App</p>
+                    <p className="text-gray-700">FastIn Property Auctions Mobile App</p>
                     <div className="mt-3 flex gap-3">
-                      <a
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition"
-                        href="https://qrco.de/ABC_Auctions" target="_blank"
+                      <button
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition opacity-50 cursor-not-allowed"
+                        disabled
                       >
-                        <Smartphone className="w-4 h-4" /> Get the App
-                      </a>
+                        <Smartphone className="w-4 h-4" /> Get the App (Coming Soon)
+                      </button>
                     </div>
                   </div>
                 </li>
@@ -98,7 +98,7 @@ export default function OnlineBiddingPage() {
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold">3</div>
                   <div>
                     <h3 className="text-xl font-semibold text-blue-900 mb-1">Sign up and become a member</h3>
-                    <p className="text-gray-700">Join the Fastin Property Auctions online community.</p>
+                    <p className="text-gray-700">Join the FastIn Property Auctions online community.</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
@@ -107,7 +107,7 @@ export default function OnlineBiddingPage() {
                     <h3 className="text-xl font-semibold text-blue-900 mb-2">Get VERIFIED</h3>
                     <div className="bg-blue-50 border border-blue-100 rounded-xl p-4">
                       <p className="text-gray-700 mb-3">
-                        By getting verified, your bidding limit will automatically increase and you will gain FREE entry into the Fastin Property Auctions Membership Program.
+                        By getting verified, your bidding limit will automatically increase and you will gain FREE entry into the FastIn Property Auctions Membership Program.
                       </p>
                       <ul className="grid md:grid-cols-3 gap-3">
                         <li className="flex items-start gap-2"><CheckCircle className="w-5 h-5 text-emerald-500 mt-0.5" /> Verify your email with an OTP message</li>

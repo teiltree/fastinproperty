@@ -36,7 +36,7 @@ export default function FootprintPage() {
                     {/* Introduction */}
                     <div className="text-center mb-16">
                         <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                            In the highly competitive real estate industry, service delivery is of utmost importance. At Fastin Property Auctions, we are able to provide our services nationally across Zimbabwe.
+                            In the highly competitive real estate industry, service delivery is of utmost importance. At FastIn Property Auctions, we are able to provide our services nationally across Zimbabwe.
                         </p>
 
                         <div className="bg-white/80 backdrop-blur-sm rounded-xl ring-1 ring-gray-200 p-8 shadow-sm">
@@ -83,7 +83,7 @@ export default function FootprintPage() {
                             <div>
                                 <h3 className="text-2xl font-semibold text-blue-800 mb-4">What this means for you</h3>
                                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                                    The first main advantage of using FastIn Property is that you will be served by knowledgeable brokers and executive team leaders with the experience to market your property to its full potential.
+                                    The first main advantage of using FastIn Property Auctions is that you will be served by knowledgeable brokers and executive team leaders with the experience to market your property to its full potential.
                                 </p>
                                 <p className="text-gray-600 leading-relaxed">
                                     We are also committed to continually cultivating knowledge and creating an environment whereby our clients achieve success through our service.
@@ -133,7 +133,7 @@ export default function FootprintPage() {
                         <div className="bg-white rounded-xl shadow-sm ring-1 ring-gray-200 p-8">
                             <h2 className="text-3xl font-semibold text-gray-900 text-center mb-6">Large Support Framework</h2>
                             <p className="text-gray-700 text-lg leading-relaxed text-center">
-                                The second advantage of using Fastin Property Auctions is the access to partnerships we have built with highly skilled individuals from the legal, banking, and financial institutions. This increases our service capabilities. At Fastin Property Auctions our large staff complement is our asset. At Fastin Property Auctions you have access to all levels of support including access to decision-makers.
+                                The second advantage of using FastIn Property Auctions is the access to partnerships we have built with highly skilled individuals from the legal, banking, and financial institutions. This increases our service capabilities. At FastIn Property Auctions our large staff complement is our asset. At FastIn Property Auctions you have access to all levels of support including access to decision-makers.
                             </p>
                         </div>
                     </div>
@@ -143,7 +143,7 @@ export default function FootprintPage() {
                         <div className="bg-gradient-to-r from-blue-800 to-blue-700 text-white rounded-xl p-8 shadow-sm">
                             <h2 className="text-3xl font-semibold text-center mb-6">Professional Responsibility</h2>
                             <p className="text-lg leading-relaxed text-center">
-                                The third advantage of using FastIn Property is our professional responsibility to clients. As a large brokerage, we have a responsibility to act professionally and deliver first-class services to our clients.
+                                The third advantage of using FastIn Property Auctions is our professional responsibility to clients. As a large brokerage, we have a responsibility to act professionally and deliver first-class services to our clients.
                             </p>
                         </div>
                     </div>
