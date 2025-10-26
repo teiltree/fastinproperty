@@ -4,7 +4,7 @@ import { Shield, FileText } from "lucide-react";
 
 export default function TermsPage() {
   useEffect(() => {
-    document.title = "Terms of Use • FastIn Property Auctions";
+    document.title = "Terms of Use • Fastin Property Auctions";
   }, []);
 
   return (
@@ -45,7 +45,7 @@ export default function TermsPage() {
 
               <div className="space-y-6 text-slate-700 text-base leading-relaxed">
                 <p>
-                  Welcome to our website. If you continue to browse and use this website you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern the relationship between you and FastIn Property Auctions in relation to this website.
+                  Welcome to our website. If you continue to browse and use this website you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern the relationship between you and Fastin Property Auctions in relation to this website.
                 </p>
                 <p>
                   The terms Company or ‘us’ or ‘we’ or ‘our’ refers to the owner of the website. The term ‘you’ refers to the user or viewer of our website.

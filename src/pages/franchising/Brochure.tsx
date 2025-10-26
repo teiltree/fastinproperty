@@ -51,7 +51,7 @@ export default function BrochurePage() {
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
-                            FastIn Property Auctions
+                            Fastin Property Auctions
                         </h1>
                         <h2 className="text-3xl md:text-5xl font-bold text-yellow-400 mb-8">
                             Franchise Brochure
@@ -63,7 +63,7 @@ export default function BrochurePage() {
                                 <img
                                     className="w-auto h-32 md:h-40 rounded-2xl"
                                     src="https://i.postimg.cc/g0pZvzDg/main.jpg"
-                                    alt="FastIn Property Auctions Logo"
+                                    alt="Fastin Property Auctions Logo"
                                 />
                             </div>
                         </div>
@@ -99,14 +99,14 @@ export default function BrochurePage() {
                     <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-xl p-8 md:p-12 border border-blue-100">
                         <div className="text-center mb-8">
                             <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-                                Become FastIn Property Auctions in Your Area
+                                Become Fastin Property Auctions in Your Area
                             </h2>
                             <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full mb-6"></div>
                         </div>
 
                         <div className="prose prose-lg max-w-none">
                             <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                                You Become <span className="font-bold text-blue-900">FastIn Property Auctions in "Your Area"</span> — i.e., FastIn Property Auctions <span className="italic">"Borrowdale"</span>, <span className="italic">"Mutare"</span>, <span className="italic">"Bulawayo"</span>, etc.
+                                You Become <span className="font-bold text-blue-900">Fastin Property Auctions in "Your Area"</span> — i.e., Fastin Property Auctions <span className="italic">"Borrowdale"</span>, <span className="italic">"Mutare"</span>, <span className="italic">"Bulawayo"</span>, etc.
                             </p>
 
                             <div className="bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-8 border-2 border-yellow-200 mb-6">
@@ -152,11 +152,11 @@ export default function BrochurePage() {
                         {[
                             { step: "1", title: "YOU source the property", icon: FileSearch },
                             { step: "2", title: "YOU pass it to us", icon: ArrowRight },
-                            { step: "3", title: "FastIn markets it, handles legals", icon: FileText },
+                            { step: "3", title: "Fastin markets it, handles legals", icon: FileText },
                             { step: "4", title: "YOU arrange viewings (or outsource)", icon: Home },
-                            { step: "5", title: "FastIn negotiates offers", icon: Handshake },
-                            { step: "6", title: "FastIn agrees sale & exchanges contracts", icon: FileCheck },
-                            { step: "7", title: "YOU + FastIn get paid", icon: DollarSign },
+                            { step: "5", title: "Fastin negotiates offers", icon: Handshake },
+                            { step: "6", title: "Fastin agrees sale & exchanges contracts", icon: FileCheck },
+                            { step: "7", title: "YOU + Fastin get paid", icon: DollarSign },
                             { step: "8", title: "Repeat", icon: TrendingUp }
                         ].map((item, index) => {
                             const Icon = item.icon;

@@ -169,7 +169,7 @@ export default function Navbar() {
                                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-blue-900/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
                                 <img
                                     src="https://i.postimg.cc/g0pZvzDg/main.jpg"
-                                    alt="FastIn Property Auctions"
+                                    alt="Fastin Property Auctions"
                                     className="relative h-16 md:h-20 w-auto transition-transform duration-300 group-hover:scale-105 rounded-2xl"
                                 />
                             </div>

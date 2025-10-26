@@ -4,7 +4,7 @@ import { HelpCircle, ChevronDown, Info } from "lucide-react";
 
 export default function FaqsPage() {
   useEffect(() => {
-    document.title = "FAQs • FastIn Property Auctions";
+    document.title = "FAQs • Fastin Property Auctions";
   }, []);
 
   return (
@@ -49,12 +49,12 @@ export default function FaqsPage() {
                   <summary className="flex items-center justify-between cursor-pointer list-none">
                     <div className="flex items-center gap-2 text-left">
                       <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">1</span>
-                      <h3 className="font-semibold text-slate-900">Where is FastIn Property Auctions?</h3>
+                      <h3 className="font-semibold text-slate-900">Where is Fastin Property Auctions?</h3>
                     </div>
                     <ChevronDown className="w-5 h-5 text-slate-500 transition-transform group-open:rotate-180" />
                   </summary>
                   <div className="mt-3 text-slate-700">
-                    FastIn Property Auctions has its main Branch at FastIn House, 2 Smithfield Way, Longlands Industrial Site, Marondera. Telephone +263784086388 / +263719086388
+                    Fastin Property Auctions has its main Branch at Fastin House, 2 Smithfield Way, Longlands Industrial Site, Marondera. Telephone +263784086388 / +263719086388
                   </div>
                 </details>
 
@@ -69,7 +69,7 @@ export default function FaqsPage() {
                   </summary>
                   <div className="mt-3 text-slate-700 space-y-3">
                     <p>
-                      FastIn Property Auctions reserves the right to change any of the commission charges quoted below. At present however our commission rates applicable to the Sales Floors are as follows:
+                      Fastin Property Auctions reserves the right to change any of the commission charges quoted below. At present however our commission rates applicable to the Sales Floors are as follows:
                     </p>
                     <div className="overflow-x-auto">
                       <table className="min-w-[480px] w-full text-left text-sm">
@@ -105,7 +105,7 @@ export default function FaqsPage() {
                   </summary>
                   <div className="mt-3 text-slate-700 space-y-3">
                     <p>
-                      FastIn Property Auctions reserves the right to change any of the commission charges quoted below. At present however our commission rates applicable to the Sales Floors are as follows:
+                      Fastin Property Auctions reserves the right to change any of the commission charges quoted below. At present however our commission rates applicable to the Sales Floors are as follows:
                     </p>
                     <div className="overflow-x-auto">
                       <table className="min-w-[480px] w-full text-left text-sm">
@@ -141,7 +141,7 @@ export default function FaqsPage() {
                   </summary>
                   <div className="mt-3 text-slate-700 space-y-3">
                     <p>
-                      FastIn Property Auctions reserves the right to change any of the commission charges quoted below. At present however our commission rates applicable to the Sales Floors are as follows:
+                      Fastin Property Auctions reserves the right to change any of the commission charges quoted below. At present however our commission rates applicable to the Sales Floors are as follows:
                     </p>
                     <div className="overflow-x-auto">
                       <table className="min-w-[480px] w-full text-left text-sm">
@@ -177,7 +177,7 @@ export default function FaqsPage() {
                   </summary>
                   <div className="mt-3 text-slate-700 space-y-3">
                     <p>
-                      FastIn Property Auctions reserves the right to change any of the commission charges quoted below. At present however our commission rates applicable to the Sales Floors are as follows:
+                      Fastin Property Auctions reserves the right to change any of the commission charges quoted below. At present however our commission rates applicable to the Sales Floors are as follows:
                     </p>
                     <div className="overflow-x-auto">
                       <table className="min-w-[480px] w-full text-left text-sm">
@@ -325,7 +325,7 @@ export default function FaqsPage() {
                   <summary className="flex items-center justify-between cursor-pointer list-none">
                     <div className="flex items-center gap-2 text-left">
                       <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">14</span>
-                      <h3 className="font-semibold text-slate-900">What are the applicable removals fees when utilizing FastIn Property Auctions's Transport Fleet?</h3>
+                      <h3 className="font-semibold text-slate-900">What are the applicable removals fees when utilizing Fastin Property Auctions's Transport Fleet?</h3>
                     </div>
                     <ChevronDown className="w-5 h-5 text-slate-500 transition-transform group-open:rotate-180" />
                   </summary>

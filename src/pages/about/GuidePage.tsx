@@ -537,7 +537,7 @@ export default function GuidePage() {
                             {
                                 id: 'listings',
                                 question: 'Where can I find auction listings?',
-                                answer: 'Auction listings are available on property websites like FastIn Property Auctions, local newspapers, and through real estate firms that specialize in auctions. You can also subscribe to auction alerts to receive notifications about upcoming properties that match your criteria. Our website maintains an up-to-date catalog of all available properties.'
+                                answer: 'Auction listings are available on property websites like Fastin Property Auctions, local newspapers, and through real estate firms that specialize in auctions. You can also subscribe to auction alerts to receive notifications about upcoming properties that match your criteria. Our website maintains an up-to-date catalog of all available properties.'
                             },
                             {
                                 id: 'deposit',

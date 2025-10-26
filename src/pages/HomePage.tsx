@@ -114,7 +114,7 @@ export default function HomePage() {
             rating: 5
         },
         {
-            quote: "My property was with estate agents for over a year. FastIn Property Auctions sold it in one week. Incredible results!",
+            quote: "My property was with estate agents for over a year. Fastin Property Auctions sold it in one week. Incredible results!",
             author: "Altoyne Muller",
             location: "Mpumalanga",
             rating: 5
@@ -162,7 +162,7 @@ export default function HomePage() {
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
                             Welcome to <br />
-                            <span className="text-yellow-400">FastIn Property Auctions</span>
+                            <span className="text-yellow-400">Fastin Property Auctions</span>
                         </h1>
                         <p className="text-xl mb-4 text-blue-100 font-semibold">Virtual Online Auctioneers</p>
                         <p className="text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
@@ -477,7 +477,7 @@ export default function HomePage() {
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">How Online Auctions Work</h2>
                     <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
-                        Learn how FastIn Property Auctions's virtual auctions make buying and selling simple, transparent, and secure. From registering and browsing properties to bidding online in real-time and closing the deal — we guide you through every step.
+                        Learn how Fastin Property Auctions's virtual auctions make buying and selling simple, transparent, and secure. From registering and browsing properties to bidding online in real-time and closing the deal — we guide you through every step.
                     </p>
                     <Link
                         to="/about/online-bidding"

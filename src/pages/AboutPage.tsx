@@ -91,7 +91,7 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto">
             {/* Brand Introduction */}
             <div className="text-center mb-20">
-              <h2 className="text-5xl font-light text-blue-900 mb-8">About FastIn Property Auctions</h2>
+              <h2 className="text-5xl font-light text-blue-900 mb-8">About Fastin Property Auctions</h2>
               <div className="w-16 h-1 bg-amber-500 mx-auto mb-12"></div>
             </div>
 
@@ -102,13 +102,13 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 left-0 w-48 h-48 bg-amber-400/5 rounded-full translate-y-16 -translate-x-16"></div>
                 <div className="relative z-10">
                   <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic">
-                    <p>At FastIn Property Auctions, we are redefining the landscape of real estate auctions in Zimbabwe. As a boutique firm, we combine a personalized approach with professional excellence, offering clients a fresh and progressive alternative to traditional property services.</p>
+                    <p>At Fastin Property Auctions, we are redefining the landscape of real estate auctions in Zimbabwe. As a boutique firm, we combine a personalized approach with professional excellence, offering clients a fresh and progressive alternative to traditional property services.</p>
                     <br/>
                     <p>With vast industry experience, our team is both seasoned and forward-thinking—committed to continuous learning and innovation. We pride ourselves on being approachable, confident, and deeply passionate about helping our clients achieve their property goals.</p>
                     <br/>
                     <p>Our services span online and onsite auctions, private treaty sales, property evaluations, marketing campaigns, and legal compliance. With a national footprint and trusted partnerships across the industry, we deliver results with integrity, precision, and enthusiasm.</p>
                     <br/>
-                    <p>At FastIn Property Auctions, every client interaction is met with the same energy and dedication as our very first day—because your success is our priority.</p>
+                    <p>At Fastin Property Auctions, every client interaction is met with the same energy and dedication as our very first day—because your success is our priority.</p>
                   </blockquote>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 <div className={`transition-all duration-300 ${expandedSection === 'overview' ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                   <div className="p-6 space-y-4">
                     <p className="text-gray-700 leading-relaxed">
-                      FastIn Property Auctions is a specialist property brokerage and Auctioneer / Registered Estate Agenting company , established with a dream of bringing a new and fresh approach to selling real estate via Property Auctions.
+                      Fastin Property Auctions is a specialist property brokerage and Auctioneer / Registered Estate Agenting company , established with a dream of bringing a new and fresh approach to selling real estate via Property Auctions.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
                       Our Specialist property team are experts in property sales, Auctioneer / Registered Estate Agenting, brokerage, rentals, and appraisals of property providing accurate and in-depth knowledge, advice and service to both buyers and sellers of property. We specialise in commercial, industrial, retail and residential property disposals on both auction and private treaty platforms.
@@ -151,13 +151,13 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Why FastIn Property Auctions */}
+              {/* Why Fastin Property Auctions */}
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div
                     className="bg-gradient-to-r from-amber-600 to-amber-500 text-white p-6 cursor-pointer flex justify-between items-center"
                     onClick={() => toggleSection('why')}
                 >
-                  <h3 className="text-2xl font-semibold">Why FastIn Property Auctions</h3>
+                  <h3 className="text-2xl font-semibold">Why Fastin Property Auctions</h3>
                   <ChevronDown className={`w-6 h-6 transition-transform duration-300 ${expandedSection === 'why' ? 'rotate-180' : ''}`} />
                 </div>
                 <div className={`transition-all duration-300 ${expandedSection === 'why' ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 <div className="bg-gradient-to-r from-blue-900 to-amber-600 text-white p-8">
                   <h3 className="text-3xl font-semibold mb-4">Service Options & Networking</h3>
                   <p className="text-blue-100 text-lg">
-                    The FastIn Property Auctions Group offers a comprehensive range of services and nationwide networking which gives properties
+                    The Fastin Property Auctions Group offers a comprehensive range of services and nationwide networking which gives properties
                     the paramount exposure and attention in the real estate marketplace.
                   </p>
                 </div>

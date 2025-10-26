@@ -147,7 +147,7 @@ export default function SellPage() {
                 <div className="mb-24">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-                            Selling Online with FastIn Property Auctions
+                            Selling Online with Fastin Property Auctions
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full"></div>
                     </div>
@@ -159,7 +159,7 @@ export default function SellPage() {
                             </p>
 
                             <p className="text-gray-700 text-lg leading-relaxed">
-                                At FastIn Property Auctions we focus all our time and energy on marketing and exposing your property to the ever-growing digital audiences via tailor-made traditional, electronic and social media marketing campaigns.
+                                At Fastin Property Auctions we focus all our time and energy on marketing and exposing your property to the ever-growing digital audiences via tailor-made traditional, electronic and social media marketing campaigns.
                             </p>
                         </div>
                     </div>

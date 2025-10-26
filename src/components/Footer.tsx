@@ -10,7 +10,8 @@ import {
     Star,
     Clock
 } from "lucide-react";
-import zimFlag from "@/assets/flag.png";
+// import zimFlag from "@/assets/flag.png";
+import flagGif from "@/assets/flag.mp4"
 
 export default function Footer() {
 
@@ -52,7 +53,7 @@ export default function Footer() {
                                 <img
                                     className="w-auto h-20 rounded-xl shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300"
                                     src="https://i.postimg.cc/g0pZvzDg/main.jpg"
-                                    alt="FastIn Property Auctions Logo"
+                                    alt="Fastin Property Auctions Logo"
                                 />
                             </div>
 
@@ -254,16 +255,21 @@ export default function Footer() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
                         <p className="text-blue-300 text-xs">
-                            © 2025 FastIn Property Auctions • 2 Smithfield Way, Longlands Industrial Site, Marondera • VAT: 4320242924
+                            © 2025 Fastin Property Auctions • 2 Smithfield Way, Longlands Industrial Site, Marondera • VAT: 4320242924
                         </p>
 
                         <div className="flex items-center gap-6 text-blue-300 text-xs">
                             <div className="flex items-center gap-2 bg-blue-900/90 px-3 py-1.5 rounded-lg">
-                                <img
-                                    src={zimFlag}
-                                    alt="Zimbabwean flag"
-                                    className="w-6 h-5 object-cover rounded-sm"
-                                />
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-auto h-5 object-cover rounded-sm"
+                                >
+                                    <source src={flagGif} type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                                 <span className="font-semibold text-sm text-white">
         Proudly Zimbabwean
       </span>

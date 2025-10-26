@@ -24,7 +24,7 @@ export default function MarketingPage() {
             <div className="text-center mb-20">
               <div className="max-w-4xl mx-auto">
                 <p className="text-2xl text-gray-700 leading-relaxed mb-12 font-light">
-                  The FastIn Property Auctions offers a comprehensive range of services & nationwide networking which gives properties the
+                  The Fastin Property Auctions offers a comprehensive range of services & nationwide networking which gives properties the
                   <span className="font-semibold text-blue-900"> paramount exposure</span> and attention in the real estate marketplace.
                 </p>
 
@@ -32,13 +32,13 @@ export default function MarketingPage() {
                   <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-900 to-yellow-500"></div>
 
                   <p className="text-gray-700 leading-relaxed mb-8 text-lg">
-                    Selling a home in today's market can be challenging - the FastIn Property Auctions Team understands that. While the market can be challenging, hundreds of homes are sold each week. What's the difference between selling your home or failing to do so?
-                    <span className="font-bold text-blue-900"> The details!</span> Whether it's our proven sales approach, effective marketing campaigns, or utilizing our extensive network, at FastIn Property Auctions no detail is overlooked.
+                    Selling a home in today's market can be challenging - the Fastin Property Auctions Team understands that. While the market can be challenging, hundreds of homes are sold each week. What's the difference between selling your home or failing to do so?
+                    <span className="font-bold text-blue-900"> The details!</span> Whether it's our proven sales approach, effective marketing campaigns, or utilizing our extensive network, at Fastin Property Auctions no detail is overlooked.
                   </p>
 
                   <div className="bg-gradient-to-r from-blue-50 to-yellow-50 rounded-xl p-6 border-l-4 border-yellow-500">
                     <p className="text-gray-800 leading-relaxed text-lg font-medium">
-                      When we say <span className="text-blue-900 font-bold">"Selling Real Estate the Right Way"</span>, we mean it! Our clients come first. With a proven track record, the right skill set, and years of experience, the FastIn Property Auctions team has the right tools to successfully sell your home.
+                      When we say <span className="text-blue-900 font-bold">"Selling Real Estate the Right Way"</span>, we mean it! Our clients come first. With a proven track record, the right skill set, and years of experience, the Fastin Property Auctions team has the right tools to successfully sell your home.
                     </p>
                   </div>
                 </div>

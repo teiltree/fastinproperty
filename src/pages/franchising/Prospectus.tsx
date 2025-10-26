@@ -54,7 +54,7 @@ export default function ProspectusPage() {
                         </h1>
 
                         <h2 className="text-3xl md:text-5xl font-bold text-yellow-400 mb-8">
-                            FastIn Property Auctions Franchise
+                            Fastin Property Auctions Franchise
                         </h2>
 
                         <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -222,7 +222,7 @@ export default function ProspectusPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[
-                                { icon: Globe, text: "Your own branded website (e.g. FastIn Property Auctions Mutare)" },
+                                { icon: Globe, text: "Your own branded website (e.g. Fastin Property Auctions Mutare)" },
                                 { icon: Phone, text: "Dedicated email and phone systems with answering services" },
                                 { icon: Building2, text: "Major portal access and bidding platform access" },
                                 { icon: MapPin, text: "Property and land data tools" },
@@ -518,7 +518,7 @@ export default function ProspectusPage() {
                             </h2>
 
                             <p className="text-xl text-blue-900 leading-relaxed max-w-4xl mx-auto mb-8">
-                                Watched the big property names on media and billboards? They turned ambition into empire – and started from the ground up. Now it's your shot. Your name. Your patch. Backed by FastIn Property Auctions.
+                                Watched the big property names on media and billboards? They turned ambition into empire – and started from the ground up. Now it's your shot. Your name. Your patch. Backed by Fastin Property Auctions.
                             </p>
 
                             <div className="bg-blue-900/20 backdrop-blur-sm rounded-2xl p-8 max-w-3xl mx-auto border-2 border-blue-900/30">
@@ -579,7 +579,7 @@ export default function ProspectusPage() {
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full mb-6"></div>
                         <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                            Why FastIn Property Auctions has everything you need to build a thriving, future-proof property business:
+                            Why Fastin Property Auctions has everything you need to build a thriving, future-proof property business:
                         </p>
                     </div>
 
@@ -593,12 +593,12 @@ export default function ProspectusPage() {
                             {
                                 number: "2",
                                 title: "High Levels of Automation",
-                                description: "You're not tied to a high-street branch or fixed hours. FastIn Property Auctions is fully digital – our efficient systems, tools, and templates streamline operations so you can focus on growing your business, not just running it."
+                                description: "You're not tied to a high-street branch or fixed hours. Fastin Property Auctions is fully digital – our efficient systems, tools, and templates streamline operations so you can focus on growing your business, not just running it."
                             },
                             {
                                 number: "3",
                                 title: "No Stock or Inventory to Fund",
-                                description: "Forget expensive inventory. With FastIn Property Auctions, your 'product' is the service you deliver – marketing and selling properties via auction. It's a low overhead, high-margin business model, with everything you need at your fingertips."
+                                description: "Forget expensive inventory. With Fastin Property Auctions, your 'product' is the service you deliver – marketing and selling properties via auction. It's a low overhead, high-margin business model, with everything you need at your fingertips."
                             },
                             {
                                 number: "4",
@@ -711,7 +711,7 @@ export default function ProspectusPage() {
                             <h3 className="text-3xl font-bold mb-6 text-blue-900">Smart Data & Digital Tools</h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {[
-                                    "FastIn Property Auctions & portal data (e.g. properties listed 12+ months, price reduced 3+ times)",
+                                    "Fastin Property Auctions & portal data (e.g. properties listed 12+ months, price reduced 3+ times)",
                                     "Targeted letter campaigns to specific property types or owners",
                                     "Vacant property registers",
                                     "Paid online advertising (PPC) – powerful tool for local targeting",
@@ -754,7 +754,7 @@ export default function ProspectusPage() {
                                 <div>
                                     <h3 className="text-3xl font-bold mb-4 text-yellow-400">Advanced Lead Generation</h3>
                                     <p className="text-xl text-blue-100 leading-relaxed">
-                                        All franchisees will benefit from access to our exclusive <span className="font-bold">FastIn Property Auctions Aggregator Platform</span> – a powerful daily property news hub and community resource.
+                                        All franchisees will benefit from access to our exclusive <span className="font-bold">Fastin Property Auctions Aggregator Platform</span> – a powerful daily property news hub and community resource.
                                     </p>
                                 </div>
                             </div>
@@ -846,7 +846,7 @@ export default function ProspectusPage() {
 
                         <div className="mt-12 pt-8 border-t border-white/20">
                             <p className="text-2xl font-bold text-yellow-400 mb-4">
-                                FastIn Property Auctions doesn't just tick the boxes – it redefines them.
+                                Fastin Property Auctions doesn't just tick the boxes – it redefines them.
                             </p>
                             <p className="text-lg text-blue-200">
                                 With demand surging, the industry shifting, and digital innovation at the core, this franchise is built for the future.
