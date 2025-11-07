@@ -145,7 +145,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 to-blue-900/70"></div>
                     <img
-                        src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&h=900&fit=crop&auto=format"
+                        src="https://i.postimg.cc/fy2MDqzM/IMG-20251104-WA0029.jpg"
                         alt="Luxury Property"
                         className="w-full h-full object-cover opacity-20"
                     />

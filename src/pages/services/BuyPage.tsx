@@ -32,11 +32,17 @@ export default function BuyPage() {
             {/* Hero Section - Premium */}
             <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 overflow-hidden">
                 {/* Animated Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0" style={{
-                        backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-                        backgroundSize: '40px 40px'
-                    }}></div>
+                <div className="absolute inset-0 opacity-60">
+                    <div className="absolute bg-cover bg-center inset-0"
+                         style={{
+                             backgroundImage: `url('https://i.postimg.cc/tJS9pvXM/IMG-20251104-WA0038.jpg')`
+                         }}>
+                        {/* Subtle pattern overlay with reduced opacity */}
+                        <div className="absolute inset-0 opacity-5" style={{
+                            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                            backgroundSize: '40px 40px'
+                        }}></div>
+                    </div>
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">

@@ -1,22 +1,39 @@
 export default function FinancePage() {
   return (
       <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-10"></div>
-          <div className="relative container mx-auto px-4 py-20">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-tight">
-                PROPERTY & AUCTION
-                <span className="block text-yellow-500">FINANCE</span>
-              </h1>
-              <div className="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-2xl mx-auto font-light">
-                Flexible Financing Solutions for Every Property Purchase
-              </p>
-            </div>
+          {/* Hero Section */}
+          <div className="relative h-[80vh] bg-cover bg-center overflow-hidden"
+               style={{
+                   backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.7) 50%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/tTzXmC8Q/IMG-20251104-WA0049.jpg')`
+               }}
+          >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>
+
+              <div className="relative z-10 container mx-auto px-8 md:px-16 h-full flex items-center justify-center">
+                  <div className="text-center">
+                      {/* Breadcrumb */}
+                      <div className="flex items-center justify-center space-x-3 mb-6 text-white/80">
+                          <span className="hover:text-yellow-400 transition-colors cursor-pointer">Home</span>
+                          <span className="text-yellow-400">/</span>
+                          <span className="hover:text-yellow-400 transition-colors cursor-pointer">Services</span>
+                          <span className="text-yellow-400">/</span>
+                          <span className="text-yellow-400 font-semibold">Finance</span>
+                      </div>
+
+                      {/* Title */}
+                      <h1 className="text-6xl md:text-7xl font-bold mb-6 tracking-tight leading-tight text-white">
+                          PROPERTY & AUCTION
+                          <span className="block text-yellow-400 mt-2">FINANCE</span>
+                      </h1>
+
+                      <div className="w-32 h-1.5 bg-yellow-400 rounded-full shadow-lg mb-6 mx-auto"></div>
+
+                      <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed max-w-2xl mx-auto">
+                          Flexible Financing Solutions for Every Property Purchase
+                      </p>
+                  </div>
+              </div>
           </div>
-        </div>
 
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">

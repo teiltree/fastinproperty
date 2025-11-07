@@ -95,7 +95,7 @@ export default function Navbar() {
         },
         {
             name: "Property Auction Guide",
-            href: "/guide",
+            href: "/about/guide",
             description: "Learn how property auctions work in Zimbabwe",
             icon: "📚"
         },
@@ -170,7 +170,7 @@ export default function Navbar() {
                                 <img
                                     src="https://i.postimg.cc/g0pZvzDg/main.jpg"
                                     alt="Fastin Property Auctions"
-                                    className="relative h-16 md:h-20 w-auto transition-transform duration-300 group-hover:scale-105 rounded-2xl"
+                                    className="relative h-16 md:h-16 w-auto transition-transform duration-300 group-hover:scale-105 rounded-2xl"
                                 />
                             </div>
                         </a>

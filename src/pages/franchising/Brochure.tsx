@@ -8,7 +8,6 @@ import {
     CheckCircle,
     Award,
     Target,
-    Zap,
     Phone,
     Mail,
     ArrowRight,
@@ -16,7 +15,6 @@ import {
     FileText,
     ChevronDown,
     Building2,
-    MapPin,
     Handshake,
     ShieldCheck,
     UserCheck, FileSearch, FileCheck
@@ -35,7 +33,14 @@ export default function BrochurePage() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Hero Section */}
-            <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 overflow-hidden">
+            <div className="relative h-[85vh] bg-cover bg-center overflow-hidden"
+                 style={{
+                     backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.75) 40%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/nzxFkQRR/IMG-20251104-WA0048.jpg')`
+                 }}
+            >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>
+
+                {/* Dotted pattern overlay */}
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0" style={{
                         backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
@@ -43,42 +48,58 @@ export default function BrochurePage() {
                     }}></div>
                 </div>
 
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-                    <div className="text-center">
+                <div className="relative max-w-7xl mx-auto px-8 md:px-16 py-16 h-full flex items-center">
+                    <div className="max-w-4xl">
+                        {/* Breadcrumb */}
+                        <div className="flex items-center space-x-3 mb-6 text-white/80">
+                            <span className="hover:text-yellow-400 transition-colors cursor-pointer">Home</span>
+                            <span className="text-yellow-400">/</span>
+                            <span className="hover:text-yellow-400 transition-colors cursor-pointer">Franchising</span>
+                            <span className="text-yellow-400">/</span>
+                            <span className="text-yellow-400 font-semibold">Brochure</span>
+                        </div>
+
+                        {/* Badge */}
                         <div className="inline-flex items-center gap-2 bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30 rounded-full px-4 py-2 mb-6">
-                            <Sparkles className="w-4 h-4 text-yellow-400" />
+                            <svg className="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            </svg>
                             <span className="text-yellow-400 text-sm font-semibold">Business Opportunity</span>
                         </div>
 
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+                        {/* Title */}
+                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
                             Fastin Property Auctions
                         </h1>
-                        <h2 className="text-3xl md:text-5xl font-bold text-yellow-400 mb-8">
+                        <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-8">
                             Franchise Brochure
                         </h2>
 
-                        {/* Large Logo */}
-                        <div className="flex justify-center mb-8">
-                            <div className="bg-transparent rounded-3xl p-8 ">
+                        {/* Logo */}
+                        <div className="mb-8 inline-block">
+                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-1 border border-white/20">
                                 <img
-                                    className="w-auto h-32 md:h-40 rounded-2xl"
+                                    className="w-auto h-12 md:h-18 rounded-2xl"
                                     src="https://i.postimg.cc/g0pZvzDg/main.jpg"
                                     alt="Fastin Property Auctions Logo"
                                 />
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+                        {/* Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-4 mt-8">
                             <a
                                 href="tel:+263784086388"
-                                className="group bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+                                className="group bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
                             >
-                                <Phone className="w-5 h-5" />
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
                                 Get Started Today
                             </a>
                             <a
                                 href="#details"
-                                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
+                                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 text-center"
                             >
                                 Learn More
                             </a>
@@ -86,52 +107,65 @@ export default function BrochurePage() {
                     </div>
                 </div>
 
+                {/* Wave bottom */}
                 <div className="absolute bottom-0 left-0 right-0">
                     <svg viewBox="0 0 1440 120" className="w-full h-auto">
-                        <path fill="#f9fafb" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+                        <path fill="#ffffff" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
                     </svg>
                 </div>
             </div>
 
-            <div id="details" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                {/* Introduction Section */}
+            <div id="details" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-4">
+                {/* Introduction + Image Section - Side by Side */}
                 <div className="mb-24">
-                    <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-xl p-8 md:p-12 border border-blue-100">
-                        <div className="text-center mb-8">
-                            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
-                                Become Fastin Property Auctions in Your Area
-                            </h2>
-                            <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full mb-6"></div>
-                        </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 items-center">
+                        {/* Text Content */}
 
-                        <div className="prose prose-lg max-w-none">
-                            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                            {/* Become Fastin Property Auctions Section with Image Background */}
+                            <div className="mb-16 max-w-3xl mx-auto md:mb-12 md:px-8">
+                                <div className="relative bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl shadow-2xl overflow-hidden border-2 border-blue-200">
+                                    {/* Background Image */}
+                                    <div className="aspect-video relative">
+                                        <img
+                                            src={image1}
+                                            alt="Franchise Overview Visual"
+                                            className="w-full h-full object-cover"
+                                        />
+                                        {/* Gradient Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/85 via-blue-900/65 to-blue-900/40"></div>
+                                    </div>
+
+                                    {/* Title Content Overlay */}
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="text-center px-4">
+                                            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
+                                                Become Fastin Property Auctions<br />in Your Area
+                                            </h2>
+
+                                            <div className="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full shadow-lg"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div className="space-y-6 max-w-4xl mx-auto md:space-y-12">
+                            <p className="text-lg text-gray-700 leading-relaxed">
                                 You Become <span className="font-bold text-blue-900">Fastin Property Auctions in "Your Area"</span> — i.e., Fastin Property Auctions <span className="italic">"Borrowdale"</span>, <span className="italic">"Mutare"</span>, <span className="italic">"Bulawayo"</span>, etc.
                             </p>
 
-                            <div className="bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-8 border-2 border-yellow-200 mb-6">
-                                <h3 className="text-2xl font-bold text-yellow-900 mb-4 flex items-center gap-3">
-                                    <Zap className="w-7 h-7 text-yellow-600" />
+                            <div className="bg-gradient-to-br from-yellow-50 to-white rounded-2xl p-6 border-2 border-yellow-200">
+                                <h3 className="text-xl font-bold text-yellow-900 mb-3 flex items-center gap-3">
+                                    <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
                                     Everything You Need Is Set Up and Ready to Go
                                 </h3>
-                                <p className="text-lg text-gray-700 leading-relaxed">
+                                <p className="text-base text-gray-700 leading-relaxed">
                                     We handle the auction sales, admin, legal work, and negotiations — <span className="font-bold text-blue-900">you focus on sourcing deals.</span>
                                 </p>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                {/* Image Section Before How It Works */}
-                <div className="mb-16">
-                    <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl shadow-lg overflow-hidden border-2 border-blue-200">
-                        <div className="aspect-video">
-                            <img
-                                src={image1}
-                                alt="Franchise Overview Visual"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
                     </div>
                 </div>
 
@@ -224,31 +258,42 @@ export default function BrochurePage() {
                     </div>
                 </div>
 
-                {/* Image Placeholder Before How Much You Can Earn */}
-                <div className="mb-16">
-                    <div className="bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-3xl shadow-lg overflow-hidden border-2 border-yellow-200">
-                        <div className="aspect-video flex items-center justify-center">
+                {/* How Much Can You Earn Section with Image Background */}
+                <div className="mb-16 max-w-4xl mx-auto md:mb-24 md:px-8">
+                    <div className="relative bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-3xl shadow-2xl overflow-hidden border-2 border-yellow-200">
+                        {/* Background Image */}
+                        <div className="aspect-video relative">
                             <img
                                 src={image2}
                                 alt="Franchise Overview Visual"
                                 className="w-full h-full object-cover"
                             />
+                            {/* Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-900/60 to-transparent"></div>
+                        </div>
+
+                        {/* Title Content Overlay */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="text-center px-4">
+                                <div className="inline-flex items-center gap-2 bg-yellow-400/90 backdrop-blur-sm rounded-full px-5 py-2.5 mb-6 shadow-lg">
+                                    <svg className="w-5 h-5 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                    </svg>
+                                    <span className="text-blue-900 text-sm font-bold">Potential</span>
+                                </div>
+
+                                <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl">
+                                    How Much Can You Earn?
+                                </h2>
+
+                                <div className="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full shadow-lg"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 {/* How Much Can You Earn */}
                 <div className="mb-24">
-                    <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 bg-yellow-100 rounded-full px-4 py-2 mb-4">
-                            <TrendingUp className="w-5 h-5 text-yellow-700" />
-                            <span className="text-yellow-700 text-sm font-semibold">Potential</span>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-                            How Much Can You Earn?
-                        </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full"></div>
-                    </div>
 
                     <div className="bg-gradient-to-br from-white to-yellow-50 rounded-3xl shadow-xl p-8 md:p-12 border border-yellow-100">
                         <div className="max-w-4xl mx-auto">
@@ -401,34 +446,47 @@ export default function BrochurePage() {
                     </div>
                 </div>
 
-                {/* Image Placeholder Before The Local Opportunity */}
-                <div className="mb-16">
-                    <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl shadow-lg overflow-hidden border-2 border-blue-200">
-                        <div className="aspect-video flex items-center justify-center">
+                {/* The Local Opportunity Section with Image Background */}
+                <div className="mb-16 max-w-4xl mx-auto md:mb-24 md:px-8">
+                    <div className="relative bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl shadow-2xl overflow-hidden border-2 border-blue-200">
+                        {/* Background Image */}
+                        <div className="aspect-video relative">
                             <img
                                 src={image3}
                                 alt="Franchise Overview Visual"
                                 className="w-full h-full object-cover"
                             />
+                            {/* Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/85 via-blue-900/65 to-blue-900/40"></div>
+                        </div>
+
+                        {/* Title Content Overlay */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="text-center px-4">
+                                <div className="inline-flex items-center gap-2 bg-yellow-400/90 backdrop-blur-sm rounded-full px-5 py-2.5 mb-6 shadow-lg">
+                                    <svg className="w-5 h-5 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <span className="text-blue-900 text-sm font-bold">Market Potential</span>
+                                </div>
+
+                                <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl">
+                                    The Local Opportunity
+                                </h2>
+
+                                <div className="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full shadow-lg mb-6"></div>
+
+                                <p className="text-2xl text-white/90 font-light drop-shadow-lg">
+                                    Every territory has, on average:
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 {/* The Local Opportunity */}
                 <div className="mb-24">
-                    <div className="text-center mb-12">
-                        <div className="inline-flex items-center gap-2 bg-yellow-100 rounded-full px-4 py-2 mb-4">
-                            <MapPin className="w-5 h-5 text-yellow-700" />
-                            <span className="text-yellow-700 text-sm font-semibold">Market Potential</span>
-                        </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-                            The Local Opportunity
-                        </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full mb-6"></div>
-                        <p className="text-xl text-gray-600">
-                            Every territory has, on average:
-                        </p>
-                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
@@ -497,7 +555,7 @@ export default function BrochurePage() {
                 </div>
 
                 {/* Contact CTA */}
-                <div id="contact" className="relative overflow-hidden bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 rounded-3xl shadow-2xl">
+                <div id="contact" className="relative overflow-hidden bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-500 rounded-3xl shadow-2xl">
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute inset-0" style={{
                             backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',

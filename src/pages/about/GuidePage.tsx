@@ -39,15 +39,21 @@ export default function GuidePage() {
             {/* Hero Section */}
             <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 overflow-hidden">
                 {/* Animated Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0" style={{
-                        backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-                        backgroundSize: '40px 40px'
-                    }}></div>
+                <div className="absolute inset-0 opacity-60">
+                    <div className="absolute bg-cover bg-center inset-0"
+                         style={{
+                             backgroundImage: `url('https://i.postimg.cc/4d1JFNqj/IMG-20251104-WA0045.jpg')`
+                         }}>
+                        {/* Subtle pattern overlay with reduced opacity */}
+                        <div className="absolute inset-0 opacity-5" style={{
+                            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                            backgroundSize: '40px 40px'
+                        }}></div>
+                    </div>
                 </div>
                 
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-                    <div className="text-center">
+                <div className="relative max-w-4xl mx-8 px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+                    <div className="text-left">
                         <div className="inline-flex items-center gap-2 bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30 rounded-full px-4 py-2 mb-6">
                             <Sparkles className="w-4 h-4 text-yellow-400" />
                             <span className="text-yellow-400 text-sm font-semibold">Complete Guide</span>

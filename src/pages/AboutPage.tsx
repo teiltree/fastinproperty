@@ -64,24 +64,31 @@ export default function AboutPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
 
-          <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white">
-              <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+          <section className="relative bg-cover bg-center h-full overflow-hidden"
+                   style={{
+                       backgroundImage: `url('https://i.postimg.cc/764HVTsW/IMG-20251104-WA0053.jpg')`
+                   }}
+          >
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-600/85 to-blue-400/90"></div>
+
+              <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14">
                   <div className="flex items-start sm:items-center justify-between gap-6 flex-col sm:flex-row">
                       <div>
                           <div className="flex items-center gap-2 text-blue-200/90 text-sm">
-                              <Link to="/" className="hover:text-white transition-colors">Home</Link>
-                              <span>/</span>
-                              <span className="text-white">About Us</span>
+                              <Link to="/" className="hover:text-yellow-400 transition-colors">Home</Link>
+                              <span className="text-yellow-400">/</span>
+                              <span className="text-yellow-400 font-semibold">About Us</span>
                           </div>
-                          <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+                          <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg">
                               Transforming Real Estate Auctions
                           </h1>
-                          <p className="mt-3 text-blue-100 max-w-2xl">
+                          <p className="mt-3 text-blue-100 max-w-2xl text-lg">
                               Bringing fresh innovation to Zimbabwe's property auction industry
                           </p>
                       </div>
-                      <div className="shrink-0 bg-white/10 rounded-2xl p-4 ring-1 ring-white/20">
-                          <Home className="w-12 h-12" />
+                      <div className="shrink-0 bg-white/10 backdrop-blur-sm rounded-2xl p-4 ring-1 ring-white/20 shadow-lg">
+                          <Home className="w-12 h-12 text-yellow-400" />
                       </div>
                   </div>
               </div>
@@ -89,30 +96,64 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-7xl mx-auto">
-            {/* Brand Introduction */}
-            <div className="text-center mb-20">
-              <h2 className="text-5xl font-light text-blue-900 mb-8">About Fastin Property Auctions</h2>
-              <div className="w-16 h-1 bg-amber-500 mx-auto mb-12"></div>
-            </div>
+              {/* Brand Introduction & Mission Statement */}
+              <div className="mb-20">
+                  {/* Heading */}
+                  <div className="text-center mb-12">
+                      <h2 className="text-5xl md:text-6xl font-bold text-blue-900 mb-6">About Fastin Property Auctions</h2>
+                      <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto rounded-full"></div>
+                  </div>
 
-            {/* Mission Statement */}
-            <div className="relative mb-20">
-              <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white p-12 rounded-2xl shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/10 rounded-full -translate-y-32 translate-x-32"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-amber-400/5 rounded-full translate-y-16 -translate-x-16"></div>
-                <div className="relative z-10">
-                  <blockquote className="text-xl md:text-2xl leading-relaxed font-light italic">
-                    <p>At Fastin Property Auctions, we are redefining the landscape of real estate auctions in Zimbabwe. As a boutique firm, we combine a personalized approach with professional excellence, offering clients a fresh and progressive alternative to traditional property services.</p>
-                    <br/>
-                    <p>With vast industry experience, our team is both seasoned and forward-thinking—committed to continuous learning and innovation. We pride ourselves on being approachable, confident, and deeply passionate about helping our clients achieve their property goals.</p>
-                    <br/>
-                    <p>Our services span online and onsite auctions, private treaty sales, property evaluations, marketing campaigns, and legal compliance. With a national footprint and trusted partnerships across the industry, we deliver results with integrity, precision, and enthusiasm.</p>
-                    <br/>
-                    <p>At Fastin Property Auctions, every client interaction is met with the same energy and dedication as our very first day—because your success is our priority.</p>
-                  </blockquote>
-                </div>
+                  {/* Mission Statement with Background Image */}
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-900/10">
+                      {/* Background Image */}
+                      <div
+                          className="absolute inset-0 bg-cover bg-center opacity-90"
+                          style={{
+                              backgroundImage: `url('https://i.postimg.cc/mDSb62KT/IMG-20251104-WA0050.jpg')`
+                          }}
+                      ></div>
+
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/92 to-blue-900/90"></div>
+
+                      {/* Decorative Elements */}
+                      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/10 rounded-full -translate-y-48 translate-x-48 blur-3xl"></div>
+                      <div className="absolute bottom-0 left-0 w-80 h-80 bg-yellow-500/10 rounded-full translate-y-40 -translate-x-40 blur-3xl"></div>
+
+                      {/* Content */}
+                      <div className="relative z-10 p-10 md:p-16">
+                          <div className="max-w-5xl mx-auto">
+                              {/* Quote Icon */}
+                              <div className="mb-8">
+                                  <svg className="w-16 h-16 text-yellow-400 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                                  </svg>
+                              </div>
+
+                              <blockquote className="space-y-6">
+                                  <p className="text-lg md:text-xl text-white leading-relaxed font-light">
+                                      At Fastin Property Auctions, we are redefining the landscape of real estate auctions in Zimbabwe. As a boutique firm, we combine a personalized approach with professional excellence, offering clients a fresh and progressive alternative to traditional property services.
+                                  </p>
+
+                                  <p className="text-lg md:text-xl text-white leading-relaxed font-light">
+                                      With vast industry experience, our team is both seasoned and forward-thinking—committed to continuous learning and innovation. We pride ourselves on being approachable, confident, and deeply passionate about helping our clients achieve their property goals.
+                                  </p>
+
+                                  <p className="text-lg md:text-xl text-white leading-relaxed font-light">
+                                      Our services span online and onsite auctions, private treaty sales, property evaluations, marketing campaigns, and legal compliance. With a national footprint and trusted partnerships across the industry, we deliver results with integrity, precision, and enthusiasm.
+                                  </p>
+
+                                  <div className="pt-6 border-t border-white/20">
+                                      <p className="text-xl md:text-2xl text-yellow-400 leading-relaxed font-medium">
+                                          At Fastin Property Auctions, every client interaction is met with the same energy and dedication as our very first day—because your success is our priority.
+                                      </p>
+                                  </div>
+                              </blockquote>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
 
             {/* Philosophy Section */}
             <div className="mb-20">
@@ -202,10 +243,25 @@ export default function AboutPage() {
 
             {/* Core Values */}
             <div>
-              <div className="text-center mb-12">
-                <h3 className="text-4xl font-light text-blue-900 mb-4">Core Values</h3>
-                <div className="w-16 h-1 bg-amber-500 mx-auto"></div>
-              </div>
+                {/* Core Values Section with Background */}
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-blue-900/10 mb-12">
+                    {/* Background Image */}
+                    <div
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{
+                            backgroundImage: `url('https://i.postimg.cc/764HVTsW/IMG-20251104-WA0053.jpg')`
+                        }}
+                    ></div>
+
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/92 via-blue-900/88 to-blue-900/92 bg-transparent"></div>
+
+                    {/* Content */}
+                    <div className="relative z-10 text-center py-16 px-8">
+                        <h3 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Core Values</h3>
+                        <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto rounded-full shadow-lg"></div>
+                    </div>
+                </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {coreValues.map((value, index) => {
                   const IconComponent = value.icon;

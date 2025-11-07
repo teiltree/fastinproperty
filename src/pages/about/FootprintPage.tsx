@@ -33,16 +33,73 @@ export default function FootprintPage() {
 
             <div className="container mx-auto px-4 py-16">
                 <div className="max-w-6xl mx-auto">
-                    {/* Introduction */}
-                    <div className="text-center mb-16">
-                        <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                            In the highly competitive real estate industry, service delivery is of utmost importance. At Fastin Property Auctions, we are able to provide our services nationally across Zimbabwe.
-                        </p>
+                    {/* Introduction Section */}
+                    <div className="mb-24">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            {/* Text Content */}
+                            <div className="order-2 lg:order-1">
+                                <div className="space-y-8">
+                                    <div>
+                                        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
+                                            Nationwide Coverage
+                                            <span className="block text-yellow-500 mt-2">Across Zimbabwe</span>
+                                        </h2>
+                                        <div className="w-24 h-1.5 bg-gradient-to-r from-yellow-500 to-transparent rounded-full mb-8"></div>
+                                    </div>
 
-                        <div className="bg-white/80 backdrop-blur-sm rounded-xl ring-1 ring-gray-200 p-8 shadow-sm">
-                            <p className="text-gray-700 leading-relaxed">
-                                With a presence in all 10 provinces and all major metropolitan areas, we can take on any property, big or small, and utilize the power of our extensive marketing group.
-                            </p>
+                                    <p className="text-xl text-gray-700 leading-relaxed">
+                                        In the highly competitive real estate industry, service delivery is of utmost importance. At Fastin Property Auctions, we are able to provide our services nationally across Zimbabwe.
+                                    </p>
+
+                                    <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-8 border-l-4 border-blue-900 shadow-lg">
+                                        <div className="flex items-start space-x-4">
+                                            <div className="flex-shrink-0">
+                                                <div className="w-12 h-12 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full flex items-center justify-center">
+                                                    <svg className="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h3 className="text-lg font-bold text-blue-900 mb-3">All 10 Provinces Covered</h3>
+                                                <p className="text-gray-700 leading-relaxed">
+                                                    With a presence in all 10 provinces and all major metropolitan areas, we can take on any property, big or small, and utilize the power of our extensive marketing group.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-6">
+                                        <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:border-yellow-400 transition-all">
+                                            <div className="text-3xl font-bold text-blue-900 mb-2">10</div>
+                                            <div className="text-gray-600">Provinces</div>
+                                        </div>
+                                        <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:border-yellow-400 transition-all">
+                                            <div className="text-3xl font-bold text-blue-900 mb-2">100%</div>
+                                            <div className="text-gray-600">Coverage</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Image */}
+                            <div className="order-1 lg:order-2">
+                                <div className="relative">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-yellow-500 rounded-3xl blur-2xl opacity-20 transform scale-95"></div>
+                                    <div className="relative bg-white rounded-3xl p-0 shadow-2xl border-2 border-blue-900/10">
+                                        <div className="overflow-hidden rounded-2xl">
+                                            <img
+                                                src="https://i.postimg.cc/d0QPVP1t/IMG-20251104-WA0046.jpg"
+                                                alt="Fastin Property Auctions Nationwide Coverage"
+                                                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full blur-2xl opacity-30"></div>
+                                    <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full blur-2xl opacity-30"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

@@ -78,7 +78,7 @@ export default function AlertsPage() {
                 <div className="relative">
                   <div className="absolute -top-4 -right-4 w-full h-full bg-yellow-500 rounded-2xl opacity-20"></div>
                   <img
-                      src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&h=900&fit=crop&auto=format"
+                      src="https://i.postimg.cc/tJCX0GHW/IMG-20251104-WA0044.jpg"
                       alt="Auction Alerts - Stay informed about property opportunities"
                       className="relative w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                   />
@@ -295,17 +295,17 @@ export default function AlertsPage() {
         </section>
 
         {/* Final CTA Section */}
-        <div className="bg-gradient-to-r from-blue-900 to-blue-800 py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h3 className="text-3xl font-bold text-white mb-4">Ready to Start Receiving Alerts?</h3>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join smart investors who never miss out on great property opportunities
-            </p>
-            <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors duration-300 text-lg">
-              Subscribe Now - It's Free
-            </button>
-          </div>
-        </div>
+        {/*<div className="bg-gradient-to-r from-blue-900 to-blue-800 py-16">*/}
+        {/*  <div className="container mx-auto px-4 text-center">*/}
+        {/*    <h3 className="text-3xl font-bold text-white mb-4">Ready to Start Receiving Alerts?</h3>*/}
+        {/*    <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">*/}
+        {/*      Join smart investors who never miss out on great property opportunities*/}
+        {/*    </p>*/}
+        {/*    <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors duration-300 text-lg">*/}
+        {/*      Subscribe Now - It's Free*/}
+        {/*    </button>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
   )
 }

@@ -10,7 +10,7 @@ export default function OnlineBiddingPage() {
           className="relative h-[40vh] md:h-[50vh] bg-cover bg-center flex items-center"
           style={{
             backgroundImage:
-              "linear-gradient(135deg, rgba(30,58,138,0.85), rgba(59,130,246,0.65)), url('https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1600&auto=format&fit=crop')",
+              "linear-gradient(135deg, rgba(30,58,138,0.45), rgba(59,130,246,0.25)), url('https://i.postimg.cc/MHKWkJ8p/IMG-20251104-WA0043.jpg')",
           }}
         >
           <div className="container mx-auto px-4">

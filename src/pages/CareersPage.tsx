@@ -27,31 +27,41 @@ export default function CareersPage() {
 
   return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <div
-            className="relative h-[500px] bg-cover bg-center flex items-center justify-center overflow-hidden"
-            style={{
-              backgroundImage: `linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(202, 138, 4, 0.8) 100%), url('#')`
-            }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-yellow-600/20"></div>
-          <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <div className="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm mb-6">
-              <svg className="w-12 h-12 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M9 11H7v8h2v-8zm4 0h-2v8h2v-8zm4 0h-2v8h2v-8zm2.5-5H18V4l-1-1H7L6 4v2H4.5l-1 1v1.5h1v11L6 20h12l1.5-1.5v-11h1V6l-1-1zM8 4h8v2H8V4z"/>
-              </svg>
-            </div>
-            <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">
-              Join the Elite
-            </h1>
-            <h2 className="text-4xl font-light mb-6 text-yellow-200">
-              Virtual Property Auction Revolution
-            </h2>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
-              Where innovation meets opportunity in real estate excellence
-            </p>
+          {/* Hero Section */}
+          <div
+              className="relative h-[60vh] bg-cover bg-center flex items-center overflow-hidden"
+              style={{
+                  backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.7) 50%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/cHcs54P4/IMG-20251104-WA0041.jpg')`
+              }}
+          >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>
+              <div className="relative z-10 container mx-auto px-8 md:px-16">
+                  <div className="max-w-2xl">
+                      {/* Breadcrumb */}
+                      <div className="flex items-center space-x-3 mb-6 text-white/80">
+                          <span className="hover:text-yellow-400 transition-colors cursor-pointer">Home</span>
+                          <span className="text-yellow-400">/</span>
+                          <span className="text-yellow-400 font-semibold">Careers</span>
+                      </div>
+
+
+                      {/* Title */}
+                      <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white leading-tight flex items-center space-x-4">
+                          Join the Elite
+                          <svg className="w-14 h-14 mx-2 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M9 11H7v8h2v-8zm4 0h-2v8h2v-8zm4 0h-2v8h2v-8zm2.5-5H18V4l-1-1H7L6 4v2H4.5l-1 1v1.5h1v11L6 20h12l1.5-1.5v-11h1V6l-1-1zM8 4h8v2H8V4z"/>
+                          </svg>
+                      </h1>
+                      <h2 className="text-4xl md:text-5xl font-light mb-6 text-yellow-400">
+                          Virtual Property Auction Revolution
+                      </h2>
+                      <p className="text-xl text-white/90 max-w-xl">
+                          Where innovation meets opportunity in real estate excellence
+                      </p>
+                      <div className="w-32 h-1.5 bg-yellow-400 rounded-full shadow-lg mt-6"></div>
+                  </div>
+              </div>
           </div>
-        </div>
 
         <div className="container mx-auto px-4 py-20">
           <div className="max-w-7xl mx-auto">
