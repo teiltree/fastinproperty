@@ -1,14 +1,14 @@
 export default function MarketingPage() {
     return (
         <div className="min-h-screen bg-white">
-            {/* Hero Section */}
+            {/* Hero Section - UNCHANGED (already optimal) */}
             <div
-                className="relative h-[60vh] bg-cover bg-center flex items-center overflow-hidden"
+                className="relative h-[80vh] bg-cover bg-center flex items-center overflow-hidden"
                 style={{
-                    backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.7) 50%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/3NJKMQHg/IMG-20251104-WA0036.jpg')`
+                    backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.1) 50%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/SRNy0bpS/IMG_20251104_WA0035.jpg')`
                 }}
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-transparent"></div>
                 <div className="relative z-10 container mx-auto px-8 md:px-16">
                     <div className="max-w-2xl">
                         {/* Breadcrumb */}
@@ -32,31 +32,62 @@ export default function MarketingPage() {
 
             <div className="container mx-auto px-4 py-24">
                 <div className="max-w-7xl mx-auto">
-                    {/* Introduction */}
-                    <div className="text-center mb-24">
-                        <div className="max-w-4xl mx-auto">
-                            <p className="text-3xl text-gray-800 leading-relaxed mb-16 font-light">
+                    {/* Introduction - Combined with Featured Image */}
+                    <div className="mb-24">
+                        {/* Opening Paragraph */}
+                        <div className="text-center mb-16 max-w-4xl mx-auto">
+                            <p className="text-3xl text-gray-800 leading-relaxed font-light">
                                 The Fastin Property Auctions offers a comprehensive range of services & nationwide networking which gives properties the
                                 <span className="font-bold text-blue-900"> paramount exposure</span> and attention in the real estate marketplace.
                             </p>
+                        </div>
 
-                            <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-3xl shadow-2xl border-2 border-blue-900/10 p-12 mb-12 relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-900 via-yellow-500 to-blue-900"></div>
+                        {/* Combined Content Box with Image */}
+                        <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-3xl shadow-2xl border-2 border-blue-900/10 overflow-hidden relative">
+                            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-900 via-yellow-500 to-blue-900"></div>
 
-                                <p className="text-gray-700 leading-relaxed mb-8 text-xl">
-                                    Selling a home in today's market can be challenging - the Fastin Property Auctions Team understands that. While the market can be challenging, hundreds of homes are sold each week. What's the difference between selling your home or failing to do so?
-                                    <span className="font-bold text-blue-900"> The details!</span> Whether it's our proven sales approach, effective marketing campaigns, or utilizing our extensive network, at Fastin Property Auctions no detail is overlooked.
-                                </p>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                                {/* Left Side - Text Content */}
+                                <div className="p-12 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                    <div className="space-y-8">
+                                        <div>
+                                            <p className="text-gray-700 leading-relaxed text-xl">
+                                                Selling a home in today's market can be challenging - the Fastin Property Auctions Team understands that. While the market can be challenging, hundreds of homes are sold each week. What's the difference between selling your home or failing to do so?
+                                                <span className="font-bold text-blue-900"> The details!</span>
+                                            </p>
+                                        </div>
 
-                                <div className="bg-white rounded-2xl p-8 border-l-4 border-yellow-500 shadow-lg">
-                                    <p className="text-gray-800 leading-relaxed text-xl font-medium">
-                                        When we say <span className="text-blue-900 font-bold">"Selling Real Estate the Right Way"</span>, we mean it! Our clients come first. With a proven track record, the right skill set, and years of experience, the Fastin Property Auctions team has the right tools to successfully sell your home.
-                                    </p>
+                                        <div>
+                                            <p className="text-gray-700 leading-relaxed text-xl">
+                                                Whether it's our proven sales approach, effective marketing campaigns, or utilizing our extensive network, at Fastin Property Auctions no detail is overlooked.
+                                            </p>
+                                        </div>
+
+                                        <div className="bg-white rounded-2xl p-8 border-l-4 border-yellow-500 shadow-lg">
+                                            <p className="text-gray-800 leading-relaxed text-xl font-medium">
+                                                When we say <span className="text-blue-900 font-bold">"Selling Real Estate the Right Way"</span>, we mean it! Our clients come first. With a proven track record, the right skill set, and years of experience, the Fastin Property Auctions team has the right tools to successfully sell your home.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right Side - Featured Image */}
+                                <div className="relative h-[400px] lg:h-auto order-1 lg:order-2 group">
+                                    <img
+                                        src="https://i.postimg.cc/3JNKnhB1/IMG_20251104_WA0033.jpg"
+                                        alt="Excellence in Property Marketing"
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent"></div>
+                                    <div className="absolute bottom-0 left-0 right-0 p-8">
+                                        <div className="bg-gradient-to-r from-blue-900/90 to-blue-800/90 backdrop-blur-sm rounded-xl p-6 border-2 border-yellow-400">
+                                            <p className="text-yellow-400 text-2xl font-bold text-center">Excellence in Property Marketing</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
 
                     {/* Marketing Campaign Section */}
                     <div className="mb-24">
@@ -144,25 +175,85 @@ export default function MarketingPage() {
                             ))}
                         </div>
 
-                        {/* Information Pack Section */}
-                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl shadow-2xl p-16 mb-20 border-2 border-blue-900/10 overflow-hidden relative">
+                        {/* NEW: Featured Property Image 2 - Split Layout with Text */}
+                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl shadow-2xl border-2 border-blue-900/10 overflow-hidden mb-20">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                                {/* Image Side */}
+                                <div className="h-[500px] lg:h-auto relative overflow-hidden group">
+                                    <img
+                                        src="https://i.postimg.cc/Fzs9tXQG/IMG_20251104_WA0037.jpg"
+                                        alt="Premium Property Marketing"
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent"></div>
+                                </div>
+
+                                {/* Text Side */}
+                                <div className="p-12 lg:p-16 flex flex-col justify-center">
+                                    <div className="mb-6">
+                                        <span className="inline-block bg-yellow-400 text-blue-900 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+                                            Featured Service
+                                        </span>
+                                    </div>
+                                    <h3 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+                                        Professional Property Showcase
+                                    </h3>
+                                    <div className="w-24 h-1.5 bg-yellow-500 rounded-full mb-8"></div>
+                                    <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                                        Every property we handle receives premium treatment with professional photography, comprehensive documentation, and strategic marketing placement. Our attention to detail ensures your property stands out in the marketplace.
+                                    </p>
+                                    <div className="space-y-4">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                            <span className="text-gray-700 font-medium">High-Quality Photography</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                            <span className="text-gray-700 font-medium">Detailed Property Information</span>
+                                        </div>
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                                            <span className="text-gray-700 font-medium">Strategic Market Positioning</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Information Pack Section - ENHANCED WITH IMAGE LEFT-ALIGNED TEXT */}
+                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl shadow-2xl p-16 mb-20 border-2 border-blue-900/10 overflow-hidden relative flex items-center">
+                            {/* Decorative Top Border */}
                             <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-blue-900 via-yellow-500 to-blue-900"></div>
+
+                            {/* Background Image on Right */}
+                            <div
+                                className="absolute right-0 top-0 w-1/2 h-full opacity-90 bg-cover bg-center"
+                                style={{
+                                    backgroundImage: `url('https://i.postimg.cc/3NJKMQHg/IMG-20251104-WA0036.jpg')`,
+                                    maskImage: 'linear-gradient(to left, rgba(0,0,0,1), transparent)',
+                                    WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1), transparent)'
+                                }}
+                            ></div>
+
+                            {/* Gradient glow accents */}
                             <div className="absolute -top-20 -right-20 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
                             <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-900/10 rounded-full blur-3xl"></div>
 
-                            <div className="relative">
-                                <h3 className="text-5xl font-bold text-blue-900 text-center mb-6">
+                            {/* Text Content - moved to left */}
+                            <div className="relative z-10 w-1/2 pr-10">
+                                <h3 className="text-5xl font-bold text-blue-900 mb-6">
                                     Professional Information Packs
                                 </h3>
-                                <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto rounded-full mb-10"></div>
-                                <p className="text-2xl text-gray-600 text-center mb-16 max-w-3xl mx-auto font-light">
-                                    Comprehensive property information packs that get added to our website and sent directly to our investor network
+                                <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent rounded-full mb-10"></div>
+                                <p className="text-2xl text-gray-600 mb-16 font-light">
+                                    Comprehensive property information packs that get added to our website and sent directly to our investor network.
                                 </p>
                             </div>
                         </div>
+
                     </div>
 
-                    {/* Global Reach Section */}
+                    {/* Global Reach Section - ENHANCED WITH IMAGE */}
                     <div className="mb-24">
                         <div className="text-center mb-16">
                             <h2 className="text-6xl font-bold text-blue-900 mb-6">Global Bidding Platform</h2>
@@ -170,11 +261,23 @@ export default function MarketingPage() {
                             <p className="text-3xl text-gray-600 font-light">Buyers can bid from anywhere in the world!</p>
                         </div>
 
-                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl p-14 border-2 border-blue-900/10 shadow-xl">
-                            <h3 className="text-4xl font-bold text-blue-900 mb-8 text-center">Extensive Marketing Channels</h3>
-                            <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
-                                We utilize an extensive network of marketing channels and platforms to ensure your property receives maximum exposure across multiple media outlets, property portals, and social media platforms, reaching potential buyers wherever they are.
-                            </p>
+                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl p-14 border-2 border-blue-900/10 shadow-xl relative overflow-hidden">
+                            {/* NEW: Subtle property image in background */}
+                            <div
+                                className="absolute left-0 top-0 w-1/3 h-full opacity-95 bg-cover bg-center"
+                                style={{
+                                    backgroundImage: `url('https://i.postimg.cc/3NJKMQHg/IMG-20251104-WA0036.jpg')`,
+                                    maskImage: 'linear-gradient(to right, rgba(0,0,0,0.3), transparent)',
+                                    WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,0.3), transparent)'
+                                }}
+                            ></div>
+
+                            <div className="relative">
+                                <h3 className="text-4xl font-bold text-blue-900 mb-8 text-center">Extensive Marketing Channels</h3>
+                                <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+                                    We utilize an extensive network of marketing channels and platforms to ensure your property receives maximum exposure across multiple media outlets, property portals, and social media platforms, reaching potential buyers wherever they are.
+                                </p>
+                            </div>
                         </div>
                     </div>
 

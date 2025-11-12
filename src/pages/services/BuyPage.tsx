@@ -30,9 +30,9 @@ export default function BuyPage() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Hero Section - Premium */}
-            <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 overflow-hidden">
+            <div className="relative  h-[90vh] bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 overflow-hidden">
                 {/* Animated Background Pattern */}
-                <div className="absolute inset-0 opacity-60">
+                <div className="absolute inset-0 opacity-80">
                     <div className="absolute bg-cover bg-center inset-0"
                          style={{
                              backgroundImage: `url('https://i.postimg.cc/tJS9pvXM/IMG-20251104-WA0038.jpg')`
@@ -347,7 +347,7 @@ export default function BuyPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
-                                href="https://qrco.de/ABC_Auctions"
+                                href="https://iprop.solutions/fastin/properties/for-auction"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-10 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"

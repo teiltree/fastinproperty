@@ -29,9 +29,9 @@ export default function CareersPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
           {/* Hero Section */}
           <div
-              className="relative h-[60vh] bg-cover bg-center flex items-center overflow-hidden"
+              className="relative h-[90vh] bg-cover bg-center flex items-center overflow-hidden"
               style={{
-                  backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.7) 50%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/cHcs54P4/IMG-20251104-WA0041.jpg')`
+                  backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.3) 0%, rgba(30, 58, 138, 0.3) 50%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/Fzs9tXQG/IMG_20251104_WA0037.jpg')`
               }}
           >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>
@@ -55,9 +55,9 @@ export default function CareersPage() {
                       <h2 className="text-4xl md:text-5xl font-light mb-6 text-yellow-400">
                           Virtual Property Auction Revolution
                       </h2>
-                      <p className="text-xl text-white/90 max-w-xl">
-                          Where innovation meets opportunity in real estate excellence
-                      </p>
+                      {/*<p className="text-xl text-white/90 max-w-xl">*/}
+                      {/*    Where innovation meets opportunity in real estate excellence*/}
+                      {/*</p>*/}
                       <div className="w-32 h-1.5 bg-yellow-400 rounded-full shadow-lg mt-6"></div>
                   </div>
               </div>
@@ -73,7 +73,7 @@ export default function CareersPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">
+                <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r py-2 from-white to-yellow-200 bg-clip-text text-transparent">
                   Our Agents Sell More Properties Faster
                 </h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 mx-auto rounded-full"></div>

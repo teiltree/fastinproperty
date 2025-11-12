@@ -7,10 +7,10 @@ export default function OnlineBiddingPage() {
       {/* Hero + Breadcrumb */}
       <div className="relative">
         <div
-          className="relative h-[40vh] md:h-[50vh] bg-cover bg-center flex items-center"
+          className="relative h-[40vh] md:h-[80vh] bg-cover bg-center flex items-center"
           style={{
             backgroundImage:
-              "linear-gradient(135deg, rgba(30,58,138,0.45), rgba(59,130,246,0.25)), url('https://i.postimg.cc/MHKWkJ8p/IMG-20251104-WA0043.jpg')",
+              "linear-gradient(135deg, rgba(30,58,138,0.1), rgba(59,130,246,0.25)), url('https://i.postimg.cc/MHKWkJ8p/IMG-20251104-WA0043.jpg')",
           }}
         >
           <div className="container mx-auto px-4">

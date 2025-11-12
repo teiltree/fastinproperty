@@ -49,9 +49,23 @@ export default function AlertsPage() {
     return (
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="bg-gradient-to-br h-[90vh] from-blue-900 via-blue-800 to-transparent text-white relative overflow-hidden">
+            {/* Animated Background Pattern */}
+            <div className="absolute inset-0 opacity-80">
+                <div className="absolute bg-cover bg-center inset-0"
+                     style={{
+                         backgroundImage: `url('https://i.postimg.cc/tJCX0GHW/IMG_20251104_WA0044.jpg')`
+                     }}>
+                    {/* Subtle pattern overlay with reduced opacity */}
+                    <div className="absolute inset-0 opacity-5" style={{
+                        backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                        backgroundSize: '40px 40px'
+                    }}></div>
+                </div>
+            </div>
+          <div className="absolute inset-0 bg-black opacity-0"></div>
           <div className="relative container mx-auto px-4 py-20">
+
             <div className="text-center">
               <div className="inline-flex items-center bg-yellow-500 text-blue-900 px-6 py-3 rounded-full text-sm font-bold mb-8">
                 <Bell className="w-5 h-5 mr-2" />
@@ -78,7 +92,7 @@ export default function AlertsPage() {
                 <div className="relative">
                   <div className="absolute -top-4 -right-4 w-full h-full bg-yellow-500 rounded-2xl opacity-20"></div>
                   <img
-                      src="https://i.postimg.cc/tJCX0GHW/IMG-20251104-WA0044.jpg"
+                      src="https://i.postimg.cc/BQzJzz7v/IMG_20251104_WA0026.jpg"
                       alt="Auction Alerts - Stay informed about property opportunities"
                       className="relative w-full rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300"
                   />

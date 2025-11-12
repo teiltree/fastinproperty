@@ -33,12 +33,12 @@ export default function BrochurePage() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Hero Section */}
-            <div className="relative h-[85vh] bg-cover bg-center overflow-hidden"
+            <div className="relative h-[90vh] bg-cover bg-center overflow-hidden"
                  style={{
-                     backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.75) 40%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/nzxFkQRR/IMG-20251104-WA0048.jpg')`
+                     backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.30) 100%, rgba(30, 58, 138, 0.2) 40%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/bY3yxrQn/IMG_20251104_WA0030.jpg')`
                  }}
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>
+                {/*<div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>*/}
 
                 {/* Dotted pattern overlay */}
                 <div className="absolute inset-0 opacity-10">
@@ -76,15 +76,15 @@ export default function BrochurePage() {
                         </h2>
 
                         {/* Logo */}
-                        <div className="mb-8 inline-block">
-                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-1 border border-white/20">
-                                <img
-                                    className="w-auto h-12 md:h-18 rounded-2xl"
-                                    src="https://i.postimg.cc/g0pZvzDg/main.jpg"
-                                    alt="Fastin Property Auctions Logo"
-                                />
-                            </div>
-                        </div>
+                        {/*<div className="mb-8 inline-block">*/}
+                        {/*    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-1 border border-white/20">*/}
+                        {/*        <img*/}
+                        {/*            className="w-auto h-12 md:h-18 rounded-2xl"*/}
+                        {/*            src="https://i.postimg.cc/g0pZvzDg/main.jpg"*/}
+                        {/*            alt="Fastin Property Auctions Logo"*/}
+                        {/*        />*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
 
                         {/* Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -123,7 +123,7 @@ export default function BrochurePage() {
 
                             {/* Become Fastin Property Auctions Section with Image Background */}
                             <div className="mb-16 max-w-3xl mx-auto md:mb-12 md:px-8">
-                                <div className="relative bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl shadow-2xl overflow-hidden border-2 border-blue-200">
+                                <div className="relative bg-gradient-to-br from-blue-100 to-transparent rounded-3xl shadow-2xl overflow-hidden border-2 border-blue-200">
                                     {/* Background Image */}
                                     <div className="aspect-video relative">
                                         <img
@@ -132,7 +132,7 @@ export default function BrochurePage() {
                                             className="w-full h-full object-cover"
                                         />
                                         {/* Gradient Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/85 via-blue-900/65 to-blue-900/40"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-b from-blue-800/50 via-transparent to-transparent"></div>
                                     </div>
 
                                     {/* Title Content Overlay */}

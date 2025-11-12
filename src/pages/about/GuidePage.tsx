@@ -39,7 +39,7 @@ export default function GuidePage() {
             {/* Hero Section */}
             <div className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 overflow-hidden">
                 {/* Animated Background Pattern */}
-                <div className="absolute inset-0 opacity-60">
+                <div className="absolute inset-0 opacity-80">
                     <div className="absolute bg-cover bg-center inset-0"
                          style={{
                              backgroundImage: `url('https://i.postimg.cc/4d1JFNqj/IMG-20251104-WA0045.jpg')`
@@ -51,26 +51,26 @@ export default function GuidePage() {
                         }}></div>
                     </div>
                 </div>
-                
+
                 <div className="relative max-w-4xl mx-8 px-4 sm:px-6 lg:px-8 py-24 md:py-32">
                     <div className="text-left">
                         <div className="inline-flex items-center gap-2 bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30 rounded-full px-4 py-2 mb-6">
                             <Sparkles className="w-4 h-4 text-yellow-400" />
                             <span className="text-yellow-400 text-sm font-semibold">Complete Guide</span>
                         </div>
-                        
+
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                             Understanding <br />
                             <span className="text-yellow-400">Property Auctions</span> in Zimbabwe
                         </h1>
-                        
+
                         <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
                             Your comprehensive resource for navigating the property auction market
                         </p>
-                        
+
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            <a 
-                                href="https://qrco.de/ABC_Auctions" 
+                            <a
+                                href="https://iprop.solutions/fastin/properties/for-auction"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
@@ -78,8 +78,8 @@ export default function GuidePage() {
                                 View Current Auctions
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </a>
-                            <a 
-                                href="/valuation" 
+                            <a
+                                href="/valuation"
                                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
                             >
                                 Get Free Valuation
@@ -87,7 +87,7 @@ export default function GuidePage() {
                         </div>
                     </div>
                 </div>
-                
+
                 {/* Bottom Wave */}
                 <div className="absolute bottom-0 left-0 right-0">
                     <svg viewBox="0 0 1440 120" className="w-full h-auto">
@@ -114,7 +114,7 @@ export default function GuidePage() {
                         <p className="text-xl text-gray-700 leading-relaxed mb-8">
                             Property auctions in Zimbabwe are public sales where properties are sold to the highest bidder through a competitive bidding process.
                         </p>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[
                                 {
@@ -184,7 +184,7 @@ export default function GuidePage() {
                         ].map((benefit, index) => {
                             const Icon = benefit.icon;
                             return (
-                                <div 
+                                <div
                                     key={index}
                                     className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100 hover:border-blue-200 hover:-translate-y-1"
                                 >
@@ -196,6 +196,107 @@ export default function GuidePage() {
                                 </div>
                             );
                         })}
+                    </div>
+                </div>
+
+                {/* NEW: Featured Auction Properties - 3 House Images */}
+                <div className="mb-24">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-2 bg-yellow-100 rounded-full px-4 py-2 mb-4">
+                            <Building2 className="w-5 h-5 text-yellow-700" />
+                            <span className="text-yellow-700 text-sm font-semibold">Property Examples</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+                            Featured Auction Properties
+                        </h2>
+                        <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full mb-6"></div>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Examples of properties available through our auction platform
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Property 1 */}
+                        <div className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-blue-900/20 hover:border-yellow-400">
+                            <div className="relative h-[350px]">
+                                <img
+                                    src="https://i.postimg.cc/WpXNGzMn/IMG_20251104_WA0032.jpg"
+                                    alt="Residential Auction Property"
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent"></div>
+                                <div className="absolute top-4 left-4">
+                                    <div className="bg-yellow-500 text-blue-900 px-4 py-2 rounded-xl font-bold text-sm shadow-lg">
+
+                                    </div>
+                                </div>
+                                <div className="absolute bottom-0 left-0 right-0 p-6">
+                                    <div className="bg-blue-900/90 backdrop-blur-sm rounded-xl p-4 border-2 border-yellow-400">
+                                        <p className="text-yellow-400 text-xl font-bold mb-1">Premium Residential</p>
+                                        <p className="text-white text-sm">Ideal for families and investors</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Property 2 */}
+                        <div className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-blue-900/20 hover:border-yellow-400">
+                            <div className="relative h-[350px]">
+                                <img
+                                    src="https://i.postimg.cc/BQzJzz7v/IMG_20251104_WA0026.jpg"
+                                    alt="Investment Property"
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent"></div>
+                                <div className="absolute top-4 left-4">
+                                    <div className="bg-yellow-500 text-blue-900 px-4 py-2 rounded-xl font-bold text-sm shadow-lg">
+
+                                    </div>
+                                </div>
+                                <div className="absolute bottom-0 left-0 right-0 p-6">
+                                    <div className="bg-blue-900/90 backdrop-blur-sm rounded-xl p-4 border-2 border-yellow-400">
+                                        <p className="text-yellow-400 text-xl font-bold mb-1">Investment Property</p>
+                                        <p className="text-white text-sm">Great rental potential</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Property 3 */}
+                        <div className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border-4 border-blue-900/20 hover:border-yellow-400">
+                            <div className="relative h-[350px]">
+                                <img
+                                    src="https://i.postimg.cc/jd2sZTcS/IMG_20251104_WA0027.jpg"
+                                    alt="Starter Home"
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent"></div>
+                                <div className="absolute top-4 left-4">
+                                    <div className="bg-yellow-500 text-blue-900 px-4 py-2 rounded-xl font-bold text-sm shadow-lg">
+
+                                    </div>
+                                </div>
+                                <div className="absolute bottom-0 left-0 right-0 p-6">
+                                    <div className="bg-blue-900/90 backdrop-blur-sm rounded-xl p-4 border-2 border-yellow-400">
+                                        <p className="text-yellow-400 text-xl font-bold mb-1">Starter Home</p>
+                                        <p className="text-white text-sm">Perfect for first-time buyers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* CTA below properties */}
+                    <div className="text-center mt-12">
+                        <a
+                            href="https://iprop.solutions/fastin/properties/for-auction"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                        >
+                            View All Properties
+                            <ArrowRight className="w-5 h-5" />
+                        </a>
                     </div>
                 </div>
 
@@ -235,7 +336,7 @@ export default function GuidePage() {
                         ].map((type, index) => {
                             const Icon = type.icon;
                             return (
-                                <div 
+                                <div
                                     key={index}
                                     className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl"
                                 >
@@ -259,7 +360,7 @@ export default function GuidePage() {
                                 backgroundSize: '40px 40px'
                             }}></div>
                         </div>
-                        
+
                         <div className="relative px-8 py-16 md:px-16">
                             <div className="text-center mb-12">
                                 <div className="inline-flex items-center gap-2 bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30 rounded-full px-4 py-2 mb-4">
@@ -296,7 +397,7 @@ export default function GuidePage() {
                                 ].map((item, index) => {
                                     const Icon = item.icon;
                                     return (
-                                        <div 
+                                        <div
                                             key={index}
                                             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
                                         >
@@ -373,18 +474,18 @@ export default function GuidePage() {
                         ].map((step, index) => {
                             const Icon = step.icon;
                             return (
-                                <div 
+                                <div
                                     key={index}
                                     className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1"
                                 >
                                     <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg">
                                         <span className="text-white font-bold text-lg">{step.step}</span>
                                     </div>
-                                    
+
                                     <div className="w-14 h-14 bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                                         <Icon className="w-7 h-7 text-yellow-400" />
                                     </div>
-                                    
+
                                     <h3 className="text-xl font-bold text-blue-900 mb-3">{step.title}</h3>
                                     <p className="text-gray-600 leading-relaxed">{step.description}</p>
                                 </div>
@@ -414,7 +515,7 @@ export default function GuidePage() {
                                 </div>
                                 <h3 className="text-3xl font-bold text-green-900">Advantages</h3>
                             </div>
-                            
+
                             <ul className="space-y-4">
                                 {[
                                     "Significant cost savings with average 25% discount",
@@ -441,7 +542,7 @@ export default function GuidePage() {
                                 </div>
                                 <h3 className="text-3xl font-bold text-orange-900">Challenges</h3>
                             </div>
-                            
+
                             <ul className="space-y-4">
                                 {[
                                     "Limited inspection opportunities before purchase",
@@ -499,7 +600,7 @@ export default function GuidePage() {
                             ].map((trend, index) => {
                                 const Icon = trend.icon;
                                 return (
-                                    <div 
+                                    <div
                                         key={index}
                                         className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
                                     >
@@ -566,8 +667,8 @@ export default function GuidePage() {
                                             {faq.question}
                                         </span>
                                         <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                                            openFaq === faq.id 
-                                                ? 'bg-gradient-to-br from-yellow-500 to-yellow-600 rotate-180' 
+                                            openFaq === faq.id
+                                                ? 'bg-gradient-to-br from-yellow-500 to-yellow-600 rotate-180'
                                                 : 'bg-blue-100 group-hover:bg-blue-200'
                                         }`}>
                                             <ChevronDown className={`w-5 h-5 transition-colors ${
@@ -594,23 +695,23 @@ export default function GuidePage() {
                             backgroundSize: '40px 40px'
                         }}></div>
                     </div>
-                    
+
                     <div className="relative px-8 py-16 md:px-16 md:py-20 text-center">
                         <div className="inline-flex items-center gap-2 bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30 rounded-full px-4 py-2 mb-6">
                             <Sparkles className="w-4 h-4 text-yellow-400" />
                             <span className="text-yellow-400 text-sm font-semibold">Ready to Begin?</span>
                         </div>
-                        
+
                         <h3 className="text-3xl md:text-5xl font-bold text-white mb-6">
                             Start Your Auction Journey Today
                         </h3>
                         <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
                             Browse current listings or get a free valuation for your property
                         </p>
-                        
+
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a 
-                                href="https://qrco.de/ABC_Auctions" 
+                            <a
+                                href="https://iprop.solutions/fastin/properties/for-auction"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-10 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
@@ -618,14 +719,14 @@ export default function GuidePage() {
                                 View Current Auctions
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </a>
-                            <a 
-                                href="/valuation" 
+                            <a
+                                href="/valuation"
                                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300"
                             >
                                 Get Free Valuation
                             </a>
                         </div>
-                        
+
                         <div className="mt-12 pt-8 border-t border-white/20">
                             <div className="flex flex-wrap justify-center gap-8 text-blue-200 text-sm">
                                 <div className="flex items-center gap-2">

@@ -6,8 +6,23 @@ export default function FootprintPage() {
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Hero Section */}
 
-            <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+            <section className="relative  h-[70vh] bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 overflow-hidden">
+                {/* Animated Background Pattern */}
+                <div className="absolute inset-0 opacity-70">
+                    <div className="absolute bg-cover bg-center inset-0"
+                         style={{
+                             backgroundImage: `url('https://i.postimg.cc/zD0zCvnn/IMG_20251104_WA0031.jpg')`
+                         }}>
+                        {/* Subtle pattern overlay with reduced opacity */}
+                        <div className="absolute inset-0 opacity-5" style={{
+                            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
+                            backgroundSize: '40px 40px'
+                        }}></div>
+                    </div>
+                </div>
+
+                <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14">
+
                     <div className="flex items-start sm:items-center justify-between gap-6 flex-col sm:flex-row">
                         <div>
                             <div className="flex items-center gap-2 text-blue-200/90 text-sm">
@@ -17,15 +32,15 @@ export default function FootprintPage() {
                                 <span>/</span>
                                 <span className="text-white">National Coverage</span>
                             </div>
-                            <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
+                            <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
                                 National Coverage
                             </h1>
                             <p className="mt-3 text-blue-100 max-w-2xl">
                                 Advantages of Using a Brokerage with a National Footprint
                             </p>
                         </div>
-                        <div className="shrink-0 bg-white/10 rounded-2xl p-4 ring-1 ring-white/20">
-                            <FileText className="w-12 h-12" />
+                        <div className="shrink-0 bg-white/40 rounded-2xl p-4 ring-1 ring-white/20">
+                            <FileText className="w-12 h-12 text-white" />
                         </div>
                     </div>
                 </div>
@@ -83,14 +98,14 @@ export default function FootprintPage() {
                                 </div>
                             </div>
 
-                            {/* Image */}
+                            {/* UPDATED IMAGE */}
                             <div className="order-1 lg:order-2">
                                 <div className="relative">
                                     <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-yellow-500 rounded-3xl blur-2xl opacity-20 transform scale-95"></div>
                                     <div className="relative bg-white rounded-3xl p-0 shadow-2xl border-2 border-blue-900/10">
                                         <div className="overflow-hidden rounded-2xl">
                                             <img
-                                                src="https://i.postimg.cc/d0QPVP1t/IMG-20251104-WA0046.jpg"
+                                                src="https://i.postimg.cc/pVCSYy00/IMG_20251104_WA0046.jpg"
                                                 alt="Fastin Property Auctions Nationwide Coverage"
                                                 className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                                             />
@@ -121,7 +136,7 @@ export default function FootprintPage() {
                                         <svg className="w-5 h-5 mt-1 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                         </svg>
-                                        <span>Experienced brokers and executive leaders to maximize your property’s potential.</span>
+                                        <span>Experienced brokers and executive leaders to maximize your property's potential.</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <svg className="w-5 h-5 mt-1 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -145,6 +160,93 @@ export default function FootprintPage() {
                                 <p className="text-gray-600 leading-relaxed">
                                     We are also committed to continually cultivating knowledge and creating an environment whereby our clients achieve success through our service.
                                 </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* NEW: Featured Property Card Section */}
+                    <div className="mb-16">
+                        <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-3xl shadow-xl p-8 border-2 border-blue-900/10">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                                {/* Property Image */}
+                                <div className="order-1">
+                                    <div className="relative group">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-yellow-500 rounded-2xl blur-xl opacity-20 transform scale-95"></div>
+                                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                                            <img
+                                                src="https://i.postimg.cc/85GpHrKq/IMG_20251104_WA0052.jpg"
+                                                alt="Property Available Through National Network"
+                                                className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent"></div>
+                                            <div className="absolute top-4 left-4">
+                                                <div className="bg-yellow-500 text-blue-900 px-4 py-2 rounded-xl font-bold text-sm shadow-lg">
+                                                    Featured Property
+                                                </div>
+                                            </div>
+                                            <div className="absolute bottom-0 left-0 right-0 p-6">
+                                                <div className="bg-blue-900/90 backdrop-blur-sm rounded-xl p-4 border-2 border-yellow-400">
+                                                    <p className="text-yellow-400 text-xl font-bold mb-1">Nationwide Reach</p>
+                                                    <p className="text-white text-sm">Properties marketed across all 10 provinces</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Text Content */}
+                                <div className="order-2">
+                                    <div className="space-y-6">
+                                        <div>
+                                            <div className="inline-flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                                                <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                                                National Marketing Power
+                                            </div>
+                                            <h3 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+                                                Your Property, Our Network
+                                            </h3>
+                                            <div className="w-20 h-1 bg-yellow-500 rounded-full mb-6"></div>
+                                        </div>
+
+                                        <p className="text-gray-700 text-lg leading-relaxed">
+                                            With our national footprint, your property gains exposure across Zimbabwe's entire market. From urban centers to regional towns, we ensure maximum visibility for every listing.
+                                        </p>
+
+                                        <div className="space-y-3">
+                                            {[
+                                                "Marketed to buyers in all 10 provinces",
+                                                "Access to nationwide investor database",
+                                                "Local expertise with national reach",
+                                                "Comprehensive marketing campaigns"
+                                            ].map((item, index) => (
+                                                <div key={index} className="flex items-center gap-3">
+                                                    <div className="bg-yellow-500 rounded-full p-1">
+                                                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                        </svg>
+                                                    </div>
+                                                    <span className="text-gray-700 font-medium">{item}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <div className="pt-4">
+                                            <div className="bg-white rounded-xl p-6 shadow-md">
+                                                <div className="flex items-center justify-between">
+                                                    <div>
+                                                        <p className="text-sm text-gray-600 mb-1">Average Market Reach</p>
+                                                        <p className="text-3xl font-bold text-blue-900">20,000+</p>
+                                                    </div>
+                                                    <div className="w-16 h-16 bg-gradient-to-br from-blue-900 to-blue-700 rounded-full flex items-center justify-center">
+                                                        <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

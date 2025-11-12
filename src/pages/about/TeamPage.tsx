@@ -50,7 +50,7 @@ export default function TeamPage() {
                         {/* Image Section */}
                         <div className="relative">
                             <div className="absolute inset-0 bg-gradient-to-br from-yellow-500 to-blue-600 rounded-3xl blur-xl opacity-30"></div>
-                            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-3 border border-yellow-500/40 shadow-2xl">
+                            <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-2 border border-yellow-500/40 shadow-2xl">
                                 <div className="overflow-hidden rounded-2xl">
                                     <img
                                         src="https://i.postimg.cc/NMxgPfZF/IMG-20251104-WA0042.jpg"
