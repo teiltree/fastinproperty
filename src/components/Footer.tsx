@@ -90,8 +90,16 @@ export default function Footer() {
                                         <MapPin className="w-4 h-4 text-yellow-400" />
                                     </div>
                                     <span className="text-sm leading-relaxed">
-                      2 Smithfield Way, Longlands Industrial Site, Marondera, Zimbabwe
-                    </span>
+                                        Head Office - Number 4 Silwood Close, Chisipite, Harare
+                                    </span>
+                                </div>
+                                <div className="flex items-start space-x-3 text-blue-200">
+                                    <div className="bg-blue-800/50 rounded-lg p-2">
+                                        <MapPin className="w-4 h-4 text-yellow-400" />
+                                    </div>
+                                    <span className="text-sm leading-relaxed">
+                                        2 Smithfield Way, Longlands Industrial Site, Marondera, Zimbabwe
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -271,8 +279,8 @@ export default function Footer() {
                                     Your browser does not support the video tag.
                                 </video>
                                 <span className="font-semibold text-sm text-white">
-        Proudly Zimbabwean
-      </span>
+                                    Proudly Zimbabwean
+                                </span>
                             </div>
                             <div className="flex items-center gap-1 bg-blue-900/30 px-3 py-1.5 rounded-full">
                                 <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />

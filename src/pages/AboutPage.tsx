@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import {ChevronDown, Award, Users, Globe, Shield, Star, CheckCircle, Home, Sparkles} from 'lucide-react';
-import {Link} from "react-router-dom";
+import { ChevronDown, Award, Users, Globe, Shield, Star, CheckCircle, Home, Sparkles } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 export default function AboutPage() {
     const [expandedSection, setExpandedSection] = useState(null);
@@ -92,9 +92,9 @@ export default function AboutPage() {
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
             {/* Hero Section */}
             <section className="relative bg-cover bg-center h-[80vh] overflow-hidden"
-                     style={{
-                         backgroundImage: `url('https://i.postimg.cc/764HVTsW/IMG-20251104-WA0053.jpg')`
-                     }}
+                style={{
+                    backgroundImage: `url('https://i.postimg.cc/764HVTsW/IMG-20251104-WA0053.jpg')`
+                }}
             >
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-100/10 to-blue-100/10"></div>
@@ -103,9 +103,9 @@ export default function AboutPage() {
                     <div className="flex items-start sm:items-center justify-between gap-6 flex-col sm:flex-row">
                         <div>
                             <div className="flex items-center gap-2 text-blue-200/90 text-sm">
-                                <Link to="/" className="hover:text-yellow-400 transition-colors">Home</Link>
-                                <span className="text-yellow-400">/</span>
-                                <span className="text-yellow-400 font-semibold">About Us</span>
+                                <Link to="/" className="hover:text-yellow-400 transition-colors"></Link>
+                                <span className="text-yellow-400"></span>
+                                <span className="text-yellow-400 font-semibold"></span>
                             </div>
                             <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white drop-shadow-lg">
                                 Transforming Real Estate Auctions
@@ -199,7 +199,7 @@ export default function AboutPage() {
                                     {/* Quote Icon */}
                                     <div className="mb-8">
                                         <svg className="w-16 h-16 text-yellow-400 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+                                            <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
                                         </svg>
                                     </div>
 

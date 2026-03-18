@@ -34,9 +34,9 @@ export default function BrochurePage() {
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Hero Section */}
             <div className="relative h-[90vh] bg-cover bg-center overflow-hidden"
-                 style={{
-                     backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.30) 100%, rgba(30, 58, 138, 0.2) 40%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/bY3yxrQn/IMG_20251104_WA0030.jpg')`
-                 }}
+                style={{
+                    backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.30) 100%, rgba(30, 58, 138, 0.2) 40%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/bY3yxrQn/IMG_20251104_WA0030.jpg')`
+                }}
             >
                 {/*<div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>*/}
 
@@ -52,11 +52,11 @@ export default function BrochurePage() {
                     <div className="max-w-4xl">
                         {/* Breadcrumb */}
                         <div className="flex items-center space-x-3 mb-6 text-white/80">
-                            <span className="hover:text-yellow-400 transition-colors cursor-pointer">Home</span>
-                            <span className="text-yellow-400">/</span>
-                            <span className="hover:text-yellow-400 transition-colors cursor-pointer">Franchising</span>
-                            <span className="text-yellow-400">/</span>
-                            <span className="text-yellow-400 font-semibold">Brochure</span>
+                            <span className="hover:text-yellow-400 transition-colors cursor-pointer"></span>
+                            <span className="text-yellow-400"></span>
+                            <span className="hover:text-yellow-400 transition-colors cursor-pointer"></span>
+                            <span className="text-yellow-400"></span>
+                            <span className="text-yellow-400 font-semibold"></span>
                         </div>
 
                         {/* Badge */}
@@ -121,32 +121,32 @@ export default function BrochurePage() {
                     <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 items-center">
                         {/* Text Content */}
 
-                            {/* Become Fastin Property Auctions Section with Image Background */}
-                            <div className="mb-16 max-w-3xl mx-auto md:mb-12 md:px-8">
-                                <div className="relative bg-gradient-to-br from-blue-100 to-transparent rounded-3xl shadow-2xl overflow-hidden border-2 border-blue-200">
-                                    {/* Background Image */}
-                                    <div className="aspect-video relative">
-                                        <img
-                                            src={image1}
-                                            alt="Franchise Overview Visual"
-                                            className="w-full h-full object-cover"
-                                        />
-                                        {/* Gradient Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-b from-blue-800/50 via-transparent to-transparent"></div>
-                                    </div>
+                        {/* Become Fastin Property Auctions Section with Image Background */}
+                        <div className="mb-16 max-w-3xl mx-auto md:mb-12 md:px-8">
+                            <div className="relative bg-gradient-to-br from-blue-100 to-transparent rounded-3xl shadow-2xl overflow-hidden border-2 border-blue-200">
+                                {/* Background Image */}
+                                <div className="aspect-video relative">
+                                    <img
+                                        src={image1}
+                                        alt="Franchise Overview Visual"
+                                        className="w-full h-full object-cover"
+                                    />
+                                    {/* Gradient Overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-b from-blue-800/50 via-transparent to-transparent"></div>
+                                </div>
 
-                                    {/* Title Content Overlay */}
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-center px-4">
-                                            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
-                                                Become Fastin Property Auctions<br />in Your Area
-                                            </h2>
+                                {/* Title Content Overlay */}
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="text-center px-4">
+                                        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
+                                            Become Fastin Property Auctions<br />in Your Area
+                                        </h2>
 
-                                            <div className="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full shadow-lg"></div>
-                                        </div>
+                                        <div className="w-32 h-1.5 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto rounded-full shadow-lg"></div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
                         <div className="space-y-6 max-w-4xl mx-auto md:space-y-12">
                             <p className="text-lg text-gray-700 leading-relaxed">
@@ -425,14 +425,12 @@ export default function BrochurePage() {
                                         <span className="text-lg font-bold text-blue-900 pr-8 group-hover:text-blue-700 transition-colors">
                                             {faq.question}
                                         </span>
-                                        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
-                                            openFaq === faq.id
+                                        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === faq.id
                                                 ? 'bg-gradient-to-br from-yellow-500 to-yellow-600 rotate-180'
                                                 : 'bg-blue-100 group-hover:bg-blue-200'
-                                        }`}>
-                                            <ChevronDown className={`w-5 h-5 transition-colors ${
-                                                openFaq === faq.id ? 'text-white' : 'text-blue-900'
-                                            }`} />
+                                            }`}>
+                                            <ChevronDown className={`w-5 h-5 transition-colors ${openFaq === faq.id ? 'text-white' : 'text-blue-900'
+                                                }`} />
                                         </div>
                                     </div>
                                 </button>

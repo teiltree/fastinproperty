@@ -13,11 +13,11 @@ export default function MarketingPage() {
                     <div className="max-w-2xl">
                         {/* Breadcrumb */}
                         <div className="flex items-center space-x-3 mb-6 text-white/80">
-                            <span className="hover:text-yellow-400 transition-colors cursor-pointer">Home</span>
-                            <span className="text-yellow-400">/</span>
-                            <span className="hover:text-yellow-400 transition-colors cursor-pointer">Services</span>
-                            <span className="text-yellow-400">/</span>
-                            <span className="text-yellow-400 font-semibold">Marketing</span>
+                            <span className="hover:text-yellow-400 transition-colors cursor-pointer"></span>
+                            <span className="text-yellow-400"></span>
+                            <span className="hover:text-yellow-400 transition-colors cursor-pointer"></span>
+                            <span className="text-yellow-400"></span>
+                            <span className="text-yellow-400 font-semibold"></span>
                         </div>
 
                         {/* Title */}
