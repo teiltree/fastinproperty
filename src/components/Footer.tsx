@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
 
             {/* Main Footer Content */}
-            <div className="relative py-20 text-white">
+            <div className="relative py-10 md:py-20 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
                         {/* Company Info */}
@@ -266,7 +266,7 @@ export default function Footer() {
                             © 2025 Fastin Property Auctions • 2 Smithfield Way, Longlands Industrial Site, Marondera • VAT: 4320242924
                         </p>
 
-                        <div className="flex items-center gap-6 text-blue-300 text-xs">
+                        <div className="flex flex-wrap items-center gap-3 md:gap-6 text-blue-300 text-xs">
                             <div className="flex items-center gap-2 bg-blue-900/90 px-3 py-1.5 rounded-lg">
                                 <video
                                     autoPlay

@@ -33,7 +33,7 @@ export default function BrochurePage() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
             {/* Hero Section */}
-            <div className="relative h-[90vh] bg-cover bg-center overflow-hidden"
+            <div className="relative min-h-[60vh] md:h-[90vh] bg-cover bg-center overflow-hidden"
                 style={{
                     backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.30) 100%, rgba(30, 58, 138, 0.2) 40%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/bY3yxrQn/IMG_20251104_WA0030.jpg')`
                 }}
@@ -68,10 +68,10 @@ export default function BrochurePage() {
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
+                        <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-4 leading-tight">
                             Fastin Property Auctions
                         </h1>
-                        <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-8">
+                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-yellow-400 mb-8">
                             Franchise Brochure
                         </h2>
 
@@ -138,7 +138,7 @@ export default function BrochurePage() {
                                 {/* Title Content Overlay */}
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="text-center px-4">
-                                        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
+                                        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-6 drop-shadow-2xl leading-tight">
                                             Become Fastin Property Auctions<br />in Your Area
                                         </h2>
 
@@ -237,19 +237,19 @@ export default function BrochurePage() {
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
-                                    <div className="text-6xl font-bold text-yellow-400 mb-2">65%</div>
+                                    <div className="text-4xl md:text-6xl font-bold text-yellow-400 mb-2">65%</div>
                                     <div className="text-white font-semibold text-xl mb-2">You Keep</div>
                                     <div className="text-blue-200 text-sm">Of all auction fees</div>
                                 </div>
 
                                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
-                                    <div className="text-6xl font-bold text-yellow-400 mb-2">$4,000+</div>
+                                    <div className="text-4xl md:text-6xl font-bold text-yellow-400 mb-2">$4,000+</div>
                                     <div className="text-white font-semibold text-xl mb-2">Average Fee</div>
                                     <div className="text-blue-200 text-sm">Per transaction</div>
                                 </div>
 
                                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
-                                    <div className="text-6xl font-bold text-yellow-400 mb-2">High</div>
+                                    <div className="text-4xl md:text-6xl font-bold text-yellow-400 mb-2">High</div>
                                     <div className="text-white font-semibold text-xl mb-2">Margin</div>
                                     <div className="text-blue-200 text-sm">No hidden costs</div>
                                 </div>
@@ -282,7 +282,7 @@ export default function BrochurePage() {
                                     <span className="text-blue-900 text-sm font-bold">Potential</span>
                                 </div>
 
-                                <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl">
+                                <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-2xl">
                                     How Much Can You Earn?
                                 </h2>
 
@@ -418,7 +418,7 @@ export default function BrochurePage() {
                         ].map((faq, index, array) => (
                             <div key={faq.id} className={index !== array.length - 1 ? "border-b border-gray-200" : ""}>
                                 <button
-                                    className="w-full px-8 py-6 text-left hover:bg-blue-50/50 focus:outline-none transition-colors duration-200 group"
+                                    className="w-full px-4 md:px-8 py-6 text-left hover:bg-blue-50/50 focus:outline-none transition-colors duration-200 group"
                                     onClick={() => toggleFaq(faq.id)}
                                 >
                                     <div className="flex justify-between items-center">
@@ -426,8 +426,8 @@ export default function BrochurePage() {
                                             {faq.question}
                                         </span>
                                         <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openFaq === faq.id
-                                                ? 'bg-gradient-to-br from-yellow-500 to-yellow-600 rotate-180'
-                                                : 'bg-blue-100 group-hover:bg-blue-200'
+                                            ? 'bg-gradient-to-br from-yellow-500 to-yellow-600 rotate-180'
+                                            : 'bg-blue-100 group-hover:bg-blue-200'
                                             }`}>
                                             <ChevronDown className={`w-5 h-5 transition-colors ${openFaq === faq.id ? 'text-white' : 'text-blue-900'
                                                 }`} />
@@ -435,7 +435,7 @@ export default function BrochurePage() {
                                     </div>
                                 </button>
                                 {openFaq === faq.id && (
-                                    <div className="px-8 pb-6 text-gray-600 leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
+                                    <div className="px-4 md:px-8 pb-6 text-gray-600 leading-relaxed animate-in fade-in slide-in-from-top-2 duration-300">
                                         <p>{faq.answer}</p>
                                     </div>
                                 )}
@@ -469,7 +469,7 @@ export default function BrochurePage() {
                                     <span className="text-blue-900 text-sm font-bold">Market Potential</span>
                                 </div>
 
-                                <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl">
+                                <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-2xl">
                                     The Local Opportunity
                                 </h2>
 

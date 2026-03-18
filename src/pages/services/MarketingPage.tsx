@@ -21,7 +21,7 @@ export default function MarketingPage() {
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-7xl md:text-8xl font-bold text-white mb-6 tracking-tight leading-tight">
+                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight leading-tight">
                             Comprehensive
                             <span className="block text-yellow-400 font-semibold mt-2">Marketing</span>
                         </h1>
@@ -30,13 +30,13 @@ export default function MarketingPage() {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-24">
+            <div className="container mx-auto px-4 py-12 md:py-24">
                 <div className="max-w-7xl mx-auto">
                     {/* Introduction - Combined with Featured Image */}
                     <div className="mb-24">
                         {/* Opening Paragraph */}
                         <div className="text-center mb-16 max-w-4xl mx-auto">
-                            <p className="text-3xl text-gray-800 leading-relaxed font-light">
+                            <p className="text-xl md:text-3xl text-gray-800 leading-relaxed font-light">
                                 The Fastin Property Auctions offers a comprehensive range of services & nationwide networking which gives properties the
                                 <span className="font-bold text-blue-900"> paramount exposure</span> and attention in the real estate marketplace.
                             </p>
@@ -48,7 +48,7 @@ export default function MarketingPage() {
 
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                                 {/* Left Side - Text Content */}
-                                <div className="p-12 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                <div className="p-6 md:p-12 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
                                     <div className="space-y-8">
                                         <div>
                                             <p className="text-gray-700 leading-relaxed text-xl">
@@ -92,9 +92,9 @@ export default function MarketingPage() {
                     {/* Marketing Campaign Section */}
                     <div className="mb-24">
                         <div className="text-center mb-20">
-                            <h2 className="text-6xl font-bold text-blue-900 mb-6">Our Marketing Arsenal</h2>
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6">Our Marketing Arsenal</h2>
                             <div className="w-40 h-1.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto rounded-full mb-8"></div>
-                            <p className="text-2xl text-gray-600 max-w-3xl mx-auto font-light">
+                            <p className="text-lg md:text-2xl text-gray-600 max-w-3xl mx-auto font-light">
                                 A multi-channel approach designed to maximize your property's exposure across every platform that matters
                             </p>
                         </div>
@@ -157,11 +157,11 @@ export default function MarketingPage() {
                                     description: "Traditional advertising through posters and billboards for maximum visibility"
                                 }
                             ].map((item, index) => (
-                                <div key={index} className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-10 border-2 border-gray-100 hover:border-yellow-400 transform hover:-translate-y-3 relative overflow-hidden">
+                                <div key={index} className="group bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 p-6 md:p-10 border-2 border-gray-100 hover:border-yellow-400 transform hover:-translate-y-3 relative overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-900/5 to-yellow-500/5 rounded-full blur-2xl transform translate-x-16 -translate-y-16"></div>
 
                                     <div className="relative">
-                                        <div className="w-24 h-24 bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-8 text-white group-hover:from-yellow-500 group-hover:to-yellow-600 transition-all duration-500 shadow-lg group-hover:shadow-yellow-500/50 group-hover:scale-110">
+                                        <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-900 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-8 text-white group-hover:from-yellow-500 group-hover:to-yellow-600 transition-all duration-500 shadow-lg group-hover:shadow-yellow-500/50 group-hover:scale-110">
                                             {item.icon}
                                         </div>
                                         <h3 className="text-xl font-bold text-blue-900 mb-5 text-center group-hover:text-yellow-600 transition-colors min-h-[3.5rem] flex items-center justify-center">
@@ -189,13 +189,13 @@ export default function MarketingPage() {
                                 </div>
 
                                 {/* Text Side */}
-                                <div className="p-12 lg:p-16 flex flex-col justify-center">
+                                <div className="p-6 md:p-12 lg:p-16 flex flex-col justify-center">
                                     <div className="mb-6">
                                         <span className="inline-block bg-yellow-400 text-blue-900 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
                                             Featured Service
                                         </span>
                                     </div>
-                                    <h3 className="text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
+                                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900 mb-6">
                                         Professional Property Showcase
                                     </h3>
                                     <div className="w-24 h-1.5 bg-yellow-500 rounded-full mb-8"></div>
@@ -221,13 +221,13 @@ export default function MarketingPage() {
                         </div>
 
                         {/* Information Pack Section - ENHANCED WITH IMAGE LEFT-ALIGNED TEXT */}
-                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl shadow-2xl p-16 mb-20 border-2 border-blue-900/10 overflow-hidden relative flex items-center">
+                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl shadow-2xl p-6 md:p-16 mb-20 border-2 border-blue-900/10 overflow-hidden relative flex flex-col md:flex-row items-center">
                             {/* Decorative Top Border */}
                             <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-blue-900 via-yellow-500 to-blue-900"></div>
 
                             {/* Background Image on Right */}
                             <div
-                                className="absolute right-0 top-0 w-1/2 h-full opacity-90 bg-cover bg-center"
+                                className="absolute right-0 top-0 w-1/2 h-full opacity-90 bg-cover bg-center hidden md:block"
                                 style={{
                                     backgroundImage: `url('https://i.postimg.cc/3NJKMQHg/IMG-20251104-WA0036.jpg')`,
                                     maskImage: 'linear-gradient(to left, rgba(0,0,0,1), transparent)',
@@ -240,12 +240,12 @@ export default function MarketingPage() {
                             <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-900/10 rounded-full blur-3xl"></div>
 
                             {/* Text Content - moved to left */}
-                            <div className="relative z-10 w-1/2 pr-10">
-                                <h3 className="text-5xl font-bold text-blue-900 mb-6">
+                            <div className="relative z-10 w-full md:w-1/2 md:pr-10">
+                                <h3 className="text-3xl md:text-5xl font-bold text-blue-900 mb-6">
                                     Professional Information Packs
                                 </h3>
                                 <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent rounded-full mb-10"></div>
-                                <p className="text-2xl text-gray-600 mb-16 font-light">
+                                <p className="text-lg md:text-2xl text-gray-600 mb-16 font-light">
                                     Comprehensive property information packs that get added to our website and sent directly to our investor network.
                                 </p>
                             </div>
@@ -256,12 +256,12 @@ export default function MarketingPage() {
                     {/* Global Reach Section - ENHANCED WITH IMAGE */}
                     <div className="mb-24">
                         <div className="text-center mb-16">
-                            <h2 className="text-6xl font-bold text-blue-900 mb-6">Global Bidding Platform</h2>
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6">Global Bidding Platform</h2>
                             <div className="w-40 h-1.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto rounded-full mb-8"></div>
-                            <p className="text-3xl text-gray-600 font-light">Buyers can bid from anywhere in the world!</p>
+                            <p className="text-xl md:text-3xl text-gray-600 font-light">Buyers can bid from anywhere in the world!</p>
                         </div>
 
-                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl p-14 border-2 border-blue-900/10 shadow-xl relative overflow-hidden">
+                        <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 rounded-3xl p-6 md:p-14 border-2 border-blue-900/10 shadow-xl relative overflow-hidden">
                             {/* NEW: Subtle property image in background */}
                             <div
                                 className="absolute left-0 top-0 w-1/3 h-full opacity-95 bg-cover bg-center"
@@ -282,15 +282,15 @@ export default function MarketingPage() {
                     </div>
 
                     {/* Summary Section */}
-                    <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white rounded-3xl p-16 text-center relative overflow-hidden shadow-2xl">
+                    <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white rounded-3xl p-6 md:p-16 text-center relative overflow-hidden shadow-2xl">
                         <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/10 via-transparent to-yellow-400/10"></div>
                         <div className="absolute top-10 right-10 w-72 h-72 bg-yellow-500/10 rounded-full blur-3xl"></div>
                         <div className="absolute bottom-10 left-10 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl"></div>
 
                         <div className="relative z-10">
-                            <h3 className="text-5xl font-bold mb-8">Multi-Platform Marketing Excellence</h3>
+                            <h3 className="text-3xl md:text-5xl font-bold mb-8">Multi-Platform Marketing Excellence</h3>
                             <div className="w-32 h-1.5 bg-yellow-400 mx-auto rounded-full mb-10 shadow-lg"></div>
-                            <p className="text-2xl leading-relaxed max-w-4xl mx-auto font-light">
+                            <p className="text-lg md:text-2xl leading-relaxed max-w-4xl mx-auto font-light">
                                 We harness the power of multiple Electronic, Social Media, and Physical platforms to elevate your property above the competition.
                                 Our comprehensive marketing approach ensures maximum exposure across all relevant channels, giving you the best possible chance of achieving
                                 <span className="font-bold text-yellow-400"> optimal results at auction</span>.

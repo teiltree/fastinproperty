@@ -167,7 +167,7 @@ export default function HomePage() {
         <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
 
             {/* Hero Section - Modernized */}
-            <section className="relative h-[90vh] bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 overflow-hidden">
+            <section className="relative min-h-screen md:h-[90vh] bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-10 z-0">
                     <div className="absolute inset-0" style={{
@@ -205,7 +205,7 @@ export default function HomePage() {
                     </div>
 
                     {/* CTA Buttons - Modernized */}
-                    <div className="flex flex-col sm:flex-row gap-4 flex-wrap justify-center">
+                    <div className="grid grid-cols-2 md:flex md:flex-wrap gap-3 md:gap-4 justify-center">
 
                         <a
                             href="https://iprop.solutions/fastin/properties/for-auction"
@@ -294,7 +294,7 @@ export default function HomePage() {
                         {[...galleryImages, ...galleryImages, ...galleryImages].map((image, index) => (
                             <div
                                 key={index}
-                                className="flex-shrink-0 w-[600px] h-[500px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group relative"
+                                className="flex-shrink-0 w-[85vw] h-[300px] md:w-[600px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group relative"
                             >
                                 <img
                                     src={image}
@@ -309,7 +309,7 @@ export default function HomePage() {
             </section>
 
             {/* Recently Sold Properties Section - With Empty State */}
-            <section className="py-24 bg-gray-50">
+            <section className="py-12 md:py-24 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <div className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
@@ -392,7 +392,7 @@ export default function HomePage() {
                         </div>
                     ) : (
                         // Empty State for Recently Sold
-                        <div className="bg-white rounded-3xl shadow-xl p-12 md:p-16 text-center border border-gray-100">
+                        <div className="bg-white rounded-3xl shadow-xl p-6 md:p-12 lg:p-16 text-center border border-gray-100">
                             <div className="max-w-2xl mx-auto">
                                 <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
                                     <Home className="w-12 h-12 text-blue-600" />
@@ -429,7 +429,7 @@ export default function HomePage() {
             </section>
 
             {/* Current Auctions Section - With Empty State */}
-            <section className="py-24 bg-white">
+            <section className="py-12 md:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <div className="inline-flex items-center gap-2 bg-yellow-100 rounded-full px-4 py-2 mb-4">
@@ -475,7 +475,7 @@ export default function HomePage() {
                         </div>
                     ) : (
                         // Empty State for Current Auctions
-                        <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-3xl shadow-xl p-12 md:p-16 text-center border-2 border-yellow-200">
+                        <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-3xl shadow-xl p-6 md:p-12 lg:p-16 text-center border-2 border-yellow-200">
                             <div className="max-w-2xl mx-auto">
                                 <div className="w-24 h-24 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
                                     <Calendar className="w-12 h-12 text-blue-900" />
@@ -521,7 +521,7 @@ export default function HomePage() {
             </section>
 
             {/* Services Section - Modernized */}
-            <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+            <section className="py-12 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-2 bg-blue-100 rounded-full px-4 py-2 mb-4">
@@ -550,7 +550,7 @@ export default function HomePage() {
             </section>
 
             {/* How Online Auctions Work - Modernized */}
-            <section className="py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 relative overflow-hidden">
+            <section className="py-12 md:py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                     <div className="absolute inset-0" style={{
                         backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
@@ -577,7 +577,7 @@ export default function HomePage() {
             </section>
 
             {/* Testimonials Section - Modernized */}
-            <section className="py-24 bg-white">
+            <section className="py-12 md:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-2 bg-yellow-100 rounded-full px-4 py-2 mb-4">

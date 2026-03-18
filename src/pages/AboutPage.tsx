@@ -152,7 +152,7 @@ export default function AboutPage() {
                         {[...galleryImages, ...galleryImages, ...galleryImages].map((image, index) => (
                             <div
                                 key={index}
-                                className="flex-shrink-0 w-[800px] h-[500px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group relative"
+                                className="flex-shrink-0 w-[85vw] h-[300px] md:w-[800px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group relative"
                             >
                                 <img
                                     src={image}
@@ -166,13 +166,13 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <div className="container mx-auto px-4 py-20">
+            <div className="container mx-auto px-4 py-10 md:py-20">
                 <div className="max-w-7xl mx-auto">
                     {/* Brand Introduction & Mission Statement */}
                     <div className="mb-20">
                         {/* Heading */}
                         <div className="text-center mb-12">
-                            <h2 className="text-5xl md:text-6xl font-bold text-blue-900 mb-6">About Fastin Property Auctions</h2>
+                            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-blue-900 mb-6">About Fastin Property Auctions</h2>
                             <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-yellow-500 to-transparent mx-auto rounded-full"></div>
                         </div>
 
@@ -330,7 +330,7 @@ export default function AboutPage() {
 
                             {/* Content */}
                             <div className="relative z-10 text-center py-16 px-8">
-                                <h3 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Core Values</h3>
+                                <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">Core Values</h3>
                                 <div className="w-32 h-1.5 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mx-auto rounded-full shadow-lg"></div>
                             </div>
                         </div>

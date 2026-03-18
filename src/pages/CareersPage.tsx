@@ -46,13 +46,13 @@ export default function CareersPage() {
 
 
             {/* Title */}
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white leading-tight flex items-center space-x-4">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 text-white leading-tight flex items-center flex-wrap space-x-4">
               Join the Elite
-              <svg className="w-14 h-14 mx-2 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8 md:w-14 md:h-14 mx-2 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M9 11H7v8h2v-8zm4 0h-2v8h2v-8zm4 0h-2v8h2v-8zm2.5-5H18V4l-1-1H7L6 4v2H4.5l-1 1v1.5h1v11L6 20h12l1.5-1.5v-11h1V6l-1-1zM8 4h8v2H8V4z" />
               </svg>
             </h1>
-            <h2 className="text-4xl md:text-5xl font-light mb-6 text-yellow-400">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light mb-6 text-yellow-400">
               Virtual Property Auction Revolution
             </h2>
             {/*<p className="text-xl text-white/90 max-w-xl">*/}
@@ -63,17 +63,17 @@ export default function CareersPage() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-10 md:py-20">
         <div className="max-w-7xl mx-auto">
           {/* Our agents sell more properties faster */}
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white rounded-3xl p-12 mb-20 shadow-2xl border border-yellow-500/20">
+          <div className="bg-gradient-to-br from-blue-900 to-blue-800 text-white rounded-3xl p-6 md:p-12 mb-12 md:mb-20 shadow-2xl border border-yellow-500/20">
             <div className="text-center mb-16">
               <div className="inline-block p-4 rounded-full bg-yellow-500/20 mb-6">
                 <svg className="w-16 h-16 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r py-2 from-white to-yellow-200 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r py-2 from-white to-yellow-200 bg-clip-text text-transparent">
                 Our Agents Sell More Properties Faster
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 mx-auto rounded-full"></div>
@@ -147,7 +147,7 @@ export default function CareersPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                 </svg>
               </div>
-              <h2 className="text-5xl font-bold text-blue-900 mb-4">Exclusive Perks</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-4">Exclusive Perks</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 mx-auto rounded-full"></div>
             </div>
 
@@ -213,7 +213,7 @@ export default function CareersPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h2 className="text-5xl font-bold text-blue-900 mb-4">Financial Rewards</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-4">Financial Rewards</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 mx-auto rounded-full"></div>
             </div>
 
@@ -268,43 +268,43 @@ export default function CareersPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h2 className="text-5xl font-bold text-blue-900 mb-4">Our Global Reach</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-4">Our Global Reach</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 mx-auto rounded-full"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
                 <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-transparent group-hover:border-blue-600">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-yellow-500 group-hover:to-yellow-600 transition-all duration-300">
+                  <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-yellow-500 group-hover:to-yellow-600 transition-all duration-300">
                     <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                     </svg>
                   </div>
-                  <div className="text-5xl font-bold text-blue-900 mb-2">21K</div>
+                  <div className="text-3xl md:text-5xl font-bold text-blue-900 mb-2">21K</div>
                   <p className="text-gray-600 text-lg">Facebook Page Likes</p>
                 </div>
               </div>
 
               <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
                 <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-transparent group-hover:border-yellow-600">
-                  <div className="w-24 h-24 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-blue-600 group-hover:to-blue-800 transition-all duration-300">
+                  <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-blue-600 group-hover:to-blue-800 transition-all duration-300">
                     <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                     </svg>
                   </div>
-                  <div className="text-5xl font-bold text-blue-900 mb-2">3K</div>
+                  <div className="text-3xl md:text-5xl font-bold text-blue-900 mb-2">3K</div>
                   <p className="text-gray-600 text-lg">Instagram Followers</p>
                 </div>
               </div>
 
               <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
                 <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-transparent group-hover:border-blue-600">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-yellow-500 group-hover:to-yellow-600 transition-all duration-300">
+                  <div className="w-16 h-16 md:w-24 md:h-24 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-yellow-500 group-hover:to-yellow-600 transition-all duration-300">
                     <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div className="text-5xl font-bold text-blue-900 mb-2">100K+</div>
+                  <div className="text-3xl md:text-5xl font-bold text-blue-900 mb-2">100K+</div>
                   <p className="text-gray-600 text-lg">Active Investor Database</p>
                 </div>
               </div>
@@ -312,14 +312,14 @@ export default function CareersPage() {
           </div>
 
           {/* Join the family */}
-          <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-2xl p-12 border-2 border-yellow-400/20">
+          <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-2xl p-6 md:p-12 border-2 border-yellow-400/20">
             <div className="text-center mb-12">
               <div className="inline-block p-4 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 mb-6">
                 <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h2 className="text-5xl font-bold text-blue-900 mb-4">Join the Elite Family</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-blue-900 mb-4">Join the Elite Family</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-300 mx-auto rounded-full mb-6"></div>
               <p className="text-xl text-gray-700 max-w-2xl mx-auto">
                 Ready to revolutionize your real estate career? Take the first step towards unlimited potential.
