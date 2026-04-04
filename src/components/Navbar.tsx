@@ -10,7 +10,9 @@ export default function Navbar() {
 
     const navItems = [
         { name: "HOME", href: "/" },
-        { name: "CAREERS", href: "/careers" },
+        { name: "PROPERTIES / AUCTIONS", href: "https://iprop.solutions/fastin/properties/for-auction", external: true },
+        { name: "RESOURCES / BLOG", href: "#" },
+        { name: "FAQS", href: "/about/faqs" },
         { name: "CONTACT", href: "/contact" },
     ];
 
@@ -59,11 +61,11 @@ export default function Navbar() {
             image: "https://i.postimg.cc/tTzXmC8Q/IMG_20251104_WA0049.jpg"
         },
         {
-            name: "Training & Careers",
-            href: "/careers",
-            description: "Full training and support provided",
-            icon: "🎓",
-            image: "https://i.postimg.cc/cHcs54P4/IMG_20251104_WA0041.jpg"
+            name: "Franchising Opportunities",
+            href: "/franchising/brochure",
+            description: "Join our growing network of property experts",
+            icon: "🤝",
+            image: "https://i.postimg.cc/mDSb62KT/IMG_20251104_WA0050.jpg"
         },
         {
             name: "Auction Alerts",
@@ -76,44 +78,37 @@ export default function Navbar() {
 
     const aboutItems = [
         {
-            name: "Our History",
+            name: "Our Company",
             href: "/about",
-            description: "Our Brand is built on decades of Real Estate experience and run by Industry Veterans with an innovative approach to the market.",
+            description: "Industry veterans with an innovative approach to the real estate market.",
             image: "https://i.postimg.cc/mDSb62KT/IMG_20251104_WA0050.jpg",
-
-        },
-        {
-            name: "Our Vision",
-            href: "/about",
-            description: "We aim to create a value-added technology-driven real estate marketing platform that will disrupt the traditional real estate market.",
-            image: "https://i.postimg.cc/764HVTsW/IMG_20251104_WA0053.jpg",
 
         },
         {
             name: "The Team",
             href: "/about/team",
-            description: "Meet our team of professionals making up our Executive and Senior management personnel.",
+            description: "Meet our executive and senior management personnel.",
             image: "https://i.postimg.cc/NMxgPfZF/IMG_20251104_WA0042.jpg",
 
         },
         {
             name: "National Footprint",
             href: "/about/footprint",
-            description: "With a national footprint and presence in all provinces we have the reach to market your property to a National Audience.",
+            description: "Presence in all provinces to market your property to a national audience.",
             image: "https://i.postimg.cc/pVCSYy00/IMG_20251104_WA0046.jpg",
 
         },
         {
             name: "Partners",
             href: "/about/partners",
-            description: "We proudly partner with dominant Web platforms, Law firms, and financial institutions to provide an effective turnkey service.",
+            description: "Partnering with law firms and financial institutions for a turnkey service.",
             image: "https://i.postimg.cc/mDSb62Ks/IMG_20251104_WA0040.jpg",
 
         },
         {
             name: "Property Auction Guide",
             href: "/about/guide",
-            description: "Learn how property auctions work in Zimbabwe and the benefits of buying at auction.",
+            description: "Learn how property auctions work in Zimbabwe.",
             image: "https://i.postimg.cc/tTzXmC8Q/IMG_20251104_WA0049.jpg",
 
         },
@@ -125,16 +120,9 @@ export default function Navbar() {
 
         },
         {
-            name: "FAQs",
-            href: "/about/faqs",
-            description: "Frequently Asked Questions about our services and processes.",
-            image: "https://i.postimg.cc/Fzs9tXQG/IMG_20251104_WA0037.jpg",
-
-        },
-        {
-            name: "Privacy Policy and PAIA Manual",
+            name: "Privacy & Legal",
             href: "/about/disclaimer",
-            description: "POPIA and CPA Compliant. Read our Policy and PAIA manual.",
+            description: "POPIA and CPA compliant policies.",
             image: "https://i.postimg.cc/SRNy0bpS/IMG_20251104_WA0035.jpg",
 
         },
@@ -174,7 +162,7 @@ export default function Navbar() {
                         </div>
                         <div className="flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
                             <span className="text-yellow-500 animate-pulse">●</span>
-                            <span className="text-[11px] uppercase tracking-widest text-blue-100/60">Mon-Fri: 8:00 AM - 6:00 PM</span>
+                            <span className="text-[11px] uppercase tracking-widest text-blue-100/60">Mon-Fri: 8:30 AM - 4:30 PM</span>
                         </div>
                     </div>
                 </div>
@@ -210,6 +198,70 @@ export default function Navbar() {
                                     <div className="absolute bottom-[-1.5rem] left-0 w-full h-1 bg-yellow-500 rounded-full"></div>
                                 )}
                             </a>
+
+                            {/* About Dropdown */}
+                            <div className="relative group">
+                                <button
+                                    onMouseEnter={() => setActiveDropdown('about')}
+                                    onMouseLeave={() => setActiveDropdown("")}
+                                    className={`px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg flex items-center gap-2 group uppercase ${location.pathname.startsWith("/about")
+                                            ? "text-blue-900 bg-blue-50/50"
+                                            : "text-gray-600 hover:text-blue-900 hover:bg-gray-50"
+                                        }`}
+                                >
+                                    ABOUT US
+                                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-500 ${activeDropdown === 'about' ? 'rotate-180 text-yellow-500' : ''
+                                        }`} />
+                                    {location.pathname.startsWith("/about") && (
+                                        <div className="absolute bottom-[-1.5rem] left-0 w-full h-1 bg-yellow-500 rounded-full"></div>
+                                    )}
+                                </button>
+
+                                {/* About Mega Menu */}
+                                <div
+                                    className={`absolute top-full left-1/2 -translate-x-1/2 pt-5 w-[1000px] bg-transparent transition-all duration-500 overflow-hidden ${activeDropdown === 'about'
+                                            ? 'opacity-100 visible translate-y-0 scale-100'
+                                            : 'opacity-0 invisible -translate-y-4 scale-95 pointer-events-none'
+                                        }`}
+                                    onMouseEnter={() => setActiveDropdown('about')}
+                                    onMouseLeave={() => setActiveDropdown("")}
+                                >
+                                    <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100/50 overflow-hidden">
+                                        <div className="grid grid-cols-3 gap-6">
+                                            {aboutItems.map((item) => (
+                                                <a
+                                                    key={item.name}
+                                                    href={item.href}
+                                                    className="group flex gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-blue-950/5 transition-all duration-300 border border-transparent hover:border-gray-100"
+                                                >
+                                                    <div className="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-500">
+                                                        <img
+                                                            src={item.image}
+                                                            alt={item.name}
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                        <div className="absolute inset-0 bg-blue-950/20 group-hover:bg-transparent transition-colors duration-300"></div>
+                                                    </div>
+                                                    <div className="pt-1">
+                                                        <h4 className="font-bold text-blue-950 text-[11px] mb-2 uppercase tracking-widest group-hover:text-yellow-600 transition-colors">
+                                                            {item.name}
+                                                        </h4>
+                                                        <p className="text-[11px] text-gray-500 leading-relaxed line-clamp-2">
+                                                            {item.description}
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="bg-[#001B3D] p-5 flex justify-between items-center text-white px-10">
+                                        <p className="text-xs text-blue-100/60 font-medium tracking-wide">Fastin Property Auctions — Excellence in Real Estate since 2012</p>
+                                        <a href="/about" className="text-xs font-bold text-yellow-500 hover:text-yellow-400 flex items-center gap-2 transition-colors">
+                                            LEARN MORE <span className="text-lg">→</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
 
                             {/* Services Dropdown */}
                             <div className="relative group">
@@ -282,130 +334,31 @@ export default function Navbar() {
                                 </div>
                             </div>
 
-                            {/* About Dropdown */}
-                            <div className="relative group">
-                                <button
-                                    onMouseEnter={() => setActiveDropdown('about')}
-                                    onMouseLeave={() => setActiveDropdown("")}
-                                    className={`px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg flex items-center gap-2 group uppercase ${location.pathname.startsWith("/about")
-                                            ? "text-blue-900 bg-blue-50/50"
-                                            : "text-gray-600 hover:text-blue-900 hover:bg-gray-50"
-                                        }`}
-                                >
-                                    ABOUT
-                                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-500 ${activeDropdown === 'about' ? 'rotate-180 text-yellow-500' : ''
-                                        }`} />
-                                    {location.pathname.startsWith("/about") && (
-                                        <div className="absolute bottom-[-1.5rem] left-0 w-full h-1 bg-yellow-500 rounded-full"></div>
-                                    )}
-                                </button>
-
-                                {/* About Mega Menu */}
-                                <div
-                                    className={`absolute top-full left-1/2 -translate-x-1/2 pt-5 w-[1000px] bg-transparent transition-all duration-500 overflow-hidden ${activeDropdown === 'about'
-                                            ? 'opacity-100 visible translate-y-0 scale-100'
-                                            : 'opacity-0 invisible -translate-y-4 scale-95 pointer-events-none'
-                                        }`}
-                                    onMouseEnter={() => setActiveDropdown('about')}
-                                    onMouseLeave={() => setActiveDropdown("")}
-                                >
-                                    <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100/50 overflow-hidden">
-                                        <div className="grid grid-cols-3 gap-6">
-                                            {aboutItems.map((item) => (
-                                                <a
-                                                    key={item.name}
-                                                    href={item.href}
-                                                    className="group flex gap-4 p-4 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-blue-950/5 transition-all duration-300 border border-transparent hover:border-gray-100"
-                                                >
-                                                    <div className="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-500">
-                                                        <img
-                                                            src={item.image}
-                                                            alt={item.name}
-                                                            className="w-full h-full object-cover"
-                                                        />
-                                                        <div className="absolute inset-0 bg-blue-950/20 group-hover:bg-transparent transition-colors duration-300"></div>
-                                                    </div>
-                                                    <div className="pt-1">
-                                                        <h4 className="font-bold text-blue-950 text-[11px] mb-2 uppercase tracking-widest group-hover:text-yellow-600 transition-colors">
-                                                            {item.name}
-                                                        </h4>
-                                                        <p className="text-[11px] text-gray-500 leading-relaxed line-clamp-2">
-                                                            {item.description}
-                                                        </p>
-                                                    </div>
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className="bg-[#001B3D] p-5 flex justify-between items-center text-white px-10">
-                                        <p className="text-xs text-blue-100/60 font-medium tracking-wide">Fastin Property Auctions — Excellence in Real Estate since 2012</p>
-                                        <a href="/about" className="text-xs font-bold text-yellow-500 hover:text-yellow-400 flex items-center gap-2 transition-colors">
-                                            LEARN MORE <span className="text-lg">→</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Franchising Dropdown */}
-                            <div className="relative group">
-                                <button
-                                    onMouseEnter={() => setActiveDropdown('franchising')}
-                                    onMouseLeave={() => setActiveDropdown("")}
-                                    className={`px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg flex items-center gap-2 group uppercase ${location.pathname.startsWith("/franchising")
-                                            ? "text-blue-900 bg-blue-50/50"
-                                            : "text-gray-600 hover:text-blue-900 hover:bg-gray-50"
-                                        }`}
-                                >
-                                    FRANCHISING
-                                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-500 ${activeDropdown === 'franchising' ? 'rotate-180 text-yellow-500' : ''
-                                        }`} />
-                                    {location.pathname.startsWith("/franchising") && (
-                                        <div className="absolute bottom-[-1.5rem] left-0 w-full h-1 bg-yellow-500 rounded-full"></div>
-                                    )}
-                                </button>
-
-                                {/* Franchising Dropdown Menu */}
-                                <div
-                                    className={`absolute top-full right-0 pt-5 w-80 bg-transparent transition-all duration-500 overflow-hidden ${activeDropdown === 'franchising'
-                                            ? 'opacity-100 visible translate-y-0 scale-100'
-                                            : 'opacity-0 invisible -translate-y-4 scale-95 pointer-events-none'
-                                        }`}
-                                    onMouseEnter={() => setActiveDropdown('franchising')}
-                                    onMouseLeave={() => setActiveDropdown("")}
-                                >
-                                    <div className="bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100/50 overflow-hidden">
-                                        <div className="bg-gray-50 p-4 border-b border-gray-100 flex items-center gap-3">
-                                            <div className="w-8 h-8 rounded-lg bg-yellow-400 flex items-center justify-center text-lg">🤝</div>
-                                            <h3 className="text-xs font-bold text-blue-950 uppercase tracking-widest">Franchise Portal</h3>
-                                        </div>
-                                        <div className="p-3">
-                                            {franchisingItems.map((item) => (
-                                                <a
-                                                    key={item.name}
-                                                    href={item.href}
-                                                    className="flex items-center space-x-4 p-4 rounded-xl hover:bg-blue-50/50 transition-all duration-300 group"
-                                                >
-                                                    <span className="text-xl shrink-0 group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
-                                                    <div>
-                                                        <div className="font-bold text-blue-950 text-xs uppercase tracking-wide mb-0.5">{item.name}</div>
-                                                        <div className="text-[10px] text-gray-500 group-hover:text-blue-900/60 transition-colors">{item.description}</div>
-                                                    </div>
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <a
+                                href="https://iprop.solutions/fastin/properties/for-auction"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`relative px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg group uppercase text-gray-600 hover:text-blue-900 hover:bg-gray-50`}
+                            >
+                                PROPERTIES / AUCTIONS
+                            </a>
 
                             <a
-                                href="/careers"
-                                className={`relative px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg group uppercase ${location.pathname === "/careers"
+                                href="#"
+                                className={`relative px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg group uppercase text-gray-600 hover:text-blue-900 hover:bg-gray-50`}
+                            >
+                                RESOURCES / BLOG
+                            </a>
+
+                            <a
+                                href="/about/faqs"
+                                className={`relative px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg group uppercase ${location.pathname === "/about/faqs"
                                         ? "text-blue-900 bg-blue-50/50"
                                         : "text-gray-600 hover:text-blue-900 hover:bg-gray-50"
                                     }`}
                             >
-                                CAREERS
-                                {location.pathname === "/careers" && (
+                                FAQS
+                                {location.pathname === "/about/faqs" && (
                                     <div className="absolute bottom-[-1.5rem] left-0 w-full h-1 bg-yellow-500 rounded-full"></div>
                                 )}
                             </a>
@@ -418,9 +371,6 @@ export default function Navbar() {
                                     }`}
                             >
                                 CONTACT
-                                {location.pathname === "/contact" && (
-                                    <div className="absolute bottom-[-1.5rem] left-0 w-full h-1 bg-yellow-500 rounded-full"></div>
-                                )}
                             </a>
                         </nav>
 
@@ -506,7 +456,7 @@ export default function Navbar() {
                             </div>
 
                             <div className="space-y-4 pt-4 border-t border-gray-100">
-                                <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] px-2 italic">Specialized Services</h4>
+                                <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] px-2 italic">Specialised Services</h4>
 
                                 {/* Mobile Dropdowns */}
                                 <div className="grid grid-cols-1 gap-3">

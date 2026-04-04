@@ -177,11 +177,11 @@ export default function HomePage() {
                 </div>
 
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-blue-900/80"></div>
+                    <div className="absolute inset-0 bg-blue-950/70"></div>
                     <img
                         src="https://i.postimg.cc/fy2MDqzM/IMG-20251104-WA0029.jpg"
                         alt="Luxury Property"
-                        className="w-full h-full object-cover opacity-60"
+                        className="w-full h-full object-cover opacity-50"
                     />
                 </div>
 
@@ -243,7 +243,7 @@ export default function HomePage() {
                             target="_blank"
                             className="bg-transparent border-2 border-blue-100 hover:bg-blue-100 hover:text-blue-800 text-blue-100 px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
                         >
-                            Fill out Our Questionnaier ?
+                            Fill out Our Questionnaire ?
                         </Link>
                         <Link
                             to="https://forms.gle/THstgtY3wEywmkuD9"

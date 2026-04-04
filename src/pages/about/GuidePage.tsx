@@ -351,7 +351,7 @@ export default function GuidePage() {
                     </div>
                 </div>
 
-                {/* 2024 Auction Market Stats - Featured Stats Block */}
+                {/* 2026 Auction Market Stats - Featured Stats Block */}
                 <div className="mb-24">
                     <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 rounded-3xl shadow-2xl">
                         <div className="absolute inset-0 opacity-10">
@@ -368,7 +368,7 @@ export default function GuidePage() {
                                     <span className="text-yellow-400 text-sm font-semibold">Market Data</span>
                                 </div>
                                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                                    2024 Auction Market Stats
+                                    2026 Auction Market Stats
                                 </h2>
                             </div>
 
@@ -571,7 +571,7 @@ export default function GuidePage() {
                             <span className="text-blue-900 text-sm font-semibold">Market Trends</span>
                         </div>
                         <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-                            Current Trends in 2024
+                            Current Trends in 2026
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full"></div>
                     </div>
@@ -644,7 +644,7 @@ export default function GuidePage() {
                             {
                                 id: 'listings',
                                 question: 'Where can I find auction listings?',
-                                answer: 'Auction listings are available on property websites like Fastin Property Auctions, local newspapers, and through real estate firms that specialize in auctions. You can also subscribe to auction alerts to receive notifications about upcoming properties that match your criteria. Our website maintains an up-to-date catalog of all available properties.'
+                                answer: 'Auction listings are available on property websites like Fastin Property Auctions, local newspapers, and through real estate firms that specialise in auctions. You can also subscribe to auction alerts to receive notifications about upcoming properties that match your criteria. Our website maintains an up-to-date catalog of all available properties.'
                             },
                             {
                                 id: 'deposit',

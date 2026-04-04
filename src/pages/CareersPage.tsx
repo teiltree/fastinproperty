@@ -89,7 +89,7 @@ export default function CareersPage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-yellow-300">Be More Competitive</h3>
                   <p className="text-blue-100 leading-relaxed">
-                    99% of Estate Agents offer the same solutions. Virtual Online Auctions puts you in that elite 1% with specialized marketing solutions that immediately set you apart and help you compete with veteran agents.
+                    99% of Estate Agents offer the same solutions. Virtual Online Auctions puts you in that elite 1% with specialised marketing solutions that immediately set you apart and help you compete with veteran agents.
                   </p>
                 </div>
               </div>

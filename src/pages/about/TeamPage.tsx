@@ -18,7 +18,7 @@ export default function TeamPage() {
                     </div>
 
                     {/* Main Content Section */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-24">
                         {/* Text Content */}
                         <div className="space-y-8">
                             <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 border border-yellow-500/30 shadow-2xl hover:shadow-yellow-500/20 transition-all duration-300">
@@ -40,7 +40,7 @@ export default function TeamPage() {
                                     </p>
                                     <div className="pt-4 border-t border-yellow-500/30">
                                         <p className="leading-relaxed font-medium text-yellow-300">
-                                            The Fastin Property Auctions team is committed to realizing the best value for Sellers and Buyers through a simple, transparent and auditable process.
+                                            The Fastin Property Auctions team is committed to realising the best value for Sellers and Buyers through a simple, transparent and auditable process.
                                         </p>
                                     </div>
                                 </div>
@@ -62,6 +62,42 @@ export default function TeamPage() {
                                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full blur-2xl opacity-40"></div>
                             </div>
                         </div>
+                    </div>
+
+                    {/* Individual Team Members Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                        {[
+                            {
+                                name: "Executive Management",
+                                role: "CEO & Founder",
+                                bio: "Visionary leader with over 15 years of experience in the Zimbabwean real estate market.",
+                                image: "https://i.postimg.cc/NMxgPfZF/IMG_20251104_WA0042.jpg"
+                            },
+                            {
+                                name: "Senior Auctioneer",
+                                role: "Lead Auctioneer",
+                                bio: "Expert in property valuation and auction dynamics, ensuring the best value for every lot.",
+                                image: "https://i.postimg.cc/mDSb62KT/IMG_20251104_WA0050.jpg"
+                            },
+                            {
+                                name: "Property Consultant",
+                                role: "Client Relations",
+                                bio: "Dedicated to providing personalised service and guidance throughout the auction process.",
+                                image: "https://i.postimg.cc/pVCSYy00/IMG_20251104_WA0046.jpg"
+                            }
+                        ].map((member, index) => (
+                            <div key={index} className="group bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 hover:border-yellow-500/50 transition-all duration-300">
+                                <div className="relative h-64 mb-6 rounded-2xl overflow-hidden">
+                                    <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 to-transparent"></div>
+                                    <div className="absolute bottom-4 left-4">
+                                        <p className="text-yellow-400 font-bold">{member.role}</p>
+                                    </div>
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
+                                <p className="text-white/70 text-sm leading-relaxed">{member.bio}</p>
+                            </div>
+                        ))}
                     </div>
 
                     {/* Bottom decorative section */}

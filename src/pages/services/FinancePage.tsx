@@ -226,7 +226,7 @@ export default function FinancePage() {
                                     </div>
                                     <h4 className="text-2xl font-bold text-blue-900 mb-4">Investment Property</h4>
                                     <p className="text-gray-600 leading-relaxed mb-4">
-                                        Specialized financing for property investors and portfolio builders
+                                        Specialised financing for property investors and portfolio builders
                                     </p>
                                     <ul className="text-sm text-gray-600 space-y-2">
                                         <li className="flex items-center">

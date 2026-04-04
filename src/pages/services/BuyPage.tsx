@@ -126,7 +126,7 @@ export default function BuyPage() {
                             {
                                 icon: Shield,
                                 title: "Purchasing Security",
-                                description: "Once that hammer falls, the property is yours. There won't be anyone backing out of the deal and nor no risk of gazumping. You will avoid the uncertainty that you would get through an estate agent purchase, and the property will be yours within 28 days of the auction.",
+                                description: "Once that hammer falls, the property is yours. There won't be anyone backing out of the deal and no risk of gazumping. You will avoid the uncertainty that you would get through an estate agent purchase, and the property will be yours within 28 days of the auction.",
                                 gradient: "from-yellow-500 to-yellow-600"
                             },
                             {
@@ -150,7 +150,7 @@ export default function BuyPage() {
                             {
                                 icon: Zap,
                                 title: "Competitive Bidding",
-                                description: "With auction, you only need to stay one bid ahead of your competitors and reach the reserve price to be successful. When bidding against other interested parties, you can gain the reassurance that others share the same opinion of the property's value, and you can also be in with the chance of having the winning bid at a far lower price than you anticipated, and lower than you would have paid by other means such as buying through an estate agent.",
+                                description: "Auctions create a sense of urgency and competition among buyers. This transparent environment allows you to see other bids in real-time, ensuring you are paying the true market value while giving you the chance to secure the property in a fast-paced setting.",
                                 gradient: "from-yellow-500 to-yellow-600"
                             },
                             {
@@ -162,7 +162,7 @@ export default function BuyPage() {
                             {
                                 icon: Handshake,
                                 title: "Motivated Vendors",
-                                description: "Once that hammer falls, the property is yours. There won't be anyone backing out of the deal and nor no risk of gazumping. You will avoid the uncertainty that you would get through an estate agent purchase, and the property will be yours within 28 days of the auction.",
+                                description: "Auction sellers are typically highly motivated to achieve a result within a fixed timeframe. Once the hammer falls, the contract is legally binding. This means there's no risk of the seller backing out or gazumping, providing you with absolute certainty.",
                                 gradient: "from-yellow-600 to-yellow-700"
                             }
                         ].map((benefit, index) => {

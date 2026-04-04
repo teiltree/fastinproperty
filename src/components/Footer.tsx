@@ -22,7 +22,7 @@ export default function Footer() {
         { name: "Sell With Us", href: "/services/sell" },
         { name: "Free Auction Valuation", href: "/valuation" },
         { name: "Guide to Property Auctions in Zimbabwe", href: "/about/guide" },
-        { name: "Finance Options", href: "/finance" },
+        { name: "Finance Options", href: "/services/finance" },
         { name: "How It Works", href: "/about/online-bidding" },
     ];
 
@@ -154,14 +154,14 @@ export default function Footer() {
                             </h4>
                             <div className="space-y-4">
                                 <div className="bg-blue-800/30 rounded-xl p-4 border border-blue-700/50 hover:border-yellow-500/50 transition-colors">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <Clock className="w-4 h-4 text-yellow-400" />
-                                        <span className="text-yellow-400 font-semibold text-sm">Office Hours</span>
+                                    <div className="flex items-center gap-3 text-gray-400 mb-3">
+                                        <Clock className="w-5 h-5 text-yellow-500" />
+                                        <span className="text-yellow-400 font-semibold text-sm">Mon - Fri: 8:30 AM - 4:30 PM</span>
                                     </div>
                                     <div className="space-y-2 text-sm">
                                         <div className="flex justify-between items-center">
                                             <span className="text-blue-200">Monday - Friday</span>
-                                            <span className="text-white font-semibold">8:00 AM - 6:00 PM</span>
+                                            <span className="text-white font-semibold">8:30 AM - 4:30 PM</span>
                                         </div>
                                         <div className="flex justify-between items-center">
                                             <span className="text-blue-200">Saturday</span>
@@ -227,20 +227,6 @@ export default function Footer() {
                                     >
                                         <Twitter className="h-5 w-5" />
                                     </a>
-                                    {/*<a*/}
-                                    {/*    href="#"*/}
-                                    {/*    className="bg-blue-800/50 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-yellow-600 hover:text-blue-900 rounded-xl p-3 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group"*/}
-                                    {/*    aria-label="LinkedIn"*/}
-                                    {/*>*/}
-                                    {/*    <Linkedin className="h-5 w-5" />*/}
-                                    {/*</a>*/}
-                                    {/*<a*/}
-                                    {/*    href="#"*/}
-                                    {/*    className="bg-blue-800/50 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-yellow-600 hover:text-blue-900 rounded-xl p-3 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group"*/}
-                                    {/*    aria-label="YouTube"*/}
-                                    {/*>*/}
-                                    {/*    <Youtube className="h-5 w-5" />*/}
-                                    {/*</a>*/}
                                 </div>
                             </div>
 
@@ -262,8 +248,8 @@ export default function Footer() {
             <div className="relative bg-black/40 backdrop-blur-sm py-6 border-t border-blue-800/50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-4">
-                        <p className="text-blue-300 text-xs">
-                            © 2025 Fastin Property Auctions • 2 Smithfield Way, Longlands Industrial Site, Marondera • VAT: 4320242924
+                        <p className="text-gray-500 text-sm">
+                            © 2026 Fastin Property Auctions. All rights reserved. Registered Estate Agents.
                         </p>
 
                         <div className="flex flex-wrap items-center gap-3 md:gap-6 text-blue-300 text-xs">

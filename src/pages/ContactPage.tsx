@@ -50,7 +50,7 @@ export default function ContactPage() {
                   Start Your Journey
                 </h2>
                 <p className="text-gray-600 mb-10 text-lg">
-                  Fill out the form below and one of our property experts will contact you within 24 hours.
+                  Fill out the form below and one of our property experts will typically contact you within 2-4 hours.
                 </p>
 
                 <div className="space-y-8">
@@ -142,7 +142,17 @@ export default function ContactPage() {
                   </h3>
                 </div>
                 <div className="text-gray-700 leading-relaxed space-y-1">
-                  <p className="font-semibold">2 Smithfield Way, Longlands Industrial Site, Marondera</p>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=2+Smithfield+Way+Marondera+Zimbabwe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold hover:text-yellow-600 transition-colors flex items-center gap-2"
+                  >
+                    2 Smithfield Way, Longlands Industrial Site, Marondera
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                   <p>Zimbabwe</p>
                 </div>
               </div>
@@ -171,14 +181,14 @@ export default function ContactPage() {
                     <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
                     <div>
                       <p className="font-semibold text-blue-900">Email</p>
-                      <p className="text-gray-700">info@fastinproperty.co.za</p>
+                      <p className="text-gray-700">info@fastinproperty.co.zw</p>
                     </div>
                   </div>
                   <div className="flex items-center">
                     <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
                     <div>
                       <p className="font-semibold text-blue-900">Business Hours</p>
-                      <p className="text-gray-700">Mon-Fri 8:00 AM - 5:00 PM</p>
+                      <p className="text-gray-700">Mon-Fri 8:30 AM - 4:30 PM</p>
                     </div>
                   </div>
                 </div>
@@ -192,10 +202,10 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-2xl font-bold ml-4">24-Hour Response</h3>
+                  <h3 className="text-2xl font-bold ml-4">Quick Response Guarantee</h3>
                 </div>
                 <p className="leading-relaxed opacity-90">
-                  We guarantee a response within 24 hours. Your property journey starts the moment you reach out to us.
+                  We typically respond within 2-4 hours. Your property journey starts the moment you reach out to us.
                 </p>
               </div>
             </div>
@@ -214,7 +224,7 @@ export default function ContactPage() {
                 <a href="tel:+263784086388" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
                   Call Now: +263784086388 / +263719086388
                 </a>
-                <a href="mailto:info@fastinproperty.co.za" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                <a href="mailto:info@fastinproperty.co.zw" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   Send Email
                 </a>
               </div>

@@ -21,7 +21,7 @@ export default function MarketingPage() {
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight leading-tight">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
                             Comprehensive
                             <span className="block text-yellow-400 font-semibold mt-2">Marketing</span>
                         </h1>
@@ -59,7 +59,7 @@ export default function MarketingPage() {
 
                                         <div>
                                             <p className="text-gray-700 leading-relaxed text-xl">
-                                                Whether it's our proven sales approach, effective marketing campaigns, or utilizing our extensive network, at Fastin Property Auctions no detail is overlooked.
+                                                Whether it's our proven sales approach, effective marketing campaigns, or utilising our extensive network, at Fastin Property Auctions no detail is overlooked.
                                             </p>
                                         </div>
 

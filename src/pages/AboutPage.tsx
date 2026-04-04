@@ -65,7 +65,7 @@ export default function AboutPage() {
         },
         {
             icon: Users,
-            title: "Personalized Attention",
+            title: "Personalised Attention",
             description: "Every client receives tailored solutions that meet their unique needs.",
             color: "text-amber-500"
         }

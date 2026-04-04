@@ -79,7 +79,7 @@ export default function FootprintPage() {
                                             <div>
                                                 <h3 className="text-lg font-bold text-blue-900 mb-3">All 10 Provinces Covered</h3>
                                                 <p className="text-gray-700 leading-relaxed">
-                                                    With a presence in all 10 provinces and all major metropolitan areas, we can take on any property, big or small, and utilize the power of our extensive marketing group.
+                                                    With a presence in all 10 provinces and all major metropolitan areas, we can take on any property, big or small, and utilise the power of our extensive marketing group.
                                                 </p>
                                             </div>
                                         </div>
@@ -257,7 +257,7 @@ export default function FootprintPage() {
                             <div className="order-2 lg:order-1">
                                 <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">Local Area Specialists</h2>
                                 <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                                    Unlike many other auction companies, we believe in the tremendous power of utilizing the knowledge of local area specialist consultants.
+                                    Unlike many other auction companies, we believe in the tremendous power of utilising the knowledge of local area specialist consultants.
                                 </p>
                                 <p className="text-gray-600 leading-relaxed">
                                     Our consultants are highly trained and motivated with expert knowledge of your local property market.
