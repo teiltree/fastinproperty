@@ -57,8 +57,9 @@ export default function HomePage() {
 
     const heroImages = [
         "https://i.postimg.cc/fy2MDqzM/IMG-20251104-WA0029.jpg",
-        "/hero1.jpg",
-        "/hero2.jpg"
+        "/hero2.jpg",
+        "/hero3.jpg",
+        "/hero4.jpg"
     ];
 
     useEffect(() => {

@@ -138,22 +138,40 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <h3 className="text-2xl font-bold text-blue-900 ml-4 group-hover:text-yellow-600 transition-colors">
-                    Our Office
+                    Our Offices
                   </h3>
                 </div>
-                <div className="text-gray-700 leading-relaxed space-y-1">
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=2+Smithfield+Way+Marondera+Zimbabwe"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold hover:text-yellow-600 transition-colors flex items-center gap-2"
-                  >
-                    2 Smithfield Way, Longlands Industrial Site, Marondera
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                  <p>Zimbabwe</p>
+                <div className="text-gray-700 leading-relaxed space-y-4">
+                  <div>
+                    <h4 className="font-bold text-blue-900 mb-1">Head Office</h4>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=4+Silwood+Close+Chisipite+Harare"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold hover:text-yellow-600 transition-colors flex items-center gap-2"
+                    >
+                      4 Silwood Close, Chisipite, Harare
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div className="w-full h-px bg-gray-100"></div>
+                  <div>
+                    <h4 className="font-bold text-blue-900 mb-1">Marondera Office</h4>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=2+Smithfield+Way+Marondera+Zimbabwe"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold hover:text-yellow-600 transition-colors flex items-center gap-2"
+                    >
+                      2 Smithfield Way, Longlands Industrial Site, Marondera
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                    <p className="mt-1 text-sm">Zimbabwe</p>
+                  </div>
                 </div>
               </div>
 
