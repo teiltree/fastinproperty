@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 
 import AboutPage from "./pages/AboutPage"
@@ -49,6 +49,8 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
           <Route path="/valuation" element={<ValuationPage />} />
         <Route path="/rules-of-auction" element={<RulesOfAuctionPage />} />
+        {/* Fallback route to land on homepage on any unknown path */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Layout>
   )

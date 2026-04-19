@@ -220,7 +220,7 @@ export default function HomePage() {
                     </div>
 
                     {/* CTA Buttons - Modernized */}
-                    <div className="flex flex-row flex-wrap lg:flex-nowrap gap-2 justify-center w-full max-w-7xl mt-16 md:mt-32">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row lg:flex-nowrap gap-2 lg:gap-3 justify-center w-full max-w-7xl mt-16 md:mt-32 px-2 sm:px-0">
 
                         <a
                             href="https://iprop.solutions/fastin/properties/for-auction"
