@@ -76,13 +76,13 @@ export default function Footer() {
                                 </a>
 
                                 <a
-                                    href="mailto:info@fastinproperty.co.zw"
+                                    href="mailto:info@fastinpropertyauctions.co.zw"
                                     className="flex items-center space-x-3 text-blue-200 hover:text-yellow-400 transition-colors group"
                                 >
                                     <div className="bg-blue-800/50 group-hover:bg-yellow-500/20 rounded-lg p-2 transition-colors">
                                         <Mail className="w-4 h-4 text-yellow-400" />
                                     </div>
-                                    <span className="text-sm">info@fastinproperty.co.zw</span>
+                                    <span className="text-sm">info@fastinpropertyauctions.co.zw</span>
                                 </a>
 
                                 <div className="flex items-start space-x-3 text-blue-200">
@@ -90,7 +90,7 @@ export default function Footer() {
                                         <MapPin className="w-4 h-4 text-yellow-400" />
                                     </div>
                                     <span className="text-sm leading-relaxed">
-                                        Head Office - Number 4 Silwood Close, Chisipite, Harare
+                                        <strong>Head Office</strong> - 4 Silwood Close, Chisipite, Harare
                                     </span>
                                 </div>
                                 <div className="flex items-start space-x-3 text-blue-200">
@@ -98,7 +98,7 @@ export default function Footer() {
                                         <MapPin className="w-4 h-4 text-yellow-400" />
                                     </div>
                                     <span className="text-sm leading-relaxed">
-                                        2 Smithfield Way, Longlands Industrial Site, Marondera, Zimbabwe
+                                        <strong>Marondera Office</strong> - 2 Smithfield Way, Longlands Industrial Site, Marondera
                                     </span>
                                 </div>
                             </div>

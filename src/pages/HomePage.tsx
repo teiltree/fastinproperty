@@ -53,7 +53,20 @@ interface Testimonial {
 
 export default function HomePage() {
     const [currentSlide, setCurrentSlide] = useState(0);
-    // const [scrollPosition, setScrollPosition] = useState(0);
+    const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
+
+    const heroImages = [
+        "https://i.postimg.cc/fy2MDqzM/IMG-20251104-WA0029.jpg",
+        "/hero1.jpg",
+        "/hero2.jpg"
+    ];
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentHeroSlide((prev) => (prev + 1) % heroImages.length);
+        }, 5000); // Change image every 5 seconds
+        return () => clearInterval(timer);
+    }, [heroImages.length]);
 
     // Gallery images for the slider
     const galleryImages = [
@@ -176,13 +189,18 @@ export default function HomePage() {
                     }}></div>
                 </div>
 
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-blue-950/70"></div>
-                    <img
-                        src="https://i.postimg.cc/fy2MDqzM/IMG-20251104-WA0029.jpg"
-                        alt="Luxury Property"
-                        className="w-full h-full object-cover opacity-50"
-                    />
+                <div className="absolute inset-0 z-0 bg-blue-950">
+                    {heroImages.map((img, index) => (
+                        <img
+                            key={index}
+                            src={img}
+                            alt={`Luxury Property ${index + 1}`}
+                            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                                index === currentHeroSlide ? "opacity-100" : "opacity-0"
+                            }`}
+                        />
+                    ))}
+                    <div className="absolute inset-0 bg-blue-950/30 z-10"></div>
                 </div>
 
 
@@ -198,29 +216,25 @@ export default function HomePage() {
                             Welcome to <br />
                             <span className="text-yellow-400">Fastin Property Auctions</span>
                         </h1>
-                        <p className="text-xl mb-4 text-blue-100 font-semibold">Virtual Online Auctioneers</p>
-                        <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                            Buy, sell, and invest in property with confidence through Zimbabwe's most trusted online auction platform.
-                        </p>
                     </div>
 
                     {/* CTA Buttons - Modernized */}
-                    <div className="grid grid-cols-2 md:flex md:flex-wrap gap-3 md:gap-4 justify-center">
+                    <div className="flex flex-row flex-wrap lg:flex-nowrap gap-2 justify-center w-full max-w-7xl mt-16 md:mt-32">
 
                         <a
                             href="https://iprop.solutions/fastin/properties/for-auction"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-blue-900 px-8 py-4 text-sm font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all uppercase tracking-wide flex items-center justify-center gap-2"
+                            className="flex-1 group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-blue-900 px-3 py-3 text-[11px] lg:text-xs font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all uppercase tracking-wide flex items-center justify-center gap-1 text-center leading-tight"
                         >
                             Browse Auctions
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                         </a>
 
                         <Link
                             to="https://forms.gle/zATdjtCQJweQnGxW6"
                             target="_blank"
-                            className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/20 px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
+                            className="flex-1 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/20 px-3 py-3 text-[11px] lg:text-xs font-bold rounded-xl shadow-lg transform hover:-translate-y-1 transition-all uppercase tracking-wide flex items-center justify-center text-center leading-tight"
                         >
                             Sell Your Property
                         </Link>
@@ -228,30 +242,40 @@ export default function HomePage() {
                         <Link
                             to="https://forms.gle/3ciUXanVv4R9e73W9"
                             target="_blank"
-                            className="bg-transparent border-2 border-yellow-400 hover:bg-yellow-400 hover:text-blue-900 text-yellow-400 px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
+                            className="flex-1 bg-transparent border-2 border-yellow-400 hover:bg-yellow-400 hover:text-blue-900 text-yellow-400 px-3 py-3 text-[11px] lg:text-xs font-bold rounded-xl shadow-lg transform hover:-translate-y-1 transition-all uppercase tracking-wide flex items-center justify-center text-center leading-tight"
                         >
                             Make An Offer
                         </Link>
+
                         <Link
                             to="/valuation"
-                            className="bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
+                            className="flex-1 bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white px-3 py-3 text-[11px] lg:text-xs font-bold rounded-xl shadow-lg transform hover:-translate-y-1 transition-all uppercase tracking-wide flex items-center justify-center text-center leading-tight"
                         >
-                            DEPOSIT AND FEE CALCULATOR
+                            DEPOSIT CALCULATOR
                         </Link>
+
                         <Link
                             to="https://forms.gle/1EwejLG4StJdK7qu5"
                             target="_blank"
-                            className="bg-transparent border-2 border-blue-100 hover:bg-blue-100 hover:text-blue-800 text-blue-100 px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
+                            className="flex-1 bg-transparent border-2 border-blue-100 hover:bg-blue-100 hover:text-blue-800 text-blue-100 px-3 py-3 text-[11px] lg:text-xs font-bold rounded-xl shadow-lg transform hover:-translate-y-1 transition-all uppercase tracking-wide flex items-center justify-center text-center leading-tight"
                         >
-                            Fill out Our Questionnaire ?
+                            Questionnaire ?
                         </Link>
+
                         <Link
                             to="https://forms.gle/THstgtY3wEywmkuD9"
                             target="_blank"
-                            className="bg-transparent border-2 border-blue-100 hover:bg-blue-100 hover:text-blue-800 text-blue-100 px-8 py-4 text-sm font-bold rounded-xl shadow-lg transform hover:scale-105 transition-all uppercase tracking-wide"
+                            className="flex-1 bg-transparent border-2 border-blue-100 hover:bg-blue-100 hover:text-blue-800 text-blue-100 px-3 py-3 text-[11px] lg:text-xs font-bold rounded-xl shadow-lg transform hover:-translate-y-1 transition-all uppercase tracking-wide flex items-center justify-center text-center leading-tight whitespace-normal"
                         >
-                            Looking For Something Else?
+                            Other Needs?
                         </Link>
+                    </div>
+                    
+                    <div className="mt-8 text-center max-w-4xl mx-auto">
+                        <p className="text-xl mb-4 text-blue-100 font-semibold tracking-wide">Virtual Online Auctioneers</p>
+                        <p className="text-lg text-blue-100 leading-relaxed">
+                            Buy, sell, and invest in property with confidence through Zimbabwe's most trusted online auction platform.
+                        </p>
                     </div>
                 </div>
 
@@ -509,8 +533,8 @@ export default function HomePage() {
                                         <a href="tel:+263784086388" className="text-blue-900 font-semibold hover:text-blue-700">
                                             📞 +263 784 086 388
                                         </a>
-                                        <a href="mailto:info@fastinproperty.co.zw" className="text-blue-900 font-semibold hover:text-blue-700">
-                                            ✉️ info@fastinproperty.co.zw
+                                        <a href="mailto:info@fastinpropertyauctions.co.zw" className="text-blue-900 font-semibold hover:text-blue-700">
+                                            ✉️ info@fastinpropertyauctions.co.zw
                                         </a>
                                     </div>
                                 </div>

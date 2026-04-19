@@ -593,11 +593,11 @@ export default function BrochurePage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center text-blue-900 font-semibold">
                             <a
-                                href="mailto:info@fastinproperty.co.zw"
+                                href="mailto:info@fastinpropertyauctions.co.zw"
                                 className="flex items-center justify-center gap-2 hover:text-blue-800 transition-colors"
                             >
                                 <Mail className="w-5 h-5" />
-                                info@fastinproperty.co.zw
+                                info@fastinpropertyauctions.co.zw
                             </a>
                             <span className="hidden sm:inline">•</span>
                             <a

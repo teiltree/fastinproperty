@@ -181,7 +181,7 @@ export default function ContactPage() {
                     <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
                     <div>
                       <p className="font-semibold text-blue-900">Email</p>
-                      <p className="text-gray-700">info@fastinproperty.co.zw</p>
+                      <p className="text-gray-700">info@fastinpropertyauctions.co.zw</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -224,7 +224,7 @@ export default function ContactPage() {
                 <a href="tel:+263784086388" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
                   Call Now: +263784086388 / +263719086388
                 </a>
-                <a href="mailto:info@fastinproperty.co.zw" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                <a href="mailto:info@fastinpropertyauctions.co.zw" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   Send Email
                 </a>
               </div>

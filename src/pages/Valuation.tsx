@@ -264,10 +264,10 @@ export default function ValuationPage() {
                                 📞 +263 784 086 388
                             </a>
                             <a
-                                href="mailto:info@fastinproperty.co.zw"
-                                className="text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
+                                href="mailto:info@fastinpropertyauctions.co.zw"
+                                className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors"
                             >
-                                ✉️ info@fastinproperty.co.zw
+                                ✉️ info@fastinpropertyauctions.co.zw
                             </a>
                         </div>
                     </div>

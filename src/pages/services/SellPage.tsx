@@ -108,7 +108,7 @@ export default function SellPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                             <a
-                            href="mailto:info@fastinproperty.co.zw"
+                            href="mailto:info@fastinpropertyauctions.co.zw"
                             className="group bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
                             >
                             Get Free Valuation
@@ -499,7 +499,7 @@ export default function SellPage() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
-                    href="mailto:info@fastinproperty.co.zw"
+                    href="mailto:info@fastinpropertyauctions.co.zw"
                     className="group bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-10 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2"
                     >
                     Book Free Valuation
@@ -517,8 +517,8 @@ export default function SellPage() {
         <div className="mt-12 pt-8 border-t border-white/20">
             <p className="text-blue-200 text-sm">
                 Or email us directly at{' '}
-                <a href="mailto:info@fastinproperty.co.zw" className="text-yellow-400 hover:text-yellow-300 font-semibold underline">
-                    info@fastinproperty.co.zw
+                <a href="mailto:info@fastinpropertyauctions.co.zw" className="text-yellow-400 hover:text-yellow-300 font-semibold underline">
+                    info@fastinpropertyauctions.co.zw
                 </a>
             </p>
         </div>

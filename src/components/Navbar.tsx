@@ -145,19 +145,19 @@ export default function Navbar() {
                                 <span>+263 784 086 388 / +263 719 086 388</span>
                             </a>
                             <a
-                                href="mailto:info@fastinproperty.co.zw"
+                                href="mailto:info@fastinpropertyauctions.co.zw"
                                 className="flex items-center space-x-2.5 hover:text-yellow-400 transition-all duration-300 group"
                             >
                                 <div className="bg-yellow-400/10 rounded-full p-1.5 group-hover:bg-yellow-400/20 transition-colors">
                                     <Mail className="w-3.5 h-3.5 text-yellow-500" />
                                 </div>
-                                <span>info@fastinproperty.co.zw</span>
+                                <span>info@fastinpropertyauctions.co.zw</span>
                             </a>
                             <div className="flex items-center space-x-2.5 text-blue-100/70">
                                 <div className="bg-blue-400/10 rounded-full p-1.5">
                                     <MapPin className="w-3.5 h-3.5 text-blue-400" />
                                 </div>
-                                <span>2 Smithfield Way, Marondera</span>
+                                <span>4 Silwood Close, Chisipite, Harare</span>
                             </div>
                         </div>
                         <div className="flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
@@ -219,7 +219,7 @@ export default function Navbar() {
 
                                 {/* About Mega Menu */}
                                 <div
-                                    className={`absolute top-full left-1/2 -translate-x-1/2 pt-5 w-[1000px] bg-transparent transition-all duration-500 overflow-hidden ${activeDropdown === 'about'
+                                    className={`absolute top-full right-0 lg:-left-32 xl:-left-64 pt-5 w-[800px] lg:w-[900px] xl:w-[1000px] bg-transparent transition-all duration-500 overflow-hidden ${activeDropdown === 'about'
                                             ? 'opacity-100 visible translate-y-0 scale-100'
                                             : 'opacity-0 invisible -translate-y-4 scale-95 pointer-events-none'
                                         }`}
@@ -314,8 +314,13 @@ export default function Navbar() {
                                                         className="group bg-white p-4 rounded-2xl border border-gray-200/50 hover:border-yellow-400/50 hover:shadow-xl hover:shadow-yellow-400/5 transition-all duration-300"
                                                     >
                                                         <div className="flex gap-4">
-                                                            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300 shrink-0">
-                                                                {item.icon}
+                                                            <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm group-hover:scale-105 transition-transform duration-300 text-2xl group-hover:scale-105">
+                                                                <img
+                                                                    src={item.image}
+                                                                    alt={item.name}
+                                                                    className="w-full h-full object-cover"
+                                                                />
+                                                                <div className="absolute inset-0 bg-blue-950/10 group-hover:bg-transparent transition-colors duration-300"></div>
                                                             </div>
                                                             <div>
                                                                 <h4 className="font-bold text-blue-950 text-xs mb-1 uppercase tracking-wider group-hover:text-yellow-600 transition-colors">
@@ -477,9 +482,9 @@ export default function Navbar() {
                                                         key={sub.name}
                                                         href={sub.href}
                                                         onClick={() => setIsMobileMenuOpen(false)}
-                                                        className="flex items-center gap-3 py-3 px-5 rounded-xl bg-blue-50/50 text-[11px] text-blue-950 font-bold uppercase tracking-wider"
+                                                        className="block py-3 px-5 rounded-xl bg-blue-50/50 text-[11px] text-blue-950 font-bold uppercase tracking-wider"
                                                     >
-                                                        <span className="text-lg">{sub.icon}</span> {sub.name}
+                                                        {sub.name}
                                                     </a>
                                                 ))}
                                             </div>
