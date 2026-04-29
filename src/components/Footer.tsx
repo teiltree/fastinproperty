@@ -52,7 +52,7 @@ export default function Footer() {
                             <div className="mb-6">
                                 <img
                                     className="w-auto h-20 rounded-xl shadow-lg hover:shadow-yellow-500/20 transition-shadow duration-300"
-                                    src="https://i.postimg.cc/g0pZvzDg/main.jpg"
+                                    src="/logo.png"
                                     alt="Fastin Property Auctions Logo"
                                 />
                             </div>

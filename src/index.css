@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  /* Navy Blue Scale — based on logo #1E3A6D */
+  --color-blue-50: #EBF0F7;
+  --color-blue-100: #D6E2F0;
+  --color-blue-200: #ADC5E0;
+  --color-blue-300: #849FCC;
+  --color-blue-400: #5B79B8;
+  --color-blue-500: #3A6BB5;
+  --color-blue-600: #2A4F8A;
+  --color-blue-700: #1E3A6D;
+  --color-blue-800: #162D54;
+  --color-blue-900: #122D54;
+  --color-blue-950: #0A1929;
+
+  /* Copper Gold Scale — based on logo #C4943D */
+  --color-yellow-50: #FDF8EF;
+  --color-yellow-100: #F5ECD8;
+  --color-yellow-200: #ECDAB5;
+  --color-yellow-300: #E0C48A;
+  --color-yellow-400: #D4A94E;
+  --color-yellow-500: #C4943D;
+  --color-yellow-600: #A87A2F;
+  --color-yellow-700: #8C6325;
+  --color-yellow-800: #704F1E;
+  --color-yellow-900: #5A3F18;
+  --color-yellow-950: #3D2A10;
+}
