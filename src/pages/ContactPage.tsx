@@ -1,31 +1,106 @@
-import { useState, type FormEvent } from 'react';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
 
 const CONTACT_EMAIL = 'info@fastinpropertyauctions.com';
+const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
+
+const emptyForm = {
+  name: '',
+  email: '',
+  phone: '',
+  message: '',
+};
+
+function openMailto(name: string, email: string, phone: string, message: string) {
+  const params = new URLSearchParams({
+    subject: `Website enquiry from ${name}`,
+    body: [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Phone: ${phone || 'Not provided'}`,
+      '',
+      'Message:',
+      message,
+    ].join('\n'),
   });
 
-  // @ts-ignore
-  const handleInputChange = (e) => {
+  const link = document.createElement('a');
+  link.href = `mailto:${CONTACT_EMAIL}?${params.toString()}`;
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function isFormSubmitSuccess(value: unknown): boolean {
+  return value === true || value === 'true';
+}
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState(emptyForm);
+  const [status, setStatus] = useState<SubmitStatus>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [usedMailtoFallback, setUsedMailtoFallback] = useState(false);
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Website enquiry from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+    setStatus('loading');
+    setErrorMessage('');
+    setUsedMailtoFallback(false);
+
+    try {
+      const response = await fetch(FORMSUBMIT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          message: formData.message,
+          _subject: `Website enquiry from ${formData.name}`,
+          _replyto: formData.email,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !isFormSubmitSuccess(data.success)) {
+        throw new Error(
+          typeof data.message === 'string' ? data.message : 'Failed to send message'
+        );
+      }
+
+      setStatus('success');
+      setFormData(emptyForm);
+    } catch (err) {
+      try {
+        openMailto(formData.name, formData.email, formData.phone, formData.message);
+        setUsedMailtoFallback(true);
+        setStatus('success');
+        setFormData(emptyForm);
+      } catch {
+        setStatus('error');
+        setErrorMessage(
+          err instanceof Error
+            ? err.message
+            : 'Something went wrong. Please try again or email us directly.'
+        );
+      }
+    }
   };
 
   return (
@@ -59,6 +134,40 @@ export default function ContactPage() {
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-8">
+                  {status === 'success' && (
+                    <div
+                      role="status"
+                      className="rounded-xl border-2 border-emerald-200 bg-emerald-50 px-5 py-4 text-emerald-900"
+                    >
+                      <p className="font-semibold">
+                        {usedMailtoFallback
+                          ? 'Your email app should be open with your message ready to send.'
+                          : 'Message sent successfully.'}
+                      </p>
+                      <p className="mt-1 text-sm">
+                        {usedMailtoFallback
+                          ? `Please send the email to ${CONTACT_EMAIL} to complete your enquiry. We typically respond within 2–4 hours.`
+                          : "Thank you — we'll get back to you within 2–4 hours."}
+                      </p>
+                    </div>
+                  )}
+
+                  {status === 'error' && (
+                    <div
+                      role="alert"
+                      className="rounded-xl border-2 border-red-200 bg-red-50 px-5 py-4 text-red-900"
+                    >
+                      <p className="font-semibold">Could not send your message.</p>
+                      <p className="mt-1 text-sm">{errorMessage}</p>
+                      <p className="mt-2 text-sm">
+                        You can also email us at{' '}
+                        <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold underline">
+                          {CONTACT_EMAIL}
+                        </a>
+                      </p>
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="group">
                       <label className="block text-sm font-semibold text-blue-900 mb-3 uppercase tracking-wide">
@@ -120,9 +229,10 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-blue-900 to-blue-800 hover:from-yellow-500 hover:to-yellow-600 text-white py-5 px-8 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
+                    disabled={status === 'loading'}
+                    className="w-full bg-gradient-to-r from-blue-900 to-blue-800 hover:from-yellow-500 hover:to-yellow-600 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed disabled:transform-none text-white py-5 px-8 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl"
                   >
-                    Send Message
+                    {status === 'loading' ? 'Sending…' : 'Send Message'}
                     <svg className="w-5 h-5 ml-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                     </svg>
