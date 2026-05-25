@@ -76,13 +76,13 @@ export default function Footer() {
                                 </a>
 
                                 <a
-                                    href="mailto:info@fastinpropertyauctions.co.zw"
+                                    href="mailto:info@fastinpropertyauctions.com"
                                     className="flex items-center space-x-3 text-blue-200 hover:text-yellow-400 transition-colors group"
                                 >
                                     <div className="bg-blue-800/50 group-hover:bg-yellow-500/20 rounded-lg p-2 transition-colors">
                                         <Mail className="w-4 h-4 text-yellow-400" />
                                     </div>
-                                    <span className="text-sm">info@fastinpropertyauctions.co.zw</span>
+                                    <span className="text-sm">info@fastinpropertyauctions.com</span>
                                 </a>
 
                                 <div className="flex items-start space-x-3 text-blue-200">

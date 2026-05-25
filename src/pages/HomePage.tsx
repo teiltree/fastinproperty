@@ -534,8 +534,8 @@ export default function HomePage() {
                                         <a href="tel:+263784086388" className="text-blue-900 font-semibold hover:text-blue-700">
                                             📞 +263 784 086 388
                                         </a>
-                                        <a href="mailto:info@fastinpropertyauctions.co.zw" className="text-blue-900 font-semibold hover:text-blue-700">
-                                            ✉️ info@fastinpropertyauctions.co.zw
+                                        <a href="mailto:info@fastinpropertyauctions.com" className="text-blue-900 font-semibold hover:text-blue-700">
+                                            ✉️ info@fastinpropertyauctions.com
                                         </a>
                                     </div>
                                 </div>

@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
+
+const CONTACT_EMAIL = 'info@fastinpropertyauctions.com';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -17,11 +19,14 @@ export default function ContactPage() {
     }));
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log('Form submitted:', formData);
-  //   // Add form submission logic here
-  // };
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Website enquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\n\nMessage:\n${formData.message}`
+    );
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-gray-100">
@@ -53,7 +58,7 @@ export default function ContactPage() {
                   Fill out the form below and one of our property experts will typically contact you within 2-4 hours.
                 </p>
 
-                <div className="space-y-8">
+                <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="group">
                       <label className="block text-sm font-semibold text-blue-900 mb-3 uppercase tracking-wide">
@@ -122,7 +127,7 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                     </svg>
                   </button>
-                </div>
+                </form>
               </div>
             </div>
 
@@ -199,7 +204,9 @@ export default function ContactPage() {
                     <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
                     <div>
                       <p className="font-semibold text-blue-900">Email</p>
-                      <p className="text-gray-700">info@fastinpropertyauctions.co.zw</p>
+                      <a href={`mailto:${CONTACT_EMAIL}`} className="text-gray-700 hover:text-blue-900 transition-colors">
+                        {CONTACT_EMAIL}
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -242,7 +249,7 @@ export default function ContactPage() {
                 <a href="tel:+263784086388" className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
                   Call Now: +263784086388 / +263719086388
                 </a>
-                <a href="mailto:info@fastinpropertyauctions.co.zw" className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   Send Email
                 </a>
               </div>

@@ -828,11 +828,11 @@ export default function ProspectusPage() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center text-blue-100 font-semibold">
                             <a
-                                href="mailto:info@fastin.co.zw"
+                                href="mailto:info@fastin.com"
                                 className="flex items-center justify-center gap-2 hover:text-yellow-400 transition-colors"
                             >
                                 <Mail className="w-5 h-5" />
-                                info@fastin.co.zw
+                                info@fastin.com
                             </a>
                             <span className="hidden sm:inline">•</span>
                             <a

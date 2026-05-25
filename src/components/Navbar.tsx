@@ -145,13 +145,13 @@ export default function Navbar() {
                                 <span>+263 784 086 388 / +263 719 086 388</span>
                             </a>
                             <a
-                                href="mailto:info@fastinpropertyauctions.co.zw"
+                                href="mailto:info@fastinpropertyauctions.com"
                                 className="flex items-center space-x-2.5 hover:text-yellow-400 transition-all duration-300 group"
                             >
                                 <div className="bg-yellow-400/10 rounded-full p-1.5 group-hover:bg-yellow-400/20 transition-colors">
                                     <Mail className="w-3.5 h-3.5 text-yellow-500" />
                                 </div>
-                                <span>info@fastinpropertyauctions.co.zw</span>
+                                <span>info@fastinpropertyauctions.com</span>
                             </a>
                             <div className="flex items-center space-x-2.5 text-blue-100/70">
                                 <div className="bg-blue-400/10 rounded-full p-1.5">
