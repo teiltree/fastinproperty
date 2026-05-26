@@ -3,7 +3,7 @@ import { ChevronDown, Award, Users, Globe, Shield, Star, CheckCircle, Home, Spar
 import { Link } from "react-router-dom";
 
 export default function AboutPage() {
-    const [expandedSection, setExpandedSection] = useState(null);
+    const [expandedSection, setExpandedSection] = useState<string | null>(null);
     const [currentImageSlide, setCurrentImageSlide] = useState(0);
 
     // Gallery images for the slider
@@ -33,8 +33,7 @@ export default function AboutPage() {
     const gapSize = 24;
     const slideWidth = imageWidth + gapSize;
 
-    // @ts-ignore
-    const toggleSection = (section) => {
+    const toggleSection = (section: string) => {
         setExpandedSection(expandedSection === section ? null : section);
     };
 

@@ -24,21 +24,25 @@ type Property = {
 };
 
 export default function AlertsPage() {
-    // @ts-ignore
     const [currentSlide, setCurrentSlide] = useState(0);
     const [email, setEmail] = useState("");
     const [location, setLocation] = useState("");
 
     const recentlySold: Property[] = [];
 
+    const itemsPerSlide = 4;
+    const totalSlides = Math.max(1, Math.ceil(recentlySold.length / itemsPerSlide));
+    const canSlide = recentlySold.length > itemsPerSlide;
 
     const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % Math.ceil(recentlySold.length / 4));
-  };
+        if (!canSlide) return;
+        setCurrentSlide(prev => (prev + 1) % totalSlides);
+    };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + Math.ceil(recentlySold.length / 4)) % Math.ceil(recentlySold.length / 4));
-  };
+    const prevSlide = () => {
+        if (!canSlide) return;
+        setCurrentSlide(prev => (prev - 1 + totalSlides) % totalSlides);
+    };
 
   const handleSubscribe = () => {
     // Handle subscription logic
@@ -249,12 +253,14 @@ export default function AlertsPage() {
               <div className="flex gap-3">
                 <button
                     onClick={prevSlide}
+                    disabled={!canSlide}
                     className="bg-blue-900 hover:bg-blue-800 text-yellow-400 p-4 rounded-full shadow-lg transition-all transform hover:scale-110"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
                 <button
                     onClick={nextSlide}
+                    disabled={!canSlide}
                     className="bg-blue-900 hover:bg-blue-800 text-yellow-400 p-4 rounded-full shadow-lg transition-all transform hover:scale-110"
                 >
                   <ChevronRight className="w-6 h-6" />
@@ -263,7 +269,9 @@ export default function AlertsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {recentlySold.map((property, index) => (
+              {recentlySold
+                .slice(currentSlide * itemsPerSlide, currentSlide * itemsPerSlide + itemsPerSlide)
+                .map((property, index) => (
                   <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                     <div className="relative">
                       <img

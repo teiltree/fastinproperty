@@ -349,7 +349,7 @@ export default function Navbar() {
                             </a>
 
                             <a
-                                href="#"
+                                href="/about/guide"
                                 className={`relative px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg group uppercase text-gray-600 hover:text-blue-900 hover:bg-gray-50`}
                             >
                                 RESOURCES / BLOG

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type ChangeEvent, type FormEvent } from 'react'
 
 export default function FranchisingPage() {
   const [formData, setFormData] = useState({
@@ -8,14 +8,12 @@ export default function FranchisingPage() {
     preferredArea: ''
   })
 
-  // @ts-ignore
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  // @ts-ignore
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
   }

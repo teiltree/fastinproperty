@@ -207,21 +207,27 @@ export default function Footer() {
                                 <span className="text-blue-200 text-sm font-semibold">Follow Us:</span>
                                 <div className="flex items-center gap-3">
                                     <a
-                                        href="#"
+                                        href="https://www.facebook.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="bg-blue-800/50 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-yellow-600 hover:text-blue-900 rounded-xl p-3 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group"
                                         aria-label="Facebook"
                                     >
                                         <Facebook className="h-5 w-5" />
                                     </a>
                                     <a
-                                        href="#"
+                                        href="https://www.instagram.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="bg-blue-800/50 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-yellow-600 hover:text-blue-900 rounded-xl p-3 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group"
                                         aria-label="Instagram"
                                     >
                                         <Instagram className="h-5 w-5" />
                                     </a>
                                     <a
-                                        href="#"
+                                        href="https://x.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="bg-blue-800/50 hover:bg-gradient-to-br hover:from-yellow-400 hover:to-yellow-600 hover:text-blue-900 rounded-xl p-3 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 group"
                                         aria-label="Twitter"
                                     >
