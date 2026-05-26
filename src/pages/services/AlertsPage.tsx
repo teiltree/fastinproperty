@@ -12,6 +12,9 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
+const ALERTS_EMAIL = "info@fastinpropertyauctions.com";
+const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${ALERTS_EMAIL}`;
+
 type Property = {
     image: string;
     price: string;
@@ -27,6 +30,8 @@ export default function AlertsPage() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [email, setEmail] = useState("");
     const [location, setLocation] = useState("");
+    const [subscribeStatus, setSubscribeStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [subscribeError, setSubscribeError] = useState("");
 
     const recentlySold: Property[] = [];
 
@@ -44,9 +49,53 @@ export default function AlertsPage() {
         setCurrentSlide(prev => (prev - 1 + totalSlides) % totalSlides);
     };
 
-  const handleSubscribe = () => {
-    // Handle subscription logic
-    console.log('Subscribing:', { email, location });
+  const handleSubscribe = async () => {
+    setSubscribeStatus("loading");
+    setSubscribeError("");
+
+    try {
+      const trimmedEmail = email.trim();
+      const trimmedLocation = location.trim();
+
+      if (!trimmedEmail) {
+        setSubscribeStatus("error");
+        setSubscribeError("Please enter your email address.");
+        return;
+      }
+
+      const response = await fetch(FORMSUBMIT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          email: trimmedEmail,
+          location: trimmedLocation || "Not provided",
+          _subject: "New Auction Alerts Subscription",
+          _replyto: trimmedEmail,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !(data.success === true || data.success === "true")) {
+        throw new Error(typeof data.message === "string" ? data.message : "Failed to subscribe");
+      }
+
+      setSubscribeStatus("success");
+      setEmail("");
+      setLocation("");
+    } catch (err) {
+      setSubscribeStatus("error");
+      setSubscribeError(
+        err instanceof Error
+          ? err.message
+          : "Could not subscribe right now. Please try again later."
+      );
+    }
   };
 
 
@@ -142,6 +191,24 @@ export default function AlertsPage() {
                   </div>
 
                   <div className="space-y-4">
+                    {subscribeStatus === "success" && (
+                      <div
+                        role="status"
+                        className="rounded-xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-emerald-900 text-sm"
+                      >
+                        Subscription received. We’ll include you in the next alerts cycle.
+                      </div>
+                    )}
+
+                    {subscribeStatus === "error" && (
+                      <div
+                        role="alert"
+                        className="rounded-xl border-2 border-red-200 bg-red-50 px-4 py-3 text-red-900 text-sm"
+                      >
+                        {subscribeError || "Could not subscribe. Please try again."}
+                      </div>
+                    )}
+
                     <div className="relative">
                       <input
                           placeholder="Enter your email address"
@@ -161,9 +228,10 @@ export default function AlertsPage() {
                     </div>
                     <button
                         onClick={handleSubscribe}
+                        disabled={subscribeStatus === "loading"}
                         className="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-blue-900 font-bold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                     >
-                      Subscribe to Alerts
+                      {subscribeStatus === "loading" ? "Subscribing…" : "Subscribe to Alerts"}
                     </button>
 
                     <div className="grid grid-cols-3 gap-4 pt-4 border-t border-gray-100 text-center">
