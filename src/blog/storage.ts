@@ -43,9 +43,11 @@ export function mergeBlogData(
   local: BlogData | null
 ): BlogData {
   const base = cloneData(seed);
+  if (!base.comments) base.comments = [];
 
   const apply = (layer: BlogData | null) => {
     if (!layer) return;
+    if (!layer.comments) layer.comments = [];
     for (const author of layer.authors) {
       const i = base.authors.findIndex(a => a.id === author.id);
       if (i >= 0) base.authors[i] = author;
@@ -65,6 +67,12 @@ export function mergeBlogData(
       const i = base.posts.findIndex(p => p.id === post.id);
       if (i >= 0) base.posts[i] = post;
       else base.posts.push(post);
+    }
+    const comments = layer.comments ?? [];
+    for (const comment of comments) {
+      const i = base.comments.findIndex(c => c.id === comment.id);
+      if (i >= 0) base.comments[i] = comment;
+      else base.comments.push(comment);
     }
   };
 

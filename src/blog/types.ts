@@ -50,10 +50,23 @@ export type BlogPost = {
   seo: BlogSeo;
 };
 
+export type BlogCommentStatus = 'pending' | 'approved' | 'rejected';
+
+export type BlogComment = {
+  id: string;
+  postId: string;
+  authorName: string;
+  authorEmail?: string;
+  content: string;
+  createdAt: string;
+  status: BlogCommentStatus;
+};
+
 export type BlogData = {
   version: 1;
   posts: BlogPost[];
   categories: BlogCategory[];
   tags: BlogTag[];
   authors: BlogAuthor[];
+  comments: BlogComment[];
 };

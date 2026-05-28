@@ -1,5 +1,13 @@
 import { createContext } from 'react';
-import type { BlogAuthor, BlogCategory, BlogData, BlogPost, BlogTag } from './types';
+import type {
+  BlogAuthor,
+  BlogCategory,
+  BlogComment,
+  BlogCommentStatus,
+  BlogData,
+  BlogPost,
+  BlogTag,
+} from './types';
 
 export type BlogContextValue = {
   data: BlogData;
@@ -14,6 +22,22 @@ export type BlogContextValue = {
   getTag: (id: string) => BlogTag | undefined;
   getPostsByCategory: (categorySlug: string) => BlogPost[];
   getPostsByTag: (tagSlug: string) => BlogPost[];
+  getCommentsForPost: (postId: string, includeNonApproved?: boolean) => BlogComment[];
+  submitComment: (input: {
+    postId: string;
+    authorName: string;
+    authorEmail?: string;
+    content: string;
+  }) => void;
+  setCommentStatus: (commentId: string, status: BlogCommentStatus) => void;
+  deleteComment: (commentId: string) => void;
+  addComment: (input: {
+    postId: string;
+    authorName: string;
+    authorEmail?: string;
+    content: string;
+    status?: BlogCommentStatus;
+  }) => void;
 };
 
 export const BlogContext = createContext<BlogContextValue | null>(null);

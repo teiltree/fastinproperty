@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import { FileText, FolderOpen, LogOut, Settings, Tag, Users } from 'lucide-react';
+import { FileText, FolderOpen, LogOut, MessageCircle, Settings, Tag, Users } from 'lucide-react';
 import { logoutAdmin } from '@/blog/adminAuth';
 import { useNavigate } from 'react-router-dom';
 
@@ -27,6 +27,9 @@ export default function BlogAdminLayout() {
         <nav className="space-y-1 flex-1">
           <NavLink to="/blog/admin" end className={navClass}>
             <FileText className="w-4 h-4" /> Posts
+          </NavLink>
+          <NavLink to="/blog/admin/comments" className={navClass}>
+            <MessageCircle className="w-4 h-4" /> Comments
           </NavLink>
           <NavLink to="/blog/admin/categories" className={navClass}>
             <FolderOpen className="w-4 h-4" /> Categories

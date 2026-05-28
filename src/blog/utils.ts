@@ -40,6 +40,10 @@ export function keywordsToString(keywords: string[]): string {
   return keywords.join(', ');
 }
 
+export function isFormSubmitSuccess(value: unknown): boolean {
+  return value === true || value === 'true';
+}
+
 export function filterPosts(
   posts: BlogPost[],
   opts: {

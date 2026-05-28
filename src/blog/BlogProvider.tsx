@@ -15,6 +15,8 @@ import {
   mergeBlogData,
   saveToLocalStorage,
 } from './storage';
+import type { BlogComment, BlogCommentStatus } from './types';
+import { uniqueId } from './utils';
 
 export function BlogProvider({ children }: { children: ReactNode }) {
   const [data, setData] = useState(getSeedData);
@@ -104,6 +106,72 @@ export function BlogProvider({ children }: { children: ReactNode }) {
     [data.tags, publishedPosts]
   );
 
+  const getCommentsForPost = useCallback(
+    (postId: string, includeNonApproved = false) => {
+      const list = (data.comments ?? []).filter(c => c.postId === postId);
+      const filtered = includeNonApproved ? list : list.filter(c => c.status === 'approved');
+      return filtered.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+    },
+    [data.comments]
+  );
+
+  const addComment = useCallback(
+    (input: {
+      postId: string;
+      authorName: string;
+      authorEmail?: string;
+      content: string;
+      status?: BlogCommentStatus;
+    }) => {
+      const comment: BlogComment = {
+        id: uniqueId('comment'),
+        postId: input.postId,
+        authorName: input.authorName.trim(),
+        authorEmail: input.authorEmail?.trim() || undefined,
+        content: input.content.trim(),
+        createdAt: new Date().toISOString().slice(0, 10),
+        status: input.status ?? 'approved',
+      };
+      saveData({
+        ...data,
+        comments: [...(data.comments ?? []), comment],
+      });
+    },
+    [data, saveData]
+  );
+
+  const submitComment = useCallback(
+    (input: {
+      postId: string;
+      authorName: string;
+      authorEmail?: string;
+      content: string;
+    }) => {
+      addComment({ ...input, status: 'pending' });
+    },
+    [addComment]
+  );
+
+  const setCommentStatus = useCallback(
+    (commentId: string, status: BlogCommentStatus) => {
+      saveData({
+        ...data,
+        comments: (data.comments ?? []).map(c => (c.id === commentId ? { ...c, status } : c)),
+      });
+    },
+    [data, saveData]
+  );
+
+  const deleteComment = useCallback(
+    (commentId: string) => {
+      saveData({
+        ...data,
+        comments: (data.comments ?? []).filter(c => c.id !== commentId),
+      });
+    },
+    [data, saveData]
+  );
+
   const value = useMemo<BlogContextValue>(
     () => ({
       data,
@@ -118,6 +186,11 @@ export function BlogProvider({ children }: { children: ReactNode }) {
       getTag,
       getPostsByCategory,
       getPostsByTag,
+      getCommentsForPost,
+      submitComment,
+      setCommentStatus,
+      deleteComment,
+      addComment,
     }),
     [
       data,
@@ -132,6 +205,11 @@ export function BlogProvider({ children }: { children: ReactNode }) {
       getTag,
       getPostsByCategory,
       getPostsByTag,
+      getCommentsForPost,
+      submitComment,
+      setCommentStatus,
+      deleteComment,
+      addComment,
     ]
   );
 

@@ -34,6 +34,7 @@ import BlogAdminCategories from "@/pages/blog/admin/BlogAdminCategories";
 import BlogAdminTags from "@/pages/blog/admin/BlogAdminTags";
 import BlogAdminAuthors from "@/pages/blog/admin/BlogAdminAuthors";
 import BlogAdminSettings from "@/pages/blog/admin/BlogAdminSettings";
+import BlogAdminComments from "@/pages/blog/admin/BlogAdminComments";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
       <Route path="/blog/admin" element={<BlogAdminGuard />}>
         <Route element={<BlogAdminLayout />}>
           <Route index element={<BlogAdminPosts />} />
+          <Route path="comments" element={<BlogAdminComments />} />
           <Route path="posts/new" element={<BlogAdminPostEditor />} />
           <Route path="posts/:id/edit" element={<BlogAdminPostEditor />} />
           <Route path="categories" element={<BlogAdminCategories />} />

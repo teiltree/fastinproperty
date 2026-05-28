@@ -118,4 +118,5 @@ export const BLOG_SEED_DATA: BlogData = {
       },
     },
   ],
+  comments: [],
 };
