@@ -23,6 +23,8 @@ import GuidePage from "@/pages/about/GuidePage.tsx";
 import BrochurePage from "@/pages/franchising/Brochure.tsx";
 import ProspectusPage from "@/pages/franchising/Prospectus.tsx";
 import ValuationPage from "@/pages/Valuation.tsx";
+import BlogIndexPage from "@/pages/blog/BlogIndexPage";
+import BlogPostPage from "@/pages/blog/BlogPostPage";
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
         <Route path="/franchising/brochure" element={<BrochurePage />} />
           <Route path="/franchising/prospectus" element={<ProspectusPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blog" element={<BlogIndexPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/terms" element={<TermsPage />} />
           <Route path="/valuation" element={<ValuationPage />} />
         <Route path="/rules-of-auction" element={<RulesOfAuctionPage />} />

@@ -11,7 +11,7 @@ export default function Navbar() {
     const navItems = [
         { name: "HOME", href: "/" },
         { name: "PROPERTIES / AUCTIONS", href: "https://iprop.solutions/fastin/properties/for-auction", external: true },
-        { name: "RESOURCES / BLOG", href: "#" },
+        { name: "RESOURCES / BLOG", href: "/blog" },
         { name: "FAQS", href: "/about/faqs" },
         { name: "CONTACT", href: "/contact" },
     ];
@@ -314,7 +314,7 @@ export default function Navbar() {
                                                         className="group bg-white p-4 rounded-2xl border border-gray-200/50 hover:border-yellow-400/50 hover:shadow-xl hover:shadow-yellow-400/5 transition-all duration-300"
                                                     >
                                                         <div className="flex gap-4">
-                                                            <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm group-hover:scale-105 transition-transform duration-300 text-2xl group-hover:scale-105">
+                                                            <div className="relative w-16 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm group-hover:scale-105 transition-transform duration-300 text-2xl">
                                                                 <img
                                                                     src={item.image}
                                                                     alt={item.name}
@@ -349,7 +349,7 @@ export default function Navbar() {
                             </a>
 
                             <a
-                                href="/about/guide"
+                                href="/blog"
                                 className={`relative px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg group uppercase text-gray-600 hover:text-blue-900 hover:bg-gray-50`}
                             >
                                 RESOURCES / BLOG

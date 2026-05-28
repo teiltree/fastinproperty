@@ -24,6 +24,7 @@ export default function Footer() {
         { name: "Guide to Property Auctions in Zimbabwe", href: "/about/guide" },
         { name: "Finance Options", href: "/services/finance" },
         { name: "How It Works", href: "/about/online-bidding" },
+        { name: "Resources / Blog", href: "/blog" },
     ];
 
     const legalLinks = [
