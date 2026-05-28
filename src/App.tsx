@@ -25,11 +25,35 @@ import ProspectusPage from "@/pages/franchising/Prospectus.tsx";
 import ValuationPage from "@/pages/Valuation.tsx";
 import BlogIndexPage from "@/pages/blog/BlogIndexPage";
 import BlogPostPage from "@/pages/blog/BlogPostPage";
+import BlogAdminLogin from "@/pages/blog/admin/BlogAdminLogin";
+import BlogAdminGuard from "@/pages/blog/admin/BlogAdminGuard";
+import BlogAdminLayout from "@/pages/blog/admin/BlogAdminLayout";
+import BlogAdminPosts from "@/pages/blog/admin/BlogAdminPosts";
+import BlogAdminPostEditor from "@/pages/blog/admin/BlogAdminPostEditor";
+import BlogAdminCategories from "@/pages/blog/admin/BlogAdminCategories";
+import BlogAdminTags from "@/pages/blog/admin/BlogAdminTags";
+import BlogAdminAuthors from "@/pages/blog/admin/BlogAdminAuthors";
+import BlogAdminSettings from "@/pages/blog/admin/BlogAdminSettings";
 
 function App() {
   return (
-    <Layout>
-      <Routes>
+    <Routes>
+      {/* Blog CMS (no site chrome) */}
+      <Route path="/blog/admin/login" element={<BlogAdminLogin />} />
+      <Route path="/blog/admin" element={<BlogAdminGuard />}>
+        <Route element={<BlogAdminLayout />}>
+          <Route index element={<BlogAdminPosts />} />
+          <Route path="posts/new" element={<BlogAdminPostEditor />} />
+          <Route path="posts/:id/edit" element={<BlogAdminPostEditor />} />
+          <Route path="categories" element={<BlogAdminCategories />} />
+          <Route path="tags" element={<BlogAdminTags />} />
+          <Route path="authors" element={<BlogAdminAuthors />} />
+          <Route path="settings" element={<BlogAdminSettings />} />
+        </Route>
+      </Route>
+
+      {/* Public site */}
+      <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
         <Route path="/services/marketing" element={<MarketingPage />} />
         <Route path="/services/buy" element={<BuyPage />} />
@@ -38,7 +62,7 @@ function App() {
         <Route path="/services/alerts" element={<AlertsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/about/team" element={<TeamPage />} />
-          <Route path="/about/guide" element={<GuidePage />} />
+        <Route path="/about/guide" element={<GuidePage />} />
         <Route path="/about/footprint" element={<FootprintPage />} />
         <Route path="/about/partners" element={<PartnersPage />} />
         <Route path="/about/disclaimer" element={<DisclaimerPage />} />
@@ -46,17 +70,16 @@ function App() {
         <Route path="/about/faqs" element={<FaqsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/franchising/brochure" element={<BrochurePage />} />
-          <Route path="/franchising/prospectus" element={<ProspectusPage />} />
+        <Route path="/franchising/prospectus" element={<ProspectusPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogIndexPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
         <Route path="/terms" element={<TermsPage />} />
-          <Route path="/valuation" element={<ValuationPage />} />
+        <Route path="/valuation" element={<ValuationPage />} />
         <Route path="/rules-of-auction" element={<RulesOfAuctionPage />} />
-        {/* Fallback route to land on homepage on any unknown path */}
         <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </Layout>
+      </Route>
+    </Routes>
   )
 }
 
