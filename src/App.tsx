@@ -35,6 +35,15 @@ import BlogAdminTags from "@/pages/blog/admin/BlogAdminTags";
 import BlogAdminAuthors from "@/pages/blog/admin/BlogAdminAuthors";
 import BlogAdminSettings from "@/pages/blog/admin/BlogAdminSettings";
 import BlogAdminComments from "@/pages/blog/admin/BlogAdminComments";
+import HousesAdminLogin from "@/pages/houses/admin/HousesAdminLogin";
+import HousesAdminGuard from "@/pages/houses/admin/HousesAdminGuard";
+import HousesAdminLayout from "@/pages/houses/admin/HousesAdminLayout";
+import HousesAdminListings from "@/pages/houses/admin/HousesAdminListings";
+import HousesAdminListingEditor from "@/pages/houses/admin/HousesAdminListingEditor";
+import HousesAdminSettings from "@/pages/houses/admin/HousesAdminSettings";
+import SaPropertiesHubPage from "@/pages/sa-properties/SaPropertiesHubPage";
+import WhyBuyInSaPage from "@/pages/sa-properties/WhyBuyInSaPage";
+import SaDevelopmentPage from "@/pages/sa-properties/SaDevelopmentPage";
 
 function App() {
   return (
@@ -51,6 +60,17 @@ function App() {
           <Route path="tags" element={<BlogAdminTags />} />
           <Route path="authors" element={<BlogAdminAuthors />} />
           <Route path="settings" element={<BlogAdminSettings />} />
+        </Route>
+      </Route>
+
+      {/* Property listings CMS (no site chrome) */}
+      <Route path="/houses/admin/login" element={<HousesAdminLogin />} />
+      <Route path="/houses/admin" element={<HousesAdminGuard />}>
+        <Route element={<HousesAdminLayout />}>
+          <Route index element={<HousesAdminListings />} />
+          <Route path="listings/new" element={<HousesAdminListingEditor />} />
+          <Route path="listings/:id/edit" element={<HousesAdminListingEditor />} />
+          <Route path="settings" element={<HousesAdminSettings />} />
         </Route>
       </Route>
 
@@ -79,6 +99,9 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/valuation" element={<ValuationPage />} />
         <Route path="/rules-of-auction" element={<RulesOfAuctionPage />} />
+        <Route path="/south-africa-properties" element={<SaPropertiesHubPage />} />
+        <Route path="/south-africa-properties/why-zimbabweans-buy-in-south-africa" element={<WhyBuyInSaPage />} />
+        <Route path="/south-africa-properties/:slug" element={<SaDevelopmentPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

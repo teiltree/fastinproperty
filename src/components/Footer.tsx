@@ -18,6 +18,8 @@ export default function Footer() {
 
 
     const quickLinks = [
+        { name: "South Africa Properties", href: "/south-africa-properties" },
+        { name: "Why Buy in South Africa", href: "/south-africa-properties/why-zimbabweans-buy-in-south-africa" },
         { name: "Current Auctions", href: "https://iprop.solutions/fastin/properties/for-auction" },
         { name: "Sell With Us", href: "/services/sell" },
         { name: "Free Auction Valuation", href: "/valuation" },

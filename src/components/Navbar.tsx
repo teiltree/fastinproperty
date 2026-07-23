@@ -10,10 +10,50 @@ export default function Navbar() {
 
     const navItems = [
         { name: "HOME", href: "/" },
+        { name: "SOUTH AFRICA PROPERTIES", href: "/south-africa-properties" },
         { name: "PROPERTIES / AUCTIONS", href: "https://iprop.solutions/fastin/properties/for-auction", external: true },
         { name: "RESOURCES / BLOG", href: "/blog" },
         { name: "FAQS", href: "/about/faqs" },
         { name: "CONTACT", href: "/contact" },
+    ];
+
+    const saPropertyItems = [
+        {
+            name: "Why Buy in South Africa",
+            href: "/south-africa-properties/why-zimbabweans-buy-in-south-africa",
+            description: "Legal process, USD pricing, rental yields & FAQs for Zimbabwean buyers.",
+            icon: "🇿🇦",
+        },
+        {
+            name: "All Developments",
+            href: "/south-africa-properties",
+            description: "Central Developments portfolio — Zimbabwe's official SA property gateway.",
+            icon: "🏘️",
+        },
+        {
+            name: "Knight's Court",
+            href: "/south-africa-properties/knights-court",
+            description: "Modern estate living — USD price list & brochure available.",
+            icon: "🏰",
+        },
+        {
+            name: "Colorado",
+            href: "/south-africa-properties/colorado",
+            description: "Contemporary apartments for investors and end-users.",
+            icon: "🏢",
+        },
+        {
+            name: "Woodlands Place",
+            href: "/south-africa-properties/woodlands-place",
+            description: "Established estate character with strong rental appeal.",
+            icon: "🌳",
+        },
+        {
+            name: "Blue Hills",
+            href: "/south-africa-properties/blue-hills",
+            description: "Launching 1 September — register for early access.",
+            icon: "⛰️",
+        },
     ];
 
     const franchisingItems = [
@@ -339,6 +379,62 @@ export default function Navbar() {
                                 </div>
                             </div>
 
+                            {/* South Africa Properties Dropdown */}
+                            <div className="relative group">
+                                <button
+                                    onMouseEnter={() => setActiveDropdown('sa-properties')}
+                                    onMouseLeave={() => setActiveDropdown("")}
+                                    className={`px-5 py-2.5 text-xs font-bold tracking-widest transition-all duration-300 rounded-lg flex items-center gap-2 group uppercase ${location.pathname.startsWith("/south-africa-properties")
+                                            ? "text-blue-900 bg-blue-50/50"
+                                            : "text-gray-600 hover:text-blue-900 hover:bg-gray-50"
+                                        }`}
+                                >
+                                    SA PROPERTIES
+                                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-500 ${activeDropdown === 'sa-properties' ? 'rotate-180 text-yellow-500' : ''
+                                        }`} />
+                                    {location.pathname.startsWith("/south-africa-properties") && (
+                                        <div className="absolute bottom-[-1.5rem] left-0 w-full h-1 bg-yellow-500 rounded-full"></div>
+                                    )}
+                                </button>
+
+                                <div
+                                    className={`absolute top-full left-1/2 -translate-x-1/2 pt-5 w-[720px] bg-transparent transition-all duration-500 overflow-hidden ${activeDropdown === 'sa-properties'
+                                            ? 'opacity-100 visible translate-y-0 scale-100'
+                                            : 'opacity-0 invisible -translate-y-4 scale-95 pointer-events-none'
+                                        }`}
+                                    onMouseEnter={() => setActiveDropdown('sa-properties')}
+                                    onMouseLeave={() => setActiveDropdown("")}
+                                >
+                                    <div className="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100/50 overflow-hidden">
+                                        <div className="grid grid-cols-2 gap-2 p-4">
+                                            {saPropertyItems.map((item) => (
+                                                <a
+                                                    key={item.name}
+                                                    href={item.href}
+                                                    className="group flex gap-3 p-4 rounded-2xl hover:bg-blue-50/50 transition-all duration-300"
+                                                >
+                                                    <span className="text-2xl shrink-0">{item.icon}</span>
+                                                    <div>
+                                                        <h4 className="font-bold text-blue-950 text-[11px] mb-1 uppercase tracking-widest group-hover:text-yellow-600 transition-colors">
+                                                            {item.name}
+                                                        </h4>
+                                                        <p className="text-[11px] text-gray-500 leading-relaxed line-clamp-2">
+                                                            {item.description}
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="bg-[#0A1929] p-4 flex justify-between items-center text-white px-8">
+                                        <p className="text-xs text-blue-100/60 font-medium">Mandated by Central Developments</p>
+                                        <a href="/south-africa-properties/why-zimbabweans-buy-in-south-africa" className="text-xs font-bold text-yellow-500 hover:text-yellow-400">
+                                            WHY BUY IN SA →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <a
                                 href="https://iprop.solutions/fastin/properties/for-auction"
                                 target="_blank"
@@ -485,6 +581,32 @@ export default function Navbar() {
                                                         className="block py-3 px-5 rounded-xl bg-blue-50/50 text-[11px] text-blue-950 font-bold uppercase tracking-wider"
                                                     >
                                                         {sub.name}
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* South Africa Properties */}
+                                    <div className="space-y-1">
+                                        <button
+                                            onClick={() => setActiveDropdown(activeDropdown === "sa-properties" ? "" : "sa-properties")}
+                                            className={`w-full flex justify-between items-center py-4 px-6 rounded-2xl font-bold text-xs uppercase tracking-widest transition-all ${activeDropdown === "sa-properties" ? "bg-yellow-400 text-blue-950 shadow-lg shadow-yellow-400/20" : "bg-gray-50 text-blue-950"
+                                                }`}
+                                        >
+                                            <span>South Africa Properties</span>
+                                            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === "sa-properties" ? "rotate-180" : ""}`} />
+                                        </button>
+                                        <div className={`overflow-hidden transition-all duration-300 ${activeDropdown === "sa-properties" ? "max-h-[500px] mt-2 opacity-100" : "max-h-0 opacity-0"}`}>
+                                            <div className="grid grid-cols-1 gap-2 pl-4">
+                                                {saPropertyItems.map((sub) => (
+                                                    <a
+                                                        key={sub.name}
+                                                        href={sub.href}
+                                                        onClick={() => setIsMobileMenuOpen(false)}
+                                                        className="flex items-center gap-3 py-3 px-5 rounded-xl bg-blue-50/50 text-[11px] text-blue-950 font-bold uppercase tracking-wider"
+                                                    >
+                                                        <span className="text-lg">{sub.icon}</span> {sub.name}
                                                     </a>
                                                 ))}
                                             </div>

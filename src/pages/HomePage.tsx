@@ -18,6 +18,8 @@ import {
     CheckCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useHouses } from "@/houses/useHouses";
+import { formatListingDate } from "@/houses/utils";
 
 interface Property {
     image: string;
@@ -28,14 +30,6 @@ interface Property {
     bathrooms: number;
     size: string;
     type: string;
-}
-
-interface Auction {
-    image: string;
-    title: string;
-    subtitle: string;
-    buttonText: string;
-    date: string;
 }
 
 interface Service {
@@ -52,6 +46,7 @@ interface Testimonial {
 }
 
 export default function HomePage() {
+    const { homepageListings, loading: listingsLoading } = useHouses();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
 
@@ -112,16 +107,6 @@ export default function HomePage() {
         //   bathrooms: 2,
         //   size: "1250 m²",
         //   type: "Residential | House",
-        // },
-    ];
-
-    const currentAuctions: Auction[] = [
-        // {
-        //   image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=400&fit=crop&auto=format",
-        //   title: "August Property Auction",
-        //   subtitle: "Premium Properties",
-        //   buttonText: "VIEW PROPERTIES",
-        //   date: "Aug 15-20, 2025"
         // },
     ];
 
@@ -453,47 +438,83 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Current Auctions Section - With Empty State */}
-            <section className="py-12 md:py-24 bg-white">
+            {/* Properties Going Live / Current Auctions */}
+            <section id="properties-going-live" className="py-12 md:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <div className="inline-flex items-center gap-2 bg-yellow-100 rounded-full px-4 py-2 mb-4">
                             <Calendar className="w-5 h-5 text-yellow-700" />
-                            <span className="text-yellow-700 text-sm font-semibold">Live Now</span>
+                            <span className="text-yellow-700 text-sm font-semibold">Going Live</span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Current Auctions</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Properties Going Live</h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-yellow-600 mx-auto rounded-full mb-6"></div>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Don't miss out on these exclusive auction opportunities. Bid online in real-time.
+                            Upcoming and live auction properties. View details and bid on our online auction platform.
                         </p>
                     </div>
 
-                    {currentAuctions.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {currentAuctions.map((auction, index) => (
-                                <div key={index} className="group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3">
-                                    <div className="relative h-96">
+                    {!listingsLoading && homepageListings.length > 0 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {homepageListings.map((listing) => (
+                                <div key={listing.id} className="group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 bg-white">
+                                    <div className="relative h-72">
                                         <img
-                                            src={auction.image}
-                                            alt={auction.title}
+                                            src={listing.image}
+                                            alt={listing.imageAlt || listing.title}
                                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-blue-950/95 via-blue-900/60 to-transparent"></div>
-                                    </div>
-
-                                    <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                                        <div className="mb-3">
-                                            <span className="inline-flex items-center gap-2 bg-yellow-500 text-blue-900 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-blue-950/95 via-blue-900/50 to-transparent"></div>
+                                        <div className="absolute top-4 left-4">
+                                            <span className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wide ${
+                                                listing.status === 'live'
+                                                    ? 'bg-emerald-500 text-white'
+                                                    : 'bg-yellow-500 text-blue-900'
+                                            }`}>
                                                 <Calendar className="w-4 h-4" />
-                                                {auction.date}
+                                                {listing.status === 'live' ? 'Live Now' : 'Coming Soon'}
                                             </span>
                                         </div>
-                                        <h3 className="text-3xl font-bold mb-2">{auction.title}</h3>
-                                        <p className="text-blue-200 mb-6 text-lg">{auction.subtitle}</p>
-                                        <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-blue-900 px-8 py-3 rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-                                            {auction.buttonText}
+                                    </div>
+
+                                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
+                                        {listing.auctionDate && (
+                                            <p className="text-yellow-300 text-sm font-semibold mb-2">
+                                                {formatListingDate(listing.auctionDate)}
+                                            </p>
+                                        )}
+                                        <h3 className="text-2xl md:text-3xl font-bold mb-1">{listing.title}</h3>
+                                        {(listing.subtitle || listing.address) && (
+                                            <p className="text-blue-200 mb-2 flex items-center gap-1 text-sm md:text-base">
+                                                <MapPin className="w-4 h-4 shrink-0" />
+                                                {listing.subtitle || listing.address}
+                                            </p>
+                                        )}
+                                        {listing.description && (
+                                            <p className="text-blue-100/90 text-sm mb-4 line-clamp-2">{listing.description}</p>
+                                        )}
+                                        {(listing.price || listing.bedrooms || listing.bathrooms || listing.size) && (
+                                            <div className="flex flex-wrap gap-3 mb-4 text-sm text-blue-100">
+                                                {listing.price && <span className="font-bold text-yellow-300">{listing.price}</span>}
+                                                {listing.bedrooms != null && (
+                                                    <span className="flex items-center gap-1"><Bed className="w-4 h-4" />{listing.bedrooms}</span>
+                                                )}
+                                                {listing.bathrooms != null && (
+                                                    <span className="flex items-center gap-1"><Bath className="w-4 h-4" />{listing.bathrooms}</span>
+                                                )}
+                                                {listing.size && (
+                                                    <span className="flex items-center gap-1"><Square className="w-4 h-4" />{listing.size}</span>
+                                                )}
+                                            </div>
+                                        )}
+                                        <a
+                                            href={listing.auctionUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-blue-900 px-6 py-3 rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg"
+                                        >
+                                            {listing.buttonText}
                                             <ArrowRight className="w-5 h-5" />
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             ))}
@@ -506,7 +527,7 @@ export default function HomePage() {
                                     <Calendar className="w-12 h-12 text-blue-900" />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
-                                    No Active Auctions at the Moment
+                                    No Properties Listed Yet
                                 </h3>
                                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                                     We're preparing exciting new property auctions for you. Subscribe to our auction alerts to be the first to know when new properties are listed!
@@ -542,6 +563,53 @@ export default function HomePage() {
                             </div>
                         </div>
                     )}
+                </div>
+            </section>
+
+            {/* South Africa Property Investment Gateway */}
+            <section className="py-12 md:py-24 bg-gradient-to-br from-blue-900 via-blue-950 to-blue-900 text-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <div className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-500/30 rounded-full px-4 py-2 mb-4">
+                            <Sparkles className="w-5 h-5 text-yellow-400" />
+                            <span className="text-yellow-400 text-sm font-semibold">Central Developments · South Africa</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                            Zimbabwe&apos;s Gateway to <span className="text-yellow-400">SA Property</span>
+                        </h2>
+                        <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-4">
+                            Buy South African property from Zimbabwe — fully compliant, USD pricing, and developer-direct transactions mandated by Central Developments.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                        {[
+                            { title: 'Legality & compliance', text: 'EAC jurisdiction does not apply to SA developments — fully compliant cross-border sales.' },
+                            { title: 'Trust & authority', text: 'Mandated by Central Developments — South Africa\'s largest residential developer.' },
+                            { title: 'Convenience', text: 'Verified pricing, guided processes, and secure developer-direct transactions from Harare.' },
+                            { title: 'Investment value', text: 'USD pricing, rental yields, and long-term capital growth in quality developments.' },
+                        ].map(item => (
+                            <div key={item.title} className="bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm">
+                                <h3 className="font-bold text-yellow-400 mb-2 text-sm">{item.title}</h3>
+                                <p className="text-blue-100 text-sm leading-relaxed">{item.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="flex flex-wrap gap-4 justify-center">
+                        <Link
+                            to="/south-africa-properties"
+                            className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-8 py-4 rounded-xl font-bold shadow-lg transition-all"
+                        >
+                            View SA Developments
+                            <ArrowRight className="w-5 h-5" />
+                        </Link>
+                        <Link
+                            to="/south-africa-properties/why-zimbabweans-buy-in-south-africa"
+                            className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold transition-all"
+                        >
+                            Why Buy in South Africa
+                            <ArrowRight className="w-5 h-5" />
+                        </Link>
+                    </div>
                 </div>
             </section>
 

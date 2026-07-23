@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import { FileText, FolderOpen, LogOut, MessageCircle, Settings, Tag, Users } from 'lucide-react';
+import { FileText, FolderOpen, Home, LogOut, MessageCircle, Settings, Tag, Users } from 'lucide-react';
 import { logoutAdmin } from '@/blog/adminAuth';
 import { useNavigate } from 'react-router-dom';
 
@@ -43,11 +43,20 @@ export default function BlogAdminLayout() {
           <NavLink to="/blog/admin/settings" className={navClass}>
             <Settings className="w-4 h-4" /> Settings
           </NavLink>
+          <Link
+            to="/houses/admin"
+            className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold text-blue-100 hover:bg-white/10 transition-colors"
+          >
+            <Home className="w-4 h-4" /> Property listings
+          </Link>
         </nav>
 
         <div className="pt-6 border-t border-white/10 space-y-2">
           <Link to="/blog" className="block text-sm text-blue-200 hover:text-yellow-400 px-4">
             View public blog →
+          </Link>
+          <Link to="/houses/admin" className="block text-sm text-blue-200 hover:text-yellow-400 px-4">
+            Property listings CMS →
           </Link>
           <button
             type="button"
