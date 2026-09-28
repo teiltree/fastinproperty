@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown, Menu, X, Phone, Mail, MapPin, User, ExternalLink } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import { SA_LOCAL_IMAGES } from '@/sa-properties/media';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,37 +23,43 @@ export default function Navbar() {
             name: "Why Buy in South Africa",
             href: "/south-africa-properties/why-zimbabweans-buy-in-south-africa",
             description: "Legal process, USD pricing, rental yields & FAQs for Zimbabwean buyers.",
-            icon: "🇿🇦",
+            image: SA_LOCAL_IMAGES.colorado.gallery[1],
+            alt: "Colorado development, South Africa",
         },
         {
             name: "All Developments",
             href: "/south-africa-properties",
             description: "Central Developments portfolio — Zimbabwe's official SA property gateway.",
-            icon: "🏘️",
+            image: SA_LOCAL_IMAGES.knightsCourt.gallery[1],
+            alt: "Knight's Court estate homes",
         },
         {
             name: "Knight's Court",
             href: "/south-africa-properties/knights-court",
             description: "Modern estate living — USD price list & brochure available.",
-            icon: "🏰",
+            image: SA_LOCAL_IMAGES.knightsCourt.hero,
+            alt: "Knight's Court",
         },
         {
             name: "Colorado",
             href: "/south-africa-properties/colorado",
             description: "Contemporary apartments for investors and end-users.",
-            icon: "🏢",
+            image: SA_LOCAL_IMAGES.colorado.hero,
+            alt: "Colorado apartments",
         },
         {
             name: "Woodlands Place",
             href: "/south-africa-properties/woodlands-place",
             description: "Established estate character with strong rental appeal.",
-            icon: "🌳",
+            image: SA_LOCAL_IMAGES.woodlands.hero,
+            alt: "Woodlands Place",
         },
         {
             name: "Blue Hills",
             href: "/south-africa-properties/blue-hills",
             description: "Launching 1 September — register for early access.",
-            icon: "⛰️",
+            image: SA_LOCAL_IMAGES.blueHills.hero,
+            alt: "Blue Hills",
         },
     ];
 
@@ -413,8 +420,13 @@ export default function Navbar() {
                                                     href={item.href}
                                                     className="group flex gap-3 p-4 rounded-2xl hover:bg-blue-50/50 transition-all duration-300"
                                                 >
-                                                    <span className="text-2xl shrink-0">{item.icon}</span>
-                                                    <div>
+                                                    <img
+                                                        src={item.image}
+                                                        alt={item.alt}
+                                                        loading="lazy"
+                                                        className="w-20 h-16 shrink-0 rounded-xl object-cover shadow-sm ring-1 ring-black/5 group-hover:scale-105 transition-transform duration-300"
+                                                    />
+                                                    <div className="min-w-0">
                                                         <h4 className="font-bold text-blue-950 text-[11px] mb-1 uppercase tracking-widest group-hover:text-yellow-600 transition-colors">
                                                             {item.name}
                                                         </h4>
@@ -606,7 +618,7 @@ export default function Navbar() {
                                                         onClick={() => setIsMobileMenuOpen(false)}
                                                         className="flex items-center gap-3 py-3 px-5 rounded-xl bg-blue-50/50 text-[11px] text-blue-950 font-bold uppercase tracking-wider"
                                                     >
-                                                        <span className="text-lg">{sub.icon}</span> {sub.name}
+                                                        <img src={sub.image} alt={sub.alt} loading="lazy" className="w-12 h-10 rounded-lg object-cover shrink-0" /> {sub.name}
                                                     </a>
                                                 ))}
                                             </div>
