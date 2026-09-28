@@ -15,7 +15,10 @@ import {
     Calendar,
     ArrowRight,
     Sparkles,
-    CheckCircle
+    CheckCircle,
+    ExternalLink,
+    Building2,
+    Search
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useHouses } from "@/houses/useHouses";
@@ -563,6 +566,65 @@ export default function HomePage() {
                             </div>
                         </div>
                     )}
+                </div>
+            </section>
+
+            {/* Local Listings - properties for sale and rent */}
+            <section className="py-12 md:py-20 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <div className="inline-flex items-center gap-2 bg-blue-900/5 border border-blue-900/10 rounded-full px-4 py-2 mb-4">
+                            <MapPin className="w-5 h-5 text-blue-900" />
+                            <span className="text-blue-900 text-sm font-semibold">Zimbabwe · For Sale &amp; To Rent</span>
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
+                            Browse Our <span className="text-yellow-500">Local Listings</span>
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Beyond the auction room: houses, stands, commercial property and rentals across Zimbabwe, listed by our team.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                        <a
+                            href="https://fastin.property.co.zw/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-900 via-blue-800 to-blue-950 text-white p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all"
+                        >
+                            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }} />
+                            <div className="relative">
+                                <div className="w-14 h-14 rounded-xl bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center mb-6">
+                                    <Search className="w-7 h-7 text-yellow-400" />
+                                </div>
+                                <h3 className="text-2xl font-bold mb-2">Fastin Property Listings</h3>
+                                <p className="text-blue-100 mb-6 leading-relaxed">
+                                    Search our full portfolio of properties for sale and to rent. Filter by area, view photos and details, and contact the listing agent directly.
+                                </p>
+                                <span className="inline-flex items-center gap-2 bg-yellow-500 group-hover:bg-yellow-400 text-blue-900 px-6 py-3 rounded-xl font-bold transition-colors">
+                                    View Listings <ExternalLink className="w-4 h-4" />
+                                </span>
+                            </div>
+                        </a>
+
+                        <a
+                            href="https://www.propertybook.co.zw/listed-agencies/fastin-property-auctions"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative overflow-hidden rounded-2xl bg-white border-2 border-gray-200 hover:border-blue-900 p-8 shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all"
+                        >
+                            <div className="w-14 h-14 rounded-xl bg-blue-900/5 border border-blue-900/10 flex items-center justify-center mb-6">
+                                <Building2 className="w-7 h-7 text-blue-900" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-blue-900 mb-2">Find Us on Propertybook</h3>
+                            <p className="text-gray-600 mb-6 leading-relaxed">
+                                Our agency page on Zimbabwe&apos;s leading property portal — houses, stands and rentals from our Chisipite and Mutare branches.
+                            </p>
+                            <span className="inline-flex items-center gap-2 bg-blue-900 group-hover:bg-blue-800 text-white px-6 py-3 rounded-xl font-bold transition-colors">
+                                Open Propertybook <ExternalLink className="w-4 h-4" />
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </section>
 
