@@ -490,7 +490,7 @@ export default function Navbar() {
                         {/* Online Bidding Button - Premium */}
                         <div className="hidden lg:flex items-center ml-4">
                             <div className="relative group">
-                                <button className="flex items-center space-x-3 bg-[#111531] hover:bg-[#122D54] text-white px-7 py-4 rounded-full text-[11px] font-bold tracking-[0.15em] transition-all duration-500 transform hover:shadow-[0_10px_30px_rgba(0,27,61,0.3)] group/btn border border-white/5 uppercase">
+                                <button className="flex items-center space-x-3 bg-[#111531] hover:bg-[#1B2250] text-white px-7 py-4 rounded-full text-[11px] font-bold tracking-[0.15em] transition-all duration-500 transform hover:shadow-[0_10px_30px_rgba(0,27,61,0.3)] group/btn border border-white/5 uppercase">
                                     <User className="w-3.5 h-3.5 text-yellow-500 group-hover/btn:scale-110 transition-transform" />
                                     <span>Online Bidding</span>
                                     <ChevronDown className="w-3.5 h-3.5 text-white/30 group-hover/btn:text-white transition-colors" />
@@ -539,7 +539,7 @@ export default function Navbar() {
                         <div className="flex lg:hidden items-center">
                             <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="p-3 rounded-2xl bg-[#111531] text-white hover:bg-[#122D54] transition-all shadow-lg active:scale-95"
+                                className="p-3 rounded-2xl bg-[#111531] text-white hover:bg-[#1B2250] transition-all shadow-lg active:scale-95"
                             >
                                 {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -691,7 +691,7 @@ export default function Navbar() {
                                         href="https://iprop.solutions/fastin/properties/for-auction"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-between bg-[#111531] text-white py-5 px-8 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-[#122D54] transition-all shadow-xl shadow-blue-900/20"
+                                        className="flex items-center justify-between bg-[#111531] text-white py-5 px-8 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-[#1B2250] transition-all shadow-xl shadow-blue-900/20"
                                     >
                                         <span>Browse Stock</span>
                                         <ExternalLink className="w-4 h-4 text-yellow-500" />
