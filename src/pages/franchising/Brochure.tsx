@@ -35,7 +35,7 @@ export default function BrochurePage() {
             {/* Hero Section */}
             <div className="relative min-h-[60vh] md:h-[90vh] bg-cover bg-center overflow-hidden"
                 style={{
-                    backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.30) 100%, rgba(30, 58, 138, 0.2) 40%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/bY3yxrQn/IMG_20251104_WA0030.jpg')`
+                    backgroundImage: `linear-gradient(90deg, rgba(27, 34, 80, 0.30) 100%, rgba(27, 34, 80, 0.2) 40%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/bY3yxrQn/IMG_20251104_WA0030.jpg')`
                 }}
             >
                 {/*<div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>*/}

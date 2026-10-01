@@ -178,7 +178,7 @@ export default function Navbar() {
     return (
         <>
             {/* Top Contact Bar - Professional & Clean */}
-            <div className="bg-[#0A1929] text-blue-50/90 py-2.5 hidden md:block border-b border-white/5">
+            <div className="bg-[#111531] text-blue-50/90 py-2.5 hidden md:block border-b border-white/5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between text-xs tracking-wide font-medium">
                         <div className="flex items-center space-x-10">
@@ -301,7 +301,7 @@ export default function Navbar() {
                                             ))}
                                         </div>
                                     </div>
-                                    <div className="bg-[#0A1929] p-5 flex justify-between items-center text-white px-10">
+                                    <div className="bg-[#111531] p-5 flex justify-between items-center text-white px-10">
                                         <p className="text-xs text-blue-100/60 font-medium tracking-wide">Fastin Property Auctions — Excellence in Real Estate since 2012</p>
                                         <a href="/about" className="text-xs font-bold text-yellow-500 hover:text-yellow-400 flex items-center gap-2 transition-colors">
                                             LEARN MORE <span className="text-lg">→</span>
@@ -338,7 +338,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setActiveDropdown("")}
                                 >
                                     <div className="flex bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-gray-100/50 overflow-hidden">
-                                        <div className="w-1/3 bg-[#0A1929] p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                                        <div className="w-1/3 bg-[#111531] p-10 text-white flex flex-col justify-between relative overflow-hidden">
                                             <div className="relative z-10">
                                                 <h3 className="text-2xl font-bold mb-4">Our Services</h3>
                                                 <p className="text-blue-100/70 text-sm leading-relaxed mb-8">
@@ -438,7 +438,7 @@ export default function Navbar() {
                                             ))}
                                         </div>
                                     </div>
-                                    <div className="bg-[#0A1929] p-4 flex justify-between items-center text-white px-8">
+                                    <div className="bg-[#111531] p-4 flex justify-between items-center text-white px-8">
                                         <p className="text-xs text-blue-100/60 font-medium">Mandated by Central Developments</p>
                                         <a href="/south-africa-properties/why-zimbabweans-buy-in-south-africa" className="text-xs font-bold text-yellow-500 hover:text-yellow-400">
                                             WHY BUY IN SA →
@@ -490,7 +490,7 @@ export default function Navbar() {
                         {/* Online Bidding Button - Premium */}
                         <div className="hidden lg:flex items-center ml-4">
                             <div className="relative group">
-                                <button className="flex items-center space-x-3 bg-[#0A1929] hover:bg-[#122D54] text-white px-7 py-4 rounded-full text-[11px] font-bold tracking-[0.15em] transition-all duration-500 transform hover:shadow-[0_10px_30px_rgba(0,27,61,0.3)] group/btn border border-white/5 uppercase">
+                                <button className="flex items-center space-x-3 bg-[#111531] hover:bg-[#122D54] text-white px-7 py-4 rounded-full text-[11px] font-bold tracking-[0.15em] transition-all duration-500 transform hover:shadow-[0_10px_30px_rgba(0,27,61,0.3)] group/btn border border-white/5 uppercase">
                                     <User className="w-3.5 h-3.5 text-yellow-500 group-hover/btn:scale-110 transition-transform" />
                                     <span>Online Bidding</span>
                                     <ChevronDown className="w-3.5 h-3.5 text-white/30 group-hover/btn:text-white transition-colors" />
@@ -539,7 +539,7 @@ export default function Navbar() {
                         <div className="flex lg:hidden items-center">
                             <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="p-3 rounded-2xl bg-[#0A1929] text-white hover:bg-[#122D54] transition-all shadow-lg active:scale-95"
+                                className="p-3 rounded-2xl bg-[#111531] text-white hover:bg-[#122D54] transition-all shadow-lg active:scale-95"
                             >
                                 {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -558,7 +558,7 @@ export default function Navbar() {
                                         key={item.name}
                                         href={item.href}
                                         className={`block py-4 px-6 rounded-2xl font-bold tracking-widest text-xs uppercase transition-all ${location.pathname === item.href
-                                                ? "bg-[#0A1929] text-white shadow-xl shadow-blue-900/20"
+                                                ? "bg-[#111531] text-white shadow-xl shadow-blue-900/20"
                                                 : "bg-gray-50 text-blue-950 hover:bg-gray-100"
                                             }`}
                                         onClick={() => setIsMobileMenuOpen(false)}
@@ -691,7 +691,7 @@ export default function Navbar() {
                                         href="https://iprop.solutions/fastin/properties/for-auction"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-between bg-[#0A1929] text-white py-5 px-8 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-[#122D54] transition-all shadow-xl shadow-blue-900/20"
+                                        className="flex items-center justify-between bg-[#111531] text-white py-5 px-8 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-[#122D54] transition-all shadow-xl shadow-blue-900/20"
                                     >
                                         <span>Browse Stock</span>
                                         <ExternalLink className="w-4 h-4 text-yellow-500" />
@@ -700,7 +700,7 @@ export default function Navbar() {
                                         href="https://iprop.solutions/fastin/auth/login"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-between bg-white border-2 border-[#0A1929] text-[#0A1929] py-5 px-8 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-gray-50 transition-all"
+                                        className="flex items-center justify-between bg-white border-2 border-[#111531] text-[#111531] py-5 px-8 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-gray-50 transition-all"
                                     >
                                         <span>Member Login</span>
                                         <User className="w-4 h-4" />

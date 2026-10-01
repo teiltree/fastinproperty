@@ -4,7 +4,7 @@ export default function FinancePage() {
             {/* Hero Section */}
             <div className="relative h-[80vh] bg-cover bg-center overflow-hidden"
                  style={{
-                     backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.4) 0%, rgba(30, 58, 138, 0.3) 50%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/WpXNGzMn/IMG_20251104_WA0032.jpg')`
+                     backgroundImage: `linear-gradient(90deg, rgba(27, 34, 80, 0.4) 0%, rgba(27, 34, 80, 0.3) 50%, rgba(202, 138, 4, 0.1) 100%), url('https://i.postimg.cc/WpXNGzMn/IMG_20251104_WA0032.jpg')`
                  }}
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 via-transparent to-transparent"></div>

@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  /* Navy Blue Scale — based on logo #1E3A6D */
-  --color-blue-50: #EBF0F7;
-  --color-blue-100: #D6E2F0;
-  --color-blue-200: #ADC5E0;
-  --color-blue-300: #849FCC;
-  --color-blue-400: #5B79B8;
-  --color-blue-500: #3A6BB5;
-  --color-blue-600: #2A4F8A;
-  --color-blue-700: #1E3A6D;
-  --color-blue-800: #162D54;
-  --color-blue-900: #122D54;
-  --color-blue-950: #0A1929;
+  /* Royal Blue Scale — anchored on the logo's outline blue #3846A4 (hue 232°).
+     600 is the logo colour itself; 900/950 carry the site's headers and
+     footers and keep white text above 15:1 contrast. */
+  --color-blue-50: #EFF1FA;
+  --color-blue-100: #DBDEF5;
+  --color-blue-200: #B6BDED;
+  --color-blue-300: #8590E0;
+  --color-blue-400: #5262D1;
+  --color-blue-500: #384AC2;
+  --color-blue-600: #3846A4;
+  --color-blue-700: #2F3A89;
+  --color-blue-800: #232D70;
+  --color-blue-900: #1B2250;
+  --color-blue-950: #111531;
 
   /* Copper Gold Scale — based on logo #C4943D */
   --color-yellow-50: #FDF8EF;

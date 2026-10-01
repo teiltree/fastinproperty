@@ -5,7 +5,7 @@ export default function MarketingPage() {
             <div
                 className="relative h-[80vh] bg-cover bg-center flex items-center overflow-hidden"
                 style={{
-                    backgroundImage: `linear-gradient(90deg, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.1) 50%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/SRNy0bpS/IMG_20251104_WA0035.jpg')`
+                    backgroundImage: `linear-gradient(90deg, rgba(27, 34, 80, 0.95) 0%, rgba(27, 34, 80, 0.1) 50%, rgba(202, 138, 4, 0.3) 100%), url('https://i.postimg.cc/SRNy0bpS/IMG_20251104_WA0035.jpg')`
                 }}
             >
                 <div className="absolute inset-0 bg-transparent"></div>
